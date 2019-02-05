@@ -47,14 +47,21 @@ namespace Presentation.Player {
                 var moveDirection = Input.GetLeftThumbAny(DeadZone);
 
                 // Keyboard: movement
-                if (KeysLeft.Any(key => Input.IsKeyDown(key)))
+                if (KeysLeft.Any(key => Input.IsKeyDown(key))) {
                     moveDirection += -Vector2.UnitX;
-                if (KeysRight.Any(key => Input.IsKeyDown(key)))
+                }
+
+                if (KeysRight.Any(key => Input.IsKeyDown(key))) {
                     moveDirection += +Vector2.UnitX;
-                if (KeysUp.Any(key => Input.IsKeyDown(key)))
+                }
+
+                if (KeysUp.Any(key => Input.IsKeyDown(key))) {
                     moveDirection += +Vector2.UnitY;
-                if (KeysDown.Any(key => Input.IsKeyDown(key)))
+                }
+
+                if (KeysDown.Any(key => Input.IsKeyDown(key))) {
                     moveDirection += -Vector2.UnitY;
+                }
 
                 // Broadcast the movement vector as a world-space Vector3 to allow characters to be controlled
                 var worldSpeed = (Camera != null)
@@ -84,10 +91,11 @@ namespace Presentation.Player {
                 // Right stick: camera rotation
                 var cameraDirection = Input.GetRightThumbAny(DeadZone);
                 var isDeadZoneRight = cameraDirection.Length() < DeadZone;
-                if (isDeadZoneRight)
+                if (isDeadZoneRight) {
                     cameraDirection = Vector2.Zero;
-                else
+                } else {
                     cameraDirection.Normalize();
+                }
 
                 // Mouse-based camera rotation. Only enabled after you click the screen to lock your cursor, pressing escape cancels this
                 if (Input.IsMouseButtonDown(MouseButton.Right)) {

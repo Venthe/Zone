@@ -78,14 +78,14 @@ namespace Presentation.Camera {
                 }
             } else {
                 // If the cone radius is > 0 we will sweep an actual cone and see where it collides
-                var fromMatrix = Matrix.Translation(0, 0, -DefaultDistance * 0.5f) *
-                                 Entity.GetParent().Transform.WorldMatrix;
-                var toMatrix = Matrix.Translation(0, 0, DefaultDistance * 0.5f) *
-                                 Entity.GetParent().Transform.WorldMatrix;
+                var fromMatrix = Matrix.Translation(0, 0, -DefaultDistance * 0.5f)
+                                 * Entity.GetParent().Transform.WorldMatrix;
+                var toMatrix = Matrix.Translation(0, 0, DefaultDistance * 0.5f)
+                                 * Entity.GetParent().Transform.WorldMatrix;
 
                 resultsOutput.Clear();
-                var cfg = CollisionFilterGroups.DefaultFilter;
-                var cfgf = CollisionFilterGroupFlags.DefaultFilter; // Intentionally ignoring the CollisionFilterGroupFlags.StaticFilter; to avoid collision with poles
+                const CollisionFilterGroups cfg = CollisionFilterGroups.DefaultFilter;
+                const CollisionFilterGroupFlags cfgf = CollisionFilterGroupFlags.DefaultFilter; // Intentionally ignoring the CollisionFilterGroupFlags.StaticFilter; to avoid collision with poles
 
                 this.GetSimulation().ShapeSweepPenetrating(coneShape, fromMatrix, toMatrix, resultsOutput, cfg, cfgf);
 
@@ -95,14 +95,16 @@ namespace Presentation.Camera {
                         var signedDistance = Vector3.Dot(cameraVector, signedVector);
 
                         var currentLength = DefaultDistance * result.HitFraction;
-                        if (signedDistance > 0 && currentLength < maxLength)
+                        if (signedDistance > 0 && currentLength < maxLength) {
                             maxLength = currentLength;
+                        }
                     }
                 }
             }
 
-            if (maxLength < MinimumDistance)
+            if (maxLength < MinimumDistance) {
                 maxLength = MinimumDistance;
+            }
 
             Entity.Transform.Position.Z = maxLength;
         }
@@ -114,15 +116,20 @@ namespace Presentation.Camera {
             var dt = this.GetSimulation().FixedTimeStep;
 
             // Camera movement from player input
-            Vector2 cameraMovement;
-            cameraDirectionEvent.TryReceive(out cameraMovement);
+            cameraDirectionEvent.TryReceive(out Vector2 cameraMovement);
 
-            if (InvertY) cameraMovement.Y *= -1;
+            if (InvertY) {
+                cameraMovement.Y *= -1;
+            }
+
             targetRotationXYZ.X += cameraMovement.Y * dt * VerticalSpeed;
             targetRotationXYZ.X = Math.Max(targetRotationXYZ.X, -MaxVerticalAngle);
             targetRotationXYZ.X = Math.Min(targetRotationXYZ.X, -MinVerticalAngle);
 
-            if (InvertX) cameraMovement.X *= -1;
+            if (InvertX) {
+                cameraMovement.X *= -1;
+            }
+
             targetRotationXYZ.Y -= cameraMovement.X * dt * RotationSpeed;
 
             // Very simple lerp to allow smoother transition of the camera towards its desired destination. You can change this behavior with a different one, better suited for your game.
@@ -142,7 +149,9 @@ namespace Presentation.Camera {
             coneShape = new ConeColliderShape(DefaultDistance, ConeRadius, ShapeOrientation.UpZ);
             resultsOutput = new List<HitResult>();
 
-            if (Entity.GetParent() == null) throw new ArgumentException("ThirdPersonCamera should be placed as a child entity of its target entity!");
+            if (Entity.GetParent() == null) {
+                throw new ArgumentException("ThirdPersonCamera should be placed as a child entity of its target entity!");
+            }
         }
     }
 }

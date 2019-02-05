@@ -48,7 +48,9 @@ namespace Presentation.Player {
 
             // Will search for an CharacterComponent within the same entity as this script
             character = Entity.Get<CharacterComponent>();
-            if (character == null) throw new ArgumentException("Please add a CharacterComponent to the entity containing PlayerController!");
+            if (character == null) {
+                throw new ArgumentException("Please add a CharacterComponent to the entity containing PlayerController!");
+            }
 
             modelChildEntity = Entity.GetChild(0);
         }
@@ -79,12 +81,14 @@ namespace Presentation.Player {
                 }
             } else {
                 // If there is still enough time left for jumping allow the character to jump even when not grounded
-                if (jumpReactionRemaining > 0)
+                if (jumpReactionRemaining > 0) {
                     jumpReactionRemaining -= dt;
+                }
 
                 // If the character on the ground reset the jumping reaction time
-                if (character.IsGrounded)
+                if (character.IsGrounded) {
                     jumpReactionRemaining = JumpReactionThreshold;
+                }
 
                 // If there is no more reaction time left don't allow the character to jump
                 if (jumpReactionRemaining <= 0) {
@@ -94,8 +98,7 @@ namespace Presentation.Player {
             }
 
             // If the player didn't press a jump button we don't need to jump
-            bool didJump;
-            jumpEvent.TryReceive(out didJump);
+            jumpEvent.TryReceive(out bool didJump);
             if (!didJump) {
                 IsGroundedEventKey.Broadcast(true);
                 return;
@@ -111,11 +114,10 @@ namespace Presentation.Player {
 
         private void Move(float speed) {
             // Character speed
-            Vector3 newMoveDirection;
-            moveDirectionEvent.TryReceive(out newMoveDirection);
+            moveDirectionEvent.TryReceive(out Vector3 newMoveDirection);
 
             // Allow very simple inertia to the character to make animation transitions more fluid
-            moveDirection = moveDirection * 0.85f + newMoveDirection * 0.15f;
+            moveDirection = (moveDirection * 0.85f) + (newMoveDirection * 0.15f);
 
             character.SetVelocity(moveDirection * speed);
 

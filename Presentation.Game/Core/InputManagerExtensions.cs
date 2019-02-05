@@ -7,26 +7,26 @@ namespace Presentation.Core {
     public static class InputManagerExtensions {
         public static bool IsGamePadButtonDown(this InputManager input, GamePadButton button, int index) {
             var gamepad = input.GetGamePadByIndex(index);
-            if (gamepad == null)
+            if (gamepad == null) {
                 return false;
+            }
 
             return (gamepad.State.Buttons & button) == button;
         }
 
         public static bool IsGamePadButtonDownAny(this InputManager input, GamePadButton button) {
             foreach (var gamepad in input.GamePads) {
-                if ((gamepad.State.Buttons & button) == button)
+                if ((gamepad.State.Buttons & button) == button) {
                     return true;
+                }
             }
             return false;
         }
 
         public static Vector2 GetLeftThumb(this InputManager input, int index) {
             var gamepad = input.GetGamePadByIndex(index);
-            if (gamepad == null)
-                return Vector2.Zero;
 
-            return gamepad.State.LeftThumb;
+            return gamepad == null ? Vector2.Zero : gamepad.State.LeftThumb;
         }
 
         public static Vector2 GetLeftThumbAny(this InputManager input, float deadZone) {
@@ -45,10 +45,8 @@ namespace Presentation.Core {
 
         public static Vector2 GetRightThumb(this InputManager input, int index) {
             var gamepad = input.GetGamePadByIndex(index);
-            if (gamepad == null)
-                return Vector2.Zero;
 
-            return gamepad.State.RightThumb;
+            return gamepad == null ? Vector2.Zero : gamepad.State.RightThumb;
         }
 
         public static Vector2 GetRightThumbAny(this InputManager input, float deadZone) {
@@ -67,10 +65,8 @@ namespace Presentation.Core {
 
         public static float GetLeftTrigger(this InputManager input, int index) {
             var gamepad = input.GetGamePadByIndex(index);
-            if (gamepad == null)
-                return 0.0f;
 
-            return gamepad.State.LeftTrigger;
+            return gamepad?.State.LeftTrigger ?? 0.0f;
         }
 
         public static float GetLeftTriggerAny(this InputManager input, float deadZone) {
@@ -89,10 +85,8 @@ namespace Presentation.Core {
 
         public static float GetRightTrigger(this InputManager input, int index) {
             var gamepad = input.GetGamePadByIndex(index);
-            if (gamepad == null)
-                return 0.0f;
 
-            return gamepad.State.RightTrigger;
+            return gamepad?.State.RightTrigger ?? 0.0f;
         }
 
         public static float GetRightTriggerAny(this InputManager input, float deadZone) {

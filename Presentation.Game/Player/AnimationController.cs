@@ -9,10 +9,8 @@ using Xenko.Animations;
 using Xenko.Engine;
 using Xenko.Engine.Events;
 
-namespace Presentation.Player
-{
-    public class AnimationController : SyncScript, IBlendTreeBuilder
-    {
+namespace Presentation.Player {
+    public class AnimationController : SyncScript, IBlendTreeBuilder {
         [Display("Animation Component")]
         public AnimationComponent AnimationComponent { get; set; }
 
@@ -62,32 +60,38 @@ namespace Presentation.Player
         private readonly EventReceiver<float> runSpeedEvent = new EventReceiver<float>(PlayerController.RunSpeedEventKey);
         private readonly EventReceiver<bool> isGroundedEvent = new EventReceiver<bool>(PlayerController.IsGroundedEventKey);
 
-        float runSpeed;
+        private float runSpeed;
 
-        public override void Start()
-        {
+        public override void Start() {
             base.Start();
 
-            if (AnimationComponent == null)
+            if (AnimationComponent == null) {
                 throw new InvalidOperationException("The animation component is not set");
+            }
 
-            if (AnimationIdle == null)
+            if (AnimationIdle == null) {
                 throw new InvalidOperationException("Idle animation is not set");
+            }
 
-            if (AnimationWalk == null)
+            if (AnimationWalk == null) {
                 throw new InvalidOperationException("Walking animation is not set");
+            }
 
-            if (AnimationRun == null)
+            if (AnimationRun == null) {
                 throw new InvalidOperationException("Running animation is not set");
+            }
 
-            if (AnimationJumpStart == null)
+            if (AnimationJumpStart == null) {
                 throw new InvalidOperationException("Jumping animation is not set");
+            }
 
-            if (AnimationJumpMid == null)
+            if (AnimationJumpMid == null) {
                 throw new InvalidOperationException("Airborne animation is not set");
+            }
 
-            if (AnimationJumpEnd == null)
+            if (AnimationJumpEnd == null) {
                 throw new InvalidOperationException("Landing animation is not set");
+            }
 
             // By setting a custom blend tree builder we can override the default behavior of the animation system
             //  Instead, BuildBlendTree(FastList<AnimationOperation> blendStack) will be called each frame
@@ -108,8 +112,7 @@ namespace Presentation.Player
             animationClipWalkLerp2 = AnimationWalk;
         }
 
-        public override void Cancel()
-        {
+        public override void Cancel() {
             AnimationComponent.Blender.ReleaseEvaluator(animEvaluatorIdle);
             AnimationComponent.Blender.ReleaseEvaluator(animEvaluatorWalk);
             AnimationComponent.Blender.ReleaseEvaluator(animEvaluatorRun);
@@ -118,19 +121,15 @@ namespace Presentation.Player
             AnimationComponent.Blender.ReleaseEvaluator(animEvaluatorJumpEnd);
         }
 
-        private void UpdateWalking()
-        {
-            if (runSpeed < WalkThreshold)
-            {
+        private void UpdateWalking() {
+            if (runSpeed < WalkThreshold) {
                 walkLerpFactor = runSpeed / WalkThreshold;
                 walkLerpFactor = (float)Math.Sqrt(walkLerpFactor);  // Idle-Walk blend looks really werid, so skew the factor towards walking
                 animEvaluatorWalkLerp1 = animEvaluatorIdle;
                 animEvaluatorWalkLerp2 = animEvaluatorWalk;
                 animationClipWalkLerp1 = AnimationIdle;
                 animationClipWalkLerp2 = AnimationWalk;
-            }
-            else
-            {
+            } else {
                 walkLerpFactor = (runSpeed - WalkThreshold) / (1.0f - WalkThreshold);
                 animEvaluatorWalkLerp1 = animEvaluatorWalk;
                 animEvaluatorWalkLerp2 = animEvaluatorRun;
@@ -141,87 +140,73 @@ namespace Presentation.Player
             // Use DrawTime rather than UpdateTime
             var time = Game.DrawTime;
             // This update function will account for animation with different durations, keeping a current time relative to the blended maximum duration
-            long blendedMaxDuration = 0;
-            blendedMaxDuration =
+            long blendedMaxDuration =
                 (long)MathUtil.Lerp(animationClipWalkLerp1.Duration.Ticks, animationClipWalkLerp2.Duration.Ticks, walkLerpFactor);
 
             var currentTicks = TimeSpan.FromTicks((long)(currentTime * blendedMaxDuration));
 
             currentTicks = blendedMaxDuration == 0
                 ? TimeSpan.Zero
-                : TimeSpan.FromTicks((currentTicks.Ticks + (long)(time.Elapsed.Ticks * TimeFactor)) %
-                                     blendedMaxDuration);
+                : TimeSpan.FromTicks((currentTicks.Ticks + (long)(time.Elapsed.Ticks * TimeFactor))
+                                     % blendedMaxDuration);
 
             currentTime = ((double)currentTicks.Ticks / (double)blendedMaxDuration);
         }
 
-        private void UpdateJumping()
-        {
-            var speedFactor = 1;
+        private void UpdateJumping() {
+            const int speedFactor = 1;
             var currentTicks = TimeSpan.FromTicks((long)(currentTime * AnimationJumpStart.Duration.Ticks));
             var updatedTicks = currentTicks.Ticks + (long)(Game.DrawTime.Elapsed.Ticks * TimeFactor * speedFactor);
 
-            if (updatedTicks < AnimationJumpStart.Duration.Ticks)
-            {
+            if (updatedTicks < AnimationJumpStart.Duration.Ticks) {
                 currentTicks = TimeSpan.FromTicks(updatedTicks);
                 currentTime = ((double)currentTicks.Ticks / (double)AnimationJumpStart.Duration.Ticks);
-            }
-            else
-            {
+            } else {
                 state = AnimationState.Airborne;
                 currentTime = 0;
                 UpdateAirborne();
             }
         }
 
-        private void UpdateAirborne()
-        {
+        private void UpdateAirborne() {
             // Use DrawTime rather than UpdateTime
             var time = Game.DrawTime;
             var currentTicks = TimeSpan.FromTicks((long)(currentTime * AnimationJumpMid.Duration.Ticks));
-            currentTicks = TimeSpan.FromTicks((currentTicks.Ticks + (long)(time.Elapsed.Ticks * TimeFactor)) %
-                                     AnimationJumpMid.Duration.Ticks);
+            currentTicks = TimeSpan.FromTicks((currentTicks.Ticks + (long)(time.Elapsed.Ticks * TimeFactor))
+                                     % AnimationJumpMid.Duration.Ticks);
             currentTime = ((double)currentTicks.Ticks / (double)AnimationJumpMid.Duration.Ticks);
         }
 
-        private void UpdateLanding()
-        {
-            var speedFactor = 1;
+        private void UpdateLanding() {
+            const int speedFactor = 1;
             var currentTicks = TimeSpan.FromTicks((long)(currentTime * AnimationJumpEnd.Duration.Ticks));
-            var updatedTicks = currentTicks.Ticks + (long) (Game.DrawTime.Elapsed.Ticks * TimeFactor * speedFactor);
+            var updatedTicks = currentTicks.Ticks + (long)(Game.DrawTime.Elapsed.Ticks * TimeFactor * speedFactor);
 
-            if (updatedTicks < AnimationJumpEnd.Duration.Ticks)
-            {
+            if (updatedTicks < AnimationJumpEnd.Duration.Ticks) {
                 currentTicks = TimeSpan.FromTicks(updatedTicks);
                 currentTime = ((double)currentTicks.Ticks / (double)AnimationJumpEnd.Duration.Ticks);
-            }
-            else
-            {
+            } else {
                 state = AnimationState.Walking;
                 currentTime = 0;
                 UpdateWalking();
             }
         }
 
-        public override void Update()
-        {
+        public override void Update() {
             // State control
             runSpeedEvent.TryReceive(out runSpeed);
-            bool isGroundedNewValue;
-            isGroundedEvent.TryReceive(out isGroundedNewValue);
-            if (isGrounded != isGroundedNewValue)
-            {
+            isGroundedEvent.TryReceive(out bool isGroundedNewValue);
+            if (isGrounded != isGroundedNewValue) {
                 currentTime = 0;
                 isGrounded = isGroundedNewValue;
                 state = (isGrounded) ? AnimationState.Landing : AnimationState.Jumping;
             }
 
-            switch (state)
-            {
-                case AnimationState.Walking:  UpdateWalking();  break;
-                case AnimationState.Jumping:  UpdateJumping();  break;
+            switch (state) {
+                case AnimationState.Walking: UpdateWalking(); break;
+                case AnimationState.Jumping: UpdateJumping(); break;
                 case AnimationState.Airborne: UpdateAirborne(); break;
-                case AnimationState.Landing:  UpdateLanding();  break;
+                case AnimationState.Landing: UpdateLanding(); break;
             }
         }
 
@@ -229,47 +214,40 @@ namespace Presentation.Player
         /// BuildBlendTree is called every frame from the animation system when the <see cref="AnimationComponent"/> needs to be evaluated
         /// It overrides the default behavior of the <see cref="AnimationComponent"/> by setting a custom blend tree
         /// </summary>
-        /// <param name="blendStack">The stack of animation operations to be blended</param>
-        public void BuildBlendTree(FastList<AnimationOperation> blendStack)
-        {
-            switch (state)
-            {
-                case AnimationState.Walking:
-                    {
-                        // Note! The tree is laid out as a stack and has to be flattened before returning it to the animation system!
-                        blendStack.Add(AnimationOperation.NewPush(animEvaluatorWalkLerp1,
-                            TimeSpan.FromTicks((long)(currentTime * animationClipWalkLerp1.Duration.Ticks))));
-                        blendStack.Add(AnimationOperation.NewPush(animEvaluatorWalkLerp2,
-                            TimeSpan.FromTicks((long)(currentTime * animationClipWalkLerp2.Duration.Ticks))));
-                        blendStack.Add(AnimationOperation.NewBlend(CoreAnimationOperation.Blend, walkLerpFactor));
-                    }
-                    break;
+        /// <param name="animationList">The stack of animation operations to be blended</param>
+        public void BuildBlendTree(FastList<AnimationOperation> animationList) {
+            switch (state) {
+                case AnimationState.Walking: {
+                    // Note! The tree is laid out as a stack and has to be flattened before returning it to the animation system!
+                    animationList.Add(AnimationOperation.NewPush(animEvaluatorWalkLerp1,
+                        TimeSpan.FromTicks((long)(currentTime * animationClipWalkLerp1.Duration.Ticks))));
+                    animationList.Add(AnimationOperation.NewPush(animEvaluatorWalkLerp2,
+                        TimeSpan.FromTicks((long)(currentTime * animationClipWalkLerp2.Duration.Ticks))));
+                    animationList.Add(AnimationOperation.NewBlend(CoreAnimationOperation.Blend, walkLerpFactor));
+                }
+                break;
 
-                case AnimationState.Jumping:
-                    {
-                        blendStack.Add(AnimationOperation.NewPush(animEvaluatorJumpStart,
-                            TimeSpan.FromTicks((long)(currentTime * AnimationJumpStart.Duration.Ticks))));
-                    }
-                    break;
+                case AnimationState.Jumping: {
+                    animationList.Add(AnimationOperation.NewPush(animEvaluatorJumpStart,
+                        TimeSpan.FromTicks((long)(currentTime * AnimationJumpStart.Duration.Ticks))));
+                }
+                break;
 
-                case AnimationState.Airborne:
-                    {
-                        blendStack.Add(AnimationOperation.NewPush(animEvaluatorJumpMid,
-                            TimeSpan.FromTicks((long)(currentTime * AnimationJumpMid.Duration.Ticks))));
-                    }
-                    break;
+                case AnimationState.Airborne: {
+                    animationList.Add(AnimationOperation.NewPush(animEvaluatorJumpMid,
+                        TimeSpan.FromTicks((long)(currentTime * AnimationJumpMid.Duration.Ticks))));
+                }
+                break;
 
-                case AnimationState.Landing:
-                    {
-                        blendStack.Add(AnimationOperation.NewPush(animEvaluatorJumpEnd,
-                            TimeSpan.FromTicks((long)(currentTime * AnimationJumpEnd.Duration.Ticks))));
-                    }
-                    break;
+                case AnimationState.Landing: {
+                    animationList.Add(AnimationOperation.NewPush(animEvaluatorJumpEnd,
+                        TimeSpan.FromTicks((long)(currentTime * AnimationJumpEnd.Duration.Ticks))));
+                }
+                break;
             }
         }
 
-        enum AnimationState
-        {
+        private enum AnimationState {
             Walking,
             Jumping,
             Airborne,

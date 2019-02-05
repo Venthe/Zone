@@ -1,8 +1,8 @@
 using Xenko.Engine;
 
 namespace Presentation.Windows {
-    static class ZonePresentationApp {
-        static void Main(string[] args) {
+    internal static class ZonePresentationApp {
+        private static void Main() {
             using (var game = new Game()) {
                 game.Run();
             }

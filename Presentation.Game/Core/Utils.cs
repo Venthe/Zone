@@ -12,7 +12,7 @@ namespace Presentation.Core {
             forward.Normalize();
 
             var right = Vector3.Cross(forward, upVector);
-            var worldDirection = forward * logicDirection.Y + right * logicDirection.X;
+            var worldDirection = (forward * logicDirection.Y) + (right * logicDirection.X);
             worldDirection.Normalize();
             return worldDirection;
         }
