@@ -7,8 +7,10 @@ using Xenko.Engine;
 using Xenko.Engine.Events;
 using Xenko.Physics;
 
-namespace Presentation.Player {
-    public class PlayerController : SyncScript {
+namespace Presentation.Player
+{
+    public class PlayerController : SyncScript
+    {
         [Display("Run Speed")]
         public float MaxRunSpeed { get; set; } = 10;
 
@@ -41,14 +43,16 @@ namespace Presentation.Player {
         /// <summary>
         /// Called when the script is first initialized
         /// </summary>
-        public override void Start() {
+        public override void Start()
+        {
             base.Start();
 
             jumpReactionRemaining = JumpReactionThreshold;
 
             // Will search for an CharacterComponent within the same entity as this script
             character = Entity.Get<CharacterComponent>();
-            if (character == null) {
+            if (character == null)
+            {
                 throw new ArgumentException("Please add a CharacterComponent to the entity containing PlayerController!");
             }
 
@@ -58,7 +62,8 @@ namespace Presentation.Player {
         /// <summary>
         /// Called on every frame update
         /// </summary>
-        public override void Update() {
+        public override void Update()
+        {
             // var dt = Game.UpdateTime.Elapsed.Milliseconds * 0.001;
             Move(MaxRunSpeed);
 
@@ -69,29 +74,37 @@ namespace Presentation.Player {
         /// Jump makes the character jump and also accounts for the player's reaction time, making jumping feel more natural by
         ///  allowing jumps within some limit of the last time the character was on the ground
         /// </summary>
-        private void Jump() {
+        private void Jump()
+        {
             var dt = this.GetSimulation().FixedTimeStep;
 
             // Check if conditions allow the character to jump
-            if (JumpReactionThreshold <= 0) {
+            if (JumpReactionThreshold <= 0)
+            {
                 // No reaction threshold. The character can only jump if grounded
-                if (!character.IsGrounded) {
+                if (!character.IsGrounded)
+                {
                     IsGroundedEventKey.Broadcast(false);
                     return;
                 }
-            } else {
+            }
+            else
+            {
                 // If there is still enough time left for jumping allow the character to jump even when not grounded
-                if (jumpReactionRemaining > 0) {
+                if (jumpReactionRemaining > 0)
+                {
                     jumpReactionRemaining -= dt;
                 }
 
                 // If the character on the ground reset the jumping reaction time
-                if (character.IsGrounded) {
+                if (character.IsGrounded)
+                {
                     jumpReactionRemaining = JumpReactionThreshold;
                 }
 
                 // If there is no more reaction time left don't allow the character to jump
-                if (jumpReactionRemaining <= 0) {
+                if (jumpReactionRemaining <= 0)
+                {
                     IsGroundedEventKey.Broadcast(character.IsGrounded);
                     return;
                 }
@@ -99,7 +112,8 @@ namespace Presentation.Player {
 
             // If the player didn't press a jump button we don't need to jump
             jumpEvent.TryReceive(out bool didJump);
-            if (!didJump) {
+            if (!didJump)
+            {
                 IsGroundedEventKey.Broadcast(true);
                 return;
             }
@@ -112,7 +126,8 @@ namespace Presentation.Player {
             IsGroundedEventKey.Broadcast(false);
         }
 
-        private void Move(float speed) {
+        private void Move(float speed)
+        {
             // Character speed
             moveDirectionEvent.TryReceive(out Vector3 newMoveDirection);
 
@@ -125,7 +140,8 @@ namespace Presentation.Player {
             RunSpeedEventKey.Broadcast(moveDirection.Length());
 
             // Character orientation
-            if (moveDirection.Length() > 0.001) {
+            if (moveDirection.Length() > 0.001)
+            {
                 yawOrientation = MathUtil.RadiansToDegrees((float)Math.Atan2(-moveDirection.Z, moveDirection.X) + MathUtil.PiOverTwo);
             }
             modelChildEntity.Transform.Rotation = Quaternion.RotationYawPitchRoll(MathUtil.DegreesToRadians(yawOrientation), 0, 0);

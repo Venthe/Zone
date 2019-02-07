@@ -6,7 +6,8 @@ using Xenko.Core.Mathematics;
 using Xenko.Engine;
 using Xenko.Input;
 
-namespace Presentation {
+namespace Presentation
+{
     /// <summary>
     /// A script that allows to move and rotate an entity through keyboard, mouse and touch input to provide basic camera navigation.
     /// </summary>
@@ -14,7 +15,8 @@ namespace Presentation {
     /// The entity can be moved using W, A, S, D, Q and E, arrow keys or dragging/scaling using multi-touch.
     /// Rotation is achieved using the Numpad, the mouse while holding the right mouse button, or dragging using single-touch.
     /// </remarks>
-    public class BasicCameraController : SyncScript {
+    public class BasicCameraController : SyncScript
+    {
         private const float MaximumPitch = MathUtil.PiOverTwo * 0.99f;
 
         private Vector3 upVector;
@@ -34,81 +36,106 @@ namespace Presentation {
 
         public Vector2 TouchRotationSpeed { get; set; } = new Vector2(60.0f, 40.0f);
 
-        public override void Start() {
+        public override void Start()
+        {
             base.Start();
 
             // Default up-direction
             upVector = Vector3.UnitY;
 
             // Configure touch input
-            if (!Platform.IsWindowsDesktop) {
+            if (!Platform.IsWindowsDesktop)
+            {
                 Input.Gestures.Add(new GestureConfigDrag());
                 Input.Gestures.Add(new GestureConfigComposite());
             }
         }
 
-        public override void Update() {
+        public override void Update()
+        {
             ProcessInput();
             UpdateTransform();
         }
 
-        private void ProcessInput() {
+        private void ProcessInput()
+        {
             translation = Vector3.Zero;
             yaw = 0;
             pitch = 0;
 
             // Move with keyboard
-            if (Input.IsKeyDown(Keys.W) || Input.IsKeyDown(Keys.Up)) {
+            if (Input.IsKeyDown(Keys.W) || Input.IsKeyDown(Keys.Up))
+            {
                 translation.Z = -KeyboardMovementSpeed.Z;
-            } else if (Input.IsKeyDown(Keys.S) || Input.IsKeyDown(Keys.Down)) {
+            }
+            else if (Input.IsKeyDown(Keys.S) || Input.IsKeyDown(Keys.Down))
+            {
                 translation.Z = KeyboardMovementSpeed.Z;
             }
 
-            if (Input.IsKeyDown(Keys.A) || Input.IsKeyDown(Keys.Left)) {
+            if (Input.IsKeyDown(Keys.A) || Input.IsKeyDown(Keys.Left))
+            {
                 translation.X = -KeyboardMovementSpeed.X;
-            } else if (Input.IsKeyDown(Keys.D) || Input.IsKeyDown(Keys.Right)) {
+            }
+            else if (Input.IsKeyDown(Keys.D) || Input.IsKeyDown(Keys.Right))
+            {
                 translation.X = KeyboardMovementSpeed.X;
             }
 
-            if (Input.IsKeyDown(Keys.Q)) {
+            if (Input.IsKeyDown(Keys.Q))
+            {
                 translation.Y = -KeyboardMovementSpeed.Y;
-            } else if (Input.IsKeyDown(Keys.E)) {
+            }
+            else if (Input.IsKeyDown(Keys.E))
+            {
                 translation.Y = KeyboardMovementSpeed.Y;
             }
 
             // Alternative translation speed
-            if (Input.IsKeyDown(Keys.LeftShift) || Input.IsKeyDown(Keys.RightShift)) {
+            if (Input.IsKeyDown(Keys.LeftShift) || Input.IsKeyDown(Keys.RightShift))
+            {
                 translation *= SpeedFactor;
             }
 
             // Rotate with keyboard
-            if (Input.IsKeyDown(Keys.NumPad2)) {
+            if (Input.IsKeyDown(Keys.NumPad2))
+            {
                 pitch = KeyboardRotationSpeed.X;
-            } else if (Input.IsKeyDown(Keys.NumPad8)) {
+            }
+            else if (Input.IsKeyDown(Keys.NumPad8))
+            {
                 pitch = -KeyboardRotationSpeed.X;
             }
 
-            if (Input.IsKeyDown(Keys.NumPad4)) {
+            if (Input.IsKeyDown(Keys.NumPad4))
+            {
                 yaw = KeyboardRotationSpeed.Y;
-            } else if (Input.IsKeyDown(Keys.NumPad6)) {
+            }
+            else if (Input.IsKeyDown(Keys.NumPad6))
+            {
                 yaw = -KeyboardRotationSpeed.Y;
             }
 
             // Rotate with mouse
-            if (Input.IsMouseButtonDown(MouseButton.Right)) {
+            if (Input.IsMouseButtonDown(MouseButton.Right))
+            {
                 Input.LockMousePosition();
                 Game.IsMouseVisible = false;
 
                 yaw = -Input.MouseDelta.X * MouseRotationSpeed.X;
                 pitch = -Input.MouseDelta.Y * MouseRotationSpeed.Y;
-            } else {
+            }
+            else
+            {
                 Input.UnlockMousePosition();
                 Game.IsMouseVisible = true;
             }
 
             // Handle gestures
-            foreach (var gestureEvent in Input.GestureEvents) {
-                switch (gestureEvent.Type) {
+            foreach (var gestureEvent in Input.GestureEvents)
+            {
+                switch (gestureEvent.Type)
+                {
                     // Rotate by dragging
                     case GestureType.Drag:
                         var drag = (GestureEventDrag)gestureEvent;
@@ -128,7 +155,8 @@ namespace Presentation {
             }
         }
 
-        private void UpdateTransform() {
+        private void UpdateTransform()
+        {
             var elapsedTime = (float)Game.UpdateTime.Elapsed.TotalSeconds;
 
             translation *= elapsedTime;

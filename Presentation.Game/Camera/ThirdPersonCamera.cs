@@ -8,8 +8,10 @@ using Xenko.Engine.Events;
 using Xenko.Physics;
 using Presentation.Player;
 
-namespace Presentation.Camera {
-    public class ThirdPersonCamera : SyncScript {
+namespace Presentation.Camera
+{
+    public class ThirdPersonCamera : SyncScript
+    {
         /// <summary>
         /// Starting camera distance from the target
         /// </summary>
@@ -64,19 +66,24 @@ namespace Presentation.Camera {
         /// <summary>
         /// Raycast between the camera and its target. The script assumes the camera is a child entity of its target.
         /// </summary>
-        private void UpdateCameraRaycast() {
+        private void UpdateCameraRaycast()
+        {
             var maxLength = DefaultDistance;
             var cameraVector = new Vector3(0, 0, DefaultDistance);
             Entity.GetParent().Transform.Rotation.Rotate(ref cameraVector);
 
-            if (ConeRadius <= 0) {
+            if (ConeRadius <= 0)
+            {
                 // If the cone radius
                 var raycastStart = Entity.GetParent().Transform.WorldMatrix.TranslationVector;
                 var hitResult = this.GetSimulation().Raycast(raycastStart, raycastStart + cameraVector);
-                if (hitResult.Succeeded) {
+                if (hitResult.Succeeded)
+                {
                     maxLength = Math.Min(DefaultDistance, (raycastStart - hitResult.Point).Length());
                 }
-            } else {
+            }
+            else
+            {
                 // If the cone radius is > 0 we will sweep an actual cone and see where it collides
                 var fromMatrix = Matrix.Translation(0, 0, -DefaultDistance * 0.5f)
                                  * Entity.GetParent().Transform.WorldMatrix;
@@ -89,20 +96,24 @@ namespace Presentation.Camera {
 
                 this.GetSimulation().ShapeSweepPenetrating(coneShape, fromMatrix, toMatrix, resultsOutput, cfg, cfgf);
 
-                foreach (var result in resultsOutput) {
-                    if (result.Succeeded) {
+                foreach (var result in resultsOutput)
+                {
+                    if (result.Succeeded)
+                    {
                         var signedVector = result.Point - Entity.GetParent().Transform.WorldMatrix.TranslationVector;
                         var signedDistance = Vector3.Dot(cameraVector, signedVector);
 
                         var currentLength = DefaultDistance * result.HitFraction;
-                        if (signedDistance > 0 && currentLength < maxLength) {
+                        if (signedDistance > 0 && currentLength < maxLength)
+                        {
                             maxLength = currentLength;
                         }
                     }
                 }
             }
 
-            if (maxLength < MinimumDistance) {
+            if (maxLength < MinimumDistance)
+            {
                 maxLength = MinimumDistance;
             }
 
@@ -112,13 +123,15 @@ namespace Presentation.Camera {
         /// <summary>
         /// Raycast between the camera and its target. The script assumes the camera is a child entity of its target.
         /// </summary>
-        private void UpdateCameraOrientation() {
+        private void UpdateCameraOrientation()
+        {
             var dt = this.GetSimulation().FixedTimeStep;
 
             // Camera movement from player input
             cameraDirectionEvent.TryReceive(out Vector2 cameraMovement);
 
-            if (InvertY) {
+            if (InvertY)
+            {
                 cameraMovement.Y *= -1;
             }
 
@@ -126,7 +139,8 @@ namespace Presentation.Camera {
             targetRotationXYZ.X = Math.Max(targetRotationXYZ.X, -MaxVerticalAngle);
             targetRotationXYZ.X = Math.Min(targetRotationXYZ.X, -MinVerticalAngle);
 
-            if (InvertX) {
+            if (InvertX)
+            {
                 cameraMovement.X *= -1;
             }
 
@@ -137,19 +151,22 @@ namespace Presentation.Camera {
             Entity.GetParent().Transform.RotationEulerXYZ = new Vector3(MathUtil.DegreesToRadians(cameraRotationXYZ.X), MathUtil.DegreesToRadians(cameraRotationXYZ.Y), 0);
         }
 
-        public override void Update() {
+        public override void Update()
+        {
             UpdateCameraRaycast();
 
             UpdateCameraOrientation();
         }
 
-        public override void Start() {
+        public override void Start()
+        {
             base.Start();
 
             coneShape = new ConeColliderShape(DefaultDistance, ConeRadius, ShapeOrientation.UpZ);
             resultsOutput = new List<HitResult>();
 
-            if (Entity.GetParent() == null) {
+            if (Entity.GetParent() == null)
+            {
                 throw new ArgumentException("ThirdPersonCamera should be placed as a child entity of its target entity!");
             }
         }

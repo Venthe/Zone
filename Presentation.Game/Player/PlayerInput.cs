@@ -8,8 +8,10 @@ using Xenko.Engine.Events;
 using Xenko.Input;
 using Presentation.Core;
 
-namespace Presentation.Player {
-    public class PlayerInput : SyncScript {
+namespace Presentation.Player
+{
+    public class PlayerInput : SyncScript
+    {
         /// <summary>
         /// Raised every frame with the intended direction of movement from the player.
         /// </summary>
@@ -40,26 +42,31 @@ namespace Presentation.Player {
 
         public List<Keys> KeysJump { get; } = new List<Keys>();
 
-        public override void Update() {
+        public override void Update()
+        {
             // Character movement: should be camera-aware
             {
                 // Left stick: movement
                 var moveDirection = Input.GetLeftThumbAny(DeadZone);
 
                 // Keyboard: movement
-                if (KeysLeft.Any(key => Input.IsKeyDown(key))) {
+                if (KeysLeft.Any(key => Input.IsKeyDown(key)))
+                {
                     moveDirection += -Vector2.UnitX;
                 }
 
-                if (KeysRight.Any(key => Input.IsKeyDown(key))) {
+                if (KeysRight.Any(key => Input.IsKeyDown(key)))
+                {
                     moveDirection += +Vector2.UnitX;
                 }
 
-                if (KeysUp.Any(key => Input.IsKeyDown(key))) {
+                if (KeysUp.Any(key => Input.IsKeyDown(key)))
+                {
                     moveDirection += +Vector2.UnitY;
                 }
 
-                if (KeysDown.Any(key => Input.IsKeyDown(key))) {
+                if (KeysDown.Any(key => Input.IsKeyDown(key)))
+                {
                     moveDirection += -Vector2.UnitY;
                 }
 
@@ -71,12 +78,18 @@ namespace Presentation.Player {
                 // Adjust vector's magnitute - worldSpeed has been normalized
                 var moveLength = moveDirection.Length();
                 var isDeadZoneLeft = moveLength < DeadZone;
-                if (isDeadZoneLeft) {
+                if (isDeadZoneLeft)
+                {
                     worldSpeed = Vector3.Zero;
-                } else {
-                    if (moveLength > 1) {
+                }
+                else
+                {
+                    if (moveLength > 1)
+                    {
                         moveLength = 1;
-                    } else {
+                    }
+                    else
+                    {
                         moveLength = (moveLength - DeadZone) / (1f - DeadZone);
                     }
 
@@ -91,20 +104,26 @@ namespace Presentation.Player {
                 // Right stick: camera rotation
                 var cameraDirection = Input.GetRightThumbAny(DeadZone);
                 var isDeadZoneRight = cameraDirection.Length() < DeadZone;
-                if (isDeadZoneRight) {
+                if (isDeadZoneRight)
+                {
                     cameraDirection = Vector2.Zero;
-                } else {
+                }
+                else
+                {
                     cameraDirection.Normalize();
                 }
 
                 // Mouse-based camera rotation. Only enabled after you click the screen to lock your cursor, pressing escape cancels this
-                if (Input.IsMouseButtonDown(MouseButton.Right)) {
+                if (Input.IsMouseButtonDown(MouseButton.Right))
+                {
                     Input.LockMousePosition(true);
                 }
-                if (Input.IsMouseButtonReleased(MouseButton.Right)) {
+                if (Input.IsMouseButtonReleased(MouseButton.Right))
+                {
                     Input.UnlockMousePosition();
                 }
-                if (Input.IsMousePositionLocked) {
+                if (Input.IsMousePositionLocked)
+                {
                     cameraDirection += new Vector2(Input.MouseDelta.X, -Input.MouseDelta.Y) * MouseSensitivity;
                 }
 

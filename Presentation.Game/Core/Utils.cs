@@ -3,9 +3,12 @@
 using Xenko.Core.Mathematics;
 using Xenko.Engine;
 
-namespace Presentation.Core {
-    public static class Utils {
-        public static Vector3 LogicDirectionToWorldDirection(Vector2 logicDirection, CameraComponent camera, Vector3 upVector) {
+namespace Presentation.Core
+{
+    public static class Utils
+    {
+        public static Vector3 LogicDirectionToWorldDirection(Vector2 logicDirection, CameraComponent camera, Vector3 upVector)
+        {
             var inverseView = Matrix.Invert(camera.ViewMatrix);
 
             var forward = Vector3.Cross(upVector, inverseView.Right);
