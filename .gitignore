@@ -345,6 +345,7 @@ healthchecksdb
 *.lock
 *.lock.json
 .vs/
+.vscode/
 _ReSharper*
 *.suo
 *.VC.db

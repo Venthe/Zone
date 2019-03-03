@@ -10,12 +10,7 @@ namespace Presentation.Core
         public static bool IsGamePadButtonDown(this InputManager input, GamePadButton button, int index)
         {
             var gamepad = input.GetGamePadByIndex(index);
-            if (gamepad == null)
-            {
-                return false;
-            }
-
-            return (gamepad.State.Buttons & button) == button;
+            return gamepad != null && (gamepad.State.Buttons & button) == button;
         }
 
         public static bool IsGamePadButtonDownAny(this InputManager input, GamePadButton button)
