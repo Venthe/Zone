@@ -228,6 +228,15 @@ namespace Engine.Core.SPECIAL.PerksNS
         // Lonesome Road; Companion
         public const string CamaraderE = "";
         #endregion Identifiers
+
+        #region Types
+        public const string Regular = "Regular";
+        public const string Companion = "Companion";
+        public const string Special = "Special";
+        public const string Implant = "Implant";
+        public const string Unarmed = "Unarmed";
+        #endregion Type
+
         private readonly IReadOnlyRepository<IBaseTranslation, string> translations = new PerkTranslationRepository();
 
         public Perk(string id, Script requirements)

@@ -12,7 +12,7 @@ namespace Engine.Core.SPECIAL.PerksNS
 
         public Perks()
         {
-            this.perks = new InMemoryRepository<Perk, string>();
+            perks = new InMemoryRepository<Perk, string>();
         }
 
         public void Add(string id) => perks.Add(perkRepository.GetById(id));

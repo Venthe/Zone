@@ -2,8 +2,10 @@
 using Engine.Core.SPECIAL.AttributesNS.DerivedNS;
 using Engine.Core.SPECIAL.KarmaNS;
 using Engine.Core.SPECIAL.PerksNS;
+using Engine.Core.SPECIAL.RadiationNS;
 using Engine.Core.SPECIAL.ReputationNS;
 using Engine.Core.SPECIAL.SkillsNS;
+using Engine.Core.SPECIAL.TraitsNS;
 
 namespace Engine.Core.SPECIAL
 {
@@ -13,14 +15,17 @@ namespace Engine.Core.SPECIAL
 
         public int Level { get; } = 1;
         public string Name { get; set; }
+        public int Experience { get; } = 0;
 
+        public Radiation Radiation { get; }
         public Attributes Attributes { get; }
         public DerivedAttributes DerivedAttributes { get; }
         public Karma Karma { get; }
-        // TODO: Add traits
+        public Traits Traits { get; }
         // TODO: Add Equipment
         // TODO: Add Companion(s)
         // TDOD: Effects
+        // Mutations?
         public Reputation Reputation { get; }
         public Skills Skills { get; }
         public Perks Perks { get; }
@@ -33,8 +38,10 @@ namespace Engine.Core.SPECIAL
             Karma = new Karma(this);
             Reputation = new Reputation();
             Perks = new Perks();
-        }
+            Radiation = new Radiation();
+            Traits = new Traits();
+    }
 
-        public override string ToString() => $"{Name}, level {Level}\n{Karma}\n{Reputation}\n{Attributes}\n{DerivedAttributes}\n{Skills}\n{Perks}";
+        public override string ToString() => $"{Name}, level {Level}\n{Karma}\n{Reputation}\n{Attributes}\n{DerivedAttributes}\n{Skills}\n{Perks}\n{Traits}";
     }
 }

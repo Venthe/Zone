@@ -1,22 +1,30 @@
 ﻿using System;
 using Engine.Core.Sharedkernel.Repositories;
+using Engine.Core.Sharedkernel.Utilities;
 
 namespace Engine.Core.Scripting
 {
     public class Script : AbstractEntity<string>
     {
-        // FIXME: Workaround
-        public static Game Game;
-        private ScriptRepository scriptRepository;
-        private Func<Game, ScriptRepository, object, object> script;
+        private readonly ScriptRepository scriptRepository;
+        private readonly dynamic baseObject;
+        private readonly Func<ScriptRepository, dynamic, dynamic, dynamic> script;
 
-        public Script(string id, Func<Game, ScriptRepository, object, object> script)
+        public Script(dynamic baseObject, string id, Func<ScriptRepository, dynamic, dynamic, dynamic> script)
         {
+            this.baseObject = baseObject;
             Id = id;
             this.script = script;
             scriptRepository = new ScriptRepository();
         }
 
-        public object Execute(object dependency = null) => script?.Invoke(Game, scriptRepository, dependency);
+        public object Execute(dynamic argument = null) => script?.Invoke(scriptRepository, baseObject, argument);
+
+        public static Script Empty => new Script(null, "EmptyScript", (scriptRepository, baseObject, _) =>
+        {
+            new LoggerService(typeof(Script)).Log("Script not found");
+            return null;
+        }
+        );
     }
 }

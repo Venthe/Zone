@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using Engine.Core.Scripting;
 using Engine.Core.SPECIAL.PerksNS;
 
@@ -14,11 +15,22 @@ namespace Engine.Core.CLI
             game.Player.Name = "Test";
 
             Console.WriteLine(game.Player);
-
-            var scripts = new ScriptRepository();
-            scripts.GetById("testAddPerk").Execute("BlackWidow");
+            TestConsole();
 
             Console.WriteLine(game.Player);
+        }
+
+        private static void TestConsole()
+        {
+            var scripts = new ScriptRepository();
+            Console.WriteLine("Type command...");
+
+            while (true) {
+                string input = Console.ReadLine();
+                var splittedInput = input.Split(" ");
+
+                scripts.GetById(splittedInput[0]).Execute(splittedInput.Skip(1).ToList<string>());
+            }
         }
     }
 }

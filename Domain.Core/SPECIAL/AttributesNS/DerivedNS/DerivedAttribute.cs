@@ -20,7 +20,6 @@ namespace Engine.Core.SPECIAL.AttributesNS.DerivedNS
         public static readonly string RadiationResistance = "RadiationResistance";
         public static readonly string ReloadSpeed = "ReloadSpeed";
         public static readonly string SkillRate = "SkillRate";
-        public static readonly string Sleep = "Sleep";
         public static readonly string Starvation = "Starvation";
         public static readonly string UnarmedDamage = "UnarmedDamage";
 

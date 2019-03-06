@@ -27,7 +27,6 @@ namespace Engine.Core.SPECIAL.AttributesNS.DerivedNS
                 [DerivedAttribute.RadiationResistance] = new DerivedAttribute(DerivedAttribute.RadiationResistance),
                 [DerivedAttribute.ReloadSpeed] = new DerivedAttribute(DerivedAttribute.ReloadSpeed),
                 [DerivedAttribute.SkillRate] = new DerivedAttribute(DerivedAttribute.SkillRate),
-                [DerivedAttribute.Sleep] = new DerivedAttribute(DerivedAttribute.Sleep),
                 [DerivedAttribute.Starvation] = new DerivedAttribute(DerivedAttribute.Starvation),
                 [DerivedAttribute.UnarmedDamage] = new DerivedAttribute(DerivedAttribute.UnarmedDamage)
             };
