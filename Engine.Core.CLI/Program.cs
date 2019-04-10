@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Linq;
 using Engine.Core.Scripting;
-using Engine.Core.SPECIAL.PerksNS;
 
 namespace Engine.Core.CLI
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             var game = new Game();
             ApplicationInitializer.LoadSampleData(ref game);

@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Engine.Core.Scripting;
+﻿using Engine.Core.Scripting;
 
 namespace Engine.Core.SPECIAL.RadiationNS
 {
     public class Radiation
     {
-        private ScriptRepository scriptRepository = new ScriptRepository();
+        private readonly ScriptRepository scriptRepository = new ScriptRepository();
         private int value = 0;
 
         public int Value

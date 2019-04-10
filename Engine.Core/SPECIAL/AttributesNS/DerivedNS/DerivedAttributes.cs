@@ -6,7 +6,7 @@ namespace Engine.Core.SPECIAL.AttributesNS.DerivedNS
 {
     public class DerivedAttributes : IReadOnlyRepository<DerivedAttribute, string>
     {
-        private IReadOnlyRepository<DerivedAttribute, string> attributes;
+        private readonly IReadOnlyRepository<DerivedAttribute, string> attributes;
 
         public DerivedAttributes()
         {

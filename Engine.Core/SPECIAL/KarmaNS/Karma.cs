@@ -1,4 +1,5 @@
-﻿using Engine.Core.Sharedkernel.Utilities;
+﻿using System;
+using Engine.Core.Sharedkernel.Utilities;
 
 namespace Engine.Core.SPECIAL.KarmaNS
 {
@@ -10,7 +11,7 @@ namespace Engine.Core.SPECIAL.KarmaNS
         private readonly KarmaTranslationRepository translationRepository = new KarmaTranslationRepository();
 
         private int value;
-        private CharacterAggregate CharacterAggregate;
+        private readonly CharacterAggregate CharacterAggregate;
 
         public Karma(CharacterAggregate characterAggregate)
         {
@@ -23,11 +24,11 @@ namespace Engine.Core.SPECIAL.KarmaNS
             get {
                 var translation = translationRepository.GetById(CharacterAggregate.Level);
 
-                if (Classification.Equals(KarmaClassification.Bad))
+                if (Classification.Equals(KarmaClassification.Bad, StringComparison.InvariantCulture))
                 {
                     return translation?.BadKarmaDescription ?? "";
                 }
-                else if (Classification.Equals(KarmaClassification.Good))
+                else if (Classification.Equals(KarmaClassification.Good, StringComparison.InvariantCulture))
                 {
                     return translation?.GoodKarmaDescription ?? "";
                 }
@@ -52,7 +53,6 @@ namespace Engine.Core.SPECIAL.KarmaNS
                 }
             }
         }
-
 
         public string Level
         {

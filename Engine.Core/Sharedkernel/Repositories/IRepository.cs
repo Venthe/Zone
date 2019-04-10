@@ -7,7 +7,7 @@ namespace Engine.Core.Sharedkernel.Repositories
         where TIdType : IEquatable<TIdType>
     {
         void Add(TEntityType entity);
-        void Delete(TIdType entity);
+        void Delete(TIdType id);
         void Edit(TEntityType entity);
     }
 }

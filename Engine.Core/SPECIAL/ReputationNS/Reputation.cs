@@ -25,10 +25,10 @@ namespace Engine.Core.SPECIAL.ReputationNS
         public const string SoftHeartedDevil = "SoftHeartedDevil";
         public const string WildChild = "WildChild";
 
-        private ReputationTranslationRepository reputationTranslationRepository = new ReputationTranslationRepository();
+        private readonly ReputationTranslationRepository reputationTranslationRepository = new ReputationTranslationRepository();
 
         // This should be per faction/city
-        private int[] reputationRange = new int[3] { 15, 50, 100 };
+        private readonly int[] reputationRange = new int[3] { 15, 50, 100 };
 
         public IBaseTranslation Translation => reputationTranslationRepository.GetById(GetIdFromReputationRank());
 
@@ -39,17 +39,10 @@ namespace Engine.Core.SPECIAL.ReputationNS
         public ReputationRank FameReputationRank => GetReputationRank(Fame);
         public ReputationRank InfamyReputationRank => GetReputationRank(Infamy);
 
-        public string Level
-        {
-            get {
-                if (FameReputationRank.Equals(InfamyReputationRank) || ((int)FameReputationRank >= 3 && (int)InfamyReputationRank >= 3))
-                {
-                    return ReputationLevel.Neutral;
-                }
+        public string Level => IsReputationRankNeutral() ? ReputationLevel.Neutral : CalculateReputatinLevel();
 
-                return (int)FameReputationRank - (int)InfamyReputationRank < 0 ? ReputationLevel.Negative : ReputationLevel.Positive;
-            }
-        }
+        private bool IsReputationRankNeutral() => FameReputationRank.Equals(InfamyReputationRank) || ((int)FameReputationRank >= 3 && (int)InfamyReputationRank >= 3);
+        private string CalculateReputatinLevel() => (int)FameReputationRank - (int)InfamyReputationRank < 0 ? ReputationLevel.Negative : ReputationLevel.Positive;
 
         private string GetIdFromReputationRank()
         {

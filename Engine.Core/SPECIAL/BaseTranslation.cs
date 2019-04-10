@@ -14,6 +14,6 @@ namespace Engine.Core.SPECIAL
             Id = id;
         }
 
-        public static BaseTranslation Empty = new BaseTranslation("", "", "");
+        public static readonly BaseTranslation Empty = new BaseTranslation("", "", "");
     }
 }

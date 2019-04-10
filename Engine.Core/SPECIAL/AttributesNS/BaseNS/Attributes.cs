@@ -6,7 +6,7 @@ namespace Engine.Core.SPECIAL.AttributesNS.BaseNS
 {
     public class Attributes : IReadOnlyRepository<Attribute, string>
     {
-        private IReadOnlyRepository<Attribute, string> attributes;
+        private readonly IReadOnlyRepository<Attribute, string> attributes;
         internal const int DefaultAttributePointsToBeDistributed = 5;
 
         internal Attributes()

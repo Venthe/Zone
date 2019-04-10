@@ -20,7 +20,7 @@ namespace Engine.Core.Scripting
 
         public object Execute(dynamic argument = null) => script?.Invoke(scriptRepository, baseObject, argument);
 
-        public static Script Empty => new Script(null, "EmptyScript", (scriptRepository, baseObject, _) =>
+        public static Script Empty => new Script(null, "EmptyScript", (_, __, ___) =>
         {
             new LoggerService(typeof(Script)).Log("Script not found");
             return null;

@@ -23,7 +23,7 @@ namespace Engine.Core.SPECIAL.AttributesNS.DerivedNS
         public static readonly string Starvation = "Starvation";
         public static readonly string UnarmedDamage = "UnarmedDamage";
 
-        private ScriptRepository scriptRepository = new ScriptRepository();
+        private readonly ScriptRepository scriptRepository = new ScriptRepository();
         private readonly IReadOnlyRepository<IBaseTranslation, string> translations = new DerivedAttributeTranslationRepository();
 
         public DerivedAttribute(string id)
