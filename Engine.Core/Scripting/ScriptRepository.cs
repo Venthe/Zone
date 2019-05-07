@@ -4,6 +4,6 @@ namespace Engine.Core.Scripting
 {
     public class ScriptRepository : AbstractInMemoryRepository<Script, string>
     {
-        new public Script GetById(string id) => base.GetById(id) ?? Script.Empty;
+        new public Script GetById(string id) => base.GetById(id) ?? Script.Empty(id);
     }
 }
