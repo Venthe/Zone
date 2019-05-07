@@ -8,9 +8,9 @@ using Engine.Core.SPECIAL.PerksNS;
 using Engine.Core.SPECIAL.ReputationNS;
 using Engine.Core.SPECIAL.SkillsNS;
 
-namespace Engine.Core.CLI
+namespace Engine.Core.Initializer
 {
-    public class ApplicationInitializer
+    public static class ApplicationInitializer
     {
         public static void LoadSampleData(ref Game game)
         {

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using Engine.Core.Initializer;
 using Engine.Core.Scripting;
 
 namespace Engine.Core.CLI

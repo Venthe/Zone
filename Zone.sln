@@ -17,6 +17,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Engine.Core", "Engine.Core\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Engine.Core.CLI", "Engine.Core.CLI\Engine.Core.CLI.csproj", "{B5DA7999-DD03-4113-87F3-AB5BAA2A1B03}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Engine.Core.Initializer", "Engine.Core.Initializer\Engine.Core.Initializer.csproj", "{7C751C09-DA04-47EA-BAB8-7751E836DA52}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +33,10 @@ Global
 		{B5DA7999-DD03-4113-87F3-AB5BAA2A1B03}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B5DA7999-DD03-4113-87F3-AB5BAA2A1B03}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B5DA7999-DD03-4113-87F3-AB5BAA2A1B03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C751C09-DA04-47EA-BAB8-7751E836DA52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C751C09-DA04-47EA-BAB8-7751E836DA52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C751C09-DA04-47EA-BAB8-7751E836DA52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C751C09-DA04-47EA-BAB8-7751E836DA52}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
