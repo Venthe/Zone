@@ -17,7 +17,10 @@ namespace Engine.Core.Sharedkernel.Repositories
 
         public InMemoryRepository(IDictionary<TIdType, TEntityType> database)
         {
-            Database = database;
+            if (Database == null)
+            {
+                Database = database;
+            }
         }
 
         protected IDictionary<TIdType, TEntityType> Database { get; }

@@ -2,35 +2,54 @@
 using System.Linq;
 using Engine.Core.Initializer;
 using Engine.Core.Scripting;
+using Engine.Core.Sharedkernel.Repositories;
 
 namespace Engine.Core.CLI
 {
     class Program
     {
+        private static IRepository<Script, string> scriptRepository;
+
         static void Main()
         {
-            var game = new Game();
-            ApplicationInitializer.LoadSampleData(ref game);
-
-            game.Player.Name = "Test";
-
-            Console.WriteLine(game.Player);
-            TestConsole();
-
-            Console.WriteLine(game.Player);
+            WireServices();
+            InitializeGame();
+            StartTestConsole();
         }
 
-        private static void TestConsole()
+        private static void WireServices()
         {
-            var scripts = new ScriptRepository();
-            Console.WriteLine("Type command...");
+            scriptRepository = new ScriptRepository();
+        }
 
-            while (true) {
-                string input = Console.ReadLine();
-                var splittedInput = input.Split(" ");
+        private static void InitializeGame()
+        {
+            var game = GameInitializer.Initialize();
+            GameInitializer.LoadSampleData(ref game);
+        }
 
-                scripts.GetById(splittedInput[0]).Execute(splittedInput.Skip(1).ToList<string>());
+        private static void StartTestConsole()
+        {
+            Console.WriteLine("Test console");
+
+            while (true)
+            {
+                Console.Write("> ");
+                string[] splittedInput = GetInput();
+
+                string id = splittedInput[0];
+                var argument = splittedInput.Skip(1).ToList();
+
+                scriptRepository.GetById(id).Execute(argument);
+                Console.WriteLine();
             }
+        }
+
+        private static string[] GetInput()
+        {
+            string input = Console.ReadLine();
+            var substrings = input.Split(" ");
+            return substrings;
         }
     }
 }

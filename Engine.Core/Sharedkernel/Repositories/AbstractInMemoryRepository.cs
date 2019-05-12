@@ -9,11 +9,11 @@ namespace Engine.Core.Sharedkernel.Repositories
     {
         protected readonly static IRepository<TEntityType, TIdType> repository = new InMemoryRepository<TEntityType, TIdType>();
 
-        public void Add(TEntityType entity) => repository.Add(entity);
-        public void Delete(TIdType id) => repository.Delete(id);
-        public void Edit(TEntityType entity) => repository.Edit(entity);
-        public TEntityType GetById(TIdType id) => repository.GetById(id);
-        public IEnumerable<TEntityType> List() => repository.List();
-        public IEnumerable<TEntityType> List(Func<TEntityType, bool> predicate) => repository.List(predicate);
+        public virtual void Add(TEntityType entity) => repository.Add(entity);
+        public virtual void Delete(TIdType id) => repository.Delete(id);
+        public virtual void Edit(TEntityType entity) => repository.Edit(entity);
+        public virtual TEntityType GetById(TIdType id) => repository.GetById(id);
+        public virtual IEnumerable<TEntityType> List() => repository.List();
+        public virtual IEnumerable<TEntityType> List(Func<TEntityType, bool> predicate) => repository.List(predicate);
     }
 }
