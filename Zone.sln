@@ -6,9 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{074C9503-1CF1-4BDA-8140-8C7D2790CFC2}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
-		.gitattributes = .gitattributes
 		.gitignore = .gitignore
 		BACKLOG.md = BACKLOG.md
+		build.ps1 = build.ps1
 		LICENSE.md = LICENSE.md
 		README.md = README.md
 	EndProjectSection
@@ -17,7 +17,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Engine.Core", "Engine.Core\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Engine.Core.CLI", "Engine.Core.CLI\Engine.Core.CLI.csproj", "{B5DA7999-DD03-4113-87F3-AB5BAA2A1B03}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Engine.Core.Initializer", "Engine.Core.Initializer\Engine.Core.Initializer.csproj", "{7C751C09-DA04-47EA-BAB8-7751E836DA52}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Engine.Core.Initializer", "Engine.Core.Initializer\Engine.Core.Initializer.csproj", "{7C751C09-DA04-47EA-BAB8-7751E836DA52}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
