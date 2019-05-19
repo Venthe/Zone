@@ -1,4 +1,7 @@
-﻿using Engine.Core.Scripting;
+﻿using System;
+using System.Collections;
+using Engine.Core.Scripting;
+using Engine.Core.Sharedkernel.Utilities;
 using Engine.Core.SPECIAL;
 using Engine.Core.SPECIAL.AttributesNS.BaseNS;
 using Engine.Core.SPECIAL.AttributesNS.DerivedNS;
@@ -9,17 +12,25 @@ namespace Engine.Core.Initializer.GeneralRepositories
 {
     class ScriptInitializer : IInitializer
     {
+        ILoggerService loggerService;
+        IScriptRepository scripts;
+
+        public ScriptInitializer()
+        {
+            loggerService = new LoggerService(typeof(ScriptInitializer));
+            scripts = new ScriptRepository();
+        }
+
         public void Initialize(ref Game game)
         {
-            var scripts = new ScriptRepository();
 
             // TODO: Fixme
             scripts.Add(new Script(game, "sexGod", (scriptsLibrary, baseObject, argument) => false));
 
             scripts.Add(new Script(game.Player, "objSexRating", (scriptsLibrary, player, argument) =>
             {
-                var attributes = ((CharacterAggregate)player).Attributes;
-                var perks = ((CharacterAggregate)player).Perks;
+                var attributes = ((ICharacter)player).Attributes;
+                var perks = ((ICharacter)player).Perks;
 
                 var charisma = attributes.GetById(Attribute.Charisma).Value;
                 var endurance = attributes.GetById(Attribute.Endurance).Value;
@@ -54,35 +65,35 @@ namespace Engine.Core.Initializer.GeneralRepositories
             {
                 var defaultArgumentValue = 5;
                 var statValue = argument ?? defaultArgumentValue;
-                var luckValue = ((CharacterAggregate)player).Attributes.GetById(Attribute.Luck).Value;
+                var luckValue = ((ICharacter)player).Attributes.GetById(Attribute.Luck).Value;
                 return 2 + (2 * (int)statValue) + (luckValue / 2);
             }));
 
-            scripts.Add(new Script(game.Player.Attributes, DerivedAttribute.ActionPoints, (scriptsLibrary, attributes, argument) => 65 + (((Attributes)attributes).GetById(Attribute.Agility).Value * 3)));
+            scripts.Add(new Script(game.Player.Attributes, DeprivedAttributeLabel.ActionPoints, (scriptsLibrary, attributes, argument) => 65 + (((IAttributes)attributes).GetById(Attribute.Agility).Value * 3)));
 
-            scripts.Add(new Script(game.Player.Attributes, DerivedAttribute.CarryWeight, (scriptsLibrary, attributes, argument) => 150 + (((Attributes)attributes).GetById(Attribute.Strength).Value * 10)));
+            scripts.Add(new Script(game.Player.Attributes, DeprivedAttributeLabel.CarryWeight, (scriptsLibrary, attributes, argument) => 150 + (((IAttributes)attributes).GetById(Attribute.Strength).Value * 10)));
 
-            scripts.Add(new Script(game.Player.Attributes, DerivedAttribute.CompanionNerve, (scriptsLibrary, attributes, argument) => (int)(0.05 * ((Attributes)attributes).GetById(Attribute.Charisma).Value)));
+            scripts.Add(new Script(game.Player.Attributes, DeprivedAttributeLabel.CompanionNerve, (scriptsLibrary, attributes, argument) => (int)(0.05 * ((IAttributes)attributes).GetById(Attribute.Charisma).Value)));
 
-            scripts.Add(new Script(game.Player.Attributes, DerivedAttribute.CriticalChance, (scriptsLibrary, attributes, argument) => (int)(0.01 * ((Attributes)attributes).GetById(Attribute.Luck).Value)));
+            scripts.Add(new Script(game.Player.Attributes, DeprivedAttributeLabel.CriticalChance, (scriptsLibrary, attributes, argument) => (int)(0.01 * ((IAttributes)attributes).GetById(Attribute.Luck).Value)));
 
-            scripts.Add(new Script(game.Player, DerivedAttribute.HitPoints, (scriptsLibrary, player, argument) => (((CharacterAggregate)player).Level * 5) + 95 + (20 * ((CharacterAggregate)player).Attributes.GetById(Attribute.Endurance).Value)));
+            scripts.Add(new Script(game.Player, DeprivedAttributeLabel.HitPoints, (scriptsLibrary, player, argument) => (((ICharacter)player).Level.Level * 5) + 95 + (20 * ((ICharacter)player).Attributes.GetById(Attribute.Endurance).Value)));
 
-            scripts.Add(new Script(game.Player.Attributes, DerivedAttribute.MeleeDamage, (scriptsLibrary, attributes, argument) => (int)(0.5 * ((Attributes)attributes).GetById(Attribute.Strength).Value)));
+            scripts.Add(new Script(game.Player.Attributes, DeprivedAttributeLabel.MeleeDamage, (scriptsLibrary, attributes, argument) => (int)(0.5 * ((IAttributes)attributes).GetById(Attribute.Strength).Value)));
 
-            scripts.Add(new Script(game.Player.Attributes, DerivedAttribute.PoisonResistance, (scriptsLibrary, attributes, argument) => (5 * ((Attributes)attributes).GetById(Attribute.Endurance).Value) - 5));
+            scripts.Add(new Script(game.Player.Attributes, DeprivedAttributeLabel.PoisonResistance, (scriptsLibrary, attributes, argument) => (5 * ((IAttributes)attributes).GetById(Attribute.Endurance).Value) - 5));
 
-            scripts.Add(new Script(game.Player.Attributes, DerivedAttribute.RadiationResistance, (scriptsLibrary, attributes, argument) => (2 * ((Attributes)attributes).GetById(Attribute.Endurance).Value) - 2));
+            scripts.Add(new Script(game.Player.Attributes, DeprivedAttributeLabel.RadiationResistance, (scriptsLibrary, attributes, argument) => (2 * ((IAttributes)attributes).GetById(Attribute.Endurance).Value) - 2));
 
-            scripts.Add(new Script(game.Player.Attributes, DerivedAttribute.ReloadSpeed, (scriptsLibrary, attributes, argument) =>
+            scripts.Add(new Script(game.Player.Attributes, DeprivedAttributeLabel.ReloadSpeed, (scriptsLibrary, attributes, argument) =>
             {
-                float value = ((Attributes)attributes).GetById(Attribute.Agility).Value;
+                float value = ((IAttributes)attributes).GetById(Attribute.Agility).Value;
                 return (int)(value > 5 ? 0.1 * (value - 5) : 0);
             }));
 
-            scripts.Add(new Script(game.Player.Attributes, DerivedAttribute.SkillRate, (scriptsLibrary, attributes, argument) => (int)(10 + (0.5 * attributes.GetById(Attribute.Intelligence).Value))));
+            scripts.Add(new Script(game.Player.Attributes, DeprivedAttributeLabel.SkillRate, (scriptsLibrary, attributes, argument) => (int)(10 + (0.5 * attributes.GetById(Attribute.Intelligence).Value))));
 
-            scripts.Add(new Script(game.Player.Skills, DerivedAttribute.UnarmedDamage, (scriptsLibrary, skills, argument) => (int)(0.5 + (skills.GetById(Skill.Unarmed).Value / 20))));
+            scripts.Add(new Script(game.Player.Skills, DeprivedAttributeLabel.UnarmedDamage, (scriptsLibrary, skills, argument) => (int)(0.5 + (skills.GetById(Skill.Unarmed).Value / 20))));
 
             scripts.Add(new Script(game.Player.Perks, "addPerk", (scriptsLibrary, perks, perkName) =>
             {
@@ -97,14 +108,15 @@ namespace Engine.Core.Initializer.GeneralRepositories
 
             scripts.Add(new Script(null, "log", (_, __, argument) =>
             {
-                System.Console.WriteLine(argument);
+                string result = argument is IList ? (string)String.Join(" ", argument) : (string)argument.ToString();
+                loggerService.Log(result);
 
                 return null;
             }));
 
             scripts.Add(new Script(game.Player, "calculateExperienceNeededForNextLevel", (scriptsLibrary, player, argument) =>
             {
-                var level = ((CharacterAggregate)player).Level;
+                var level = ((ICharacter)player).Level.Level;
                 return 25 * ((3 * level) + 2) * (level - 1);
             }));
 

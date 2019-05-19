@@ -52,7 +52,5 @@ namespace Engine.Core.SPECIAL.AttributesNS.BaseNS
         public override int Value => BaseRank + TemporaryRankModifier < MinimumAttributeValue ? MinimumAttributeValue : BaseRank + TemporaryRankModifier;
 
         public override AttributeTranslation Translation => translations.GetById(Id);
-
-        public override string ToString() => $"{base.ToString()}; {Translation?.RankDescription[Value]}";
     }
 }

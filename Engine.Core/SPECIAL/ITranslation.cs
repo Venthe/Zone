@@ -1,6 +1,6 @@
 ﻿namespace Engine.Core.SPECIAL
 {
-    internal interface ITranslation<TTranslationType>
+    public interface ITranslation<TTranslationType>
     {
         TTranslationType Translation { get; }
     }

@@ -3,29 +3,8 @@
 namespace Engine.Core.SPECIAL.ReputationNS
 {
     // TODO: Add reputation per faction
-    public class Reputation : AbstractEntity<string>, ITranslatedEntity<IBaseTranslation, string>
-    {
-        public const string Neutral = "Neutral";
-        public const string Accepted = "Accepted";
-        public const string Liked = "Liked";
-        public const string Idolized = "Idolized";
-
-        public const string Shunned = "Shunned";
-        public const string Mixed = "Mixed";
-        public const string SmilingTroublemaker = "SmilingTroublemaker";
-        public const string GoodNaturedRascal = "GoodNaturedRascal";
-
-        public const string Hated = "Hated";
-        public const string SneeringPunk = "SneeringPunk";
-        public const string Unpredictable = "Unpredictable";
-        public const string DarkHero = "DarkHero";
-
-        public const string Vilified = "Vilified";
-        public const string MercifulThug = "MercifulThug";
-        public const string SoftHeartedDevil = "SoftHeartedDevil";
-        public const string WildChild = "WildChild";
-
-        private readonly ReputationTranslationRepository reputationTranslationRepository = new ReputationTranslationRepository();
+    internal class Reputation : AbstractEntity<string>, IReputation
+    {        private readonly ReputationTranslationRepository reputationTranslationRepository = new ReputationTranslationRepository();
 
         // This should be per faction/city
         private readonly int[] reputationRange = new int[3] { 15, 50, 100 };
@@ -53,80 +32,80 @@ namespace Engine.Core.SPECIAL.ReputationNS
             {
                 if (fameRank == ReputationRank.Rank1)
                 {
-                    return Neutral;
+                    return ReputationLabel.Neutral;
                 }
                 else if (fameRank == ReputationRank.Rank2)
                 {
-                    return Accepted;
+                    return ReputationLabel.Accepted;
                 }
                 else if (fameRank == ReputationRank.Rank3)
                 {
-                    return Liked;
+                    return ReputationLabel.Liked;
                 }
                 else if (fameRank == ReputationRank.Rank4)
                 {
-                    return Idolized;
+                    return ReputationLabel.Idolized;
                 }
             }
             else if (infamyRank == ReputationRank.Rank2)
             {
                 if (fameRank == ReputationRank.Rank1)
                 {
-                    return Shunned;
+                    return ReputationLabel.Shunned;
                 }
                 else if (fameRank == ReputationRank.Rank2)
                 {
-                    return Mixed;
+                    return ReputationLabel.Mixed;
                 }
                 else if (fameRank == ReputationRank.Rank3)
                 {
-                    return SmilingTroublemaker;
+                    return ReputationLabel.SmilingTroublemaker;
                 }
                 else if (fameRank == ReputationRank.Rank4)
                 {
-                    return GoodNaturedRascal;
+                    return ReputationLabel.GoodNaturedRascal;
                 }
             }
             else if (infamyRank == ReputationRank.Rank3)
             {
                 if (fameRank == ReputationRank.Rank1)
                 {
-                    return Hated;
+                    return ReputationLabel.Hated;
                 }
                 else if (fameRank == ReputationRank.Rank2)
                 {
-                    return SneeringPunk;
+                    return ReputationLabel.SneeringPunk;
                 }
                 else if (fameRank == ReputationRank.Rank3)
                 {
-                    return Unpredictable;
+                    return ReputationLabel.Unpredictable;
                 }
                 else if (fameRank == ReputationRank.Rank4)
                 {
-                    return DarkHero;
+                    return ReputationLabel.DarkHero;
                 }
             }
             else if (infamyRank == ReputationRank.Rank4)
             {
                 if (fameRank == ReputationRank.Rank1)
                 {
-                    return Vilified;
+                    return ReputationLabel.Vilified;
                 }
                 else if (fameRank == ReputationRank.Rank2)
                 {
-                    return MercifulThug;
+                    return ReputationLabel.MercifulThug;
                 }
                 else if (fameRank == ReputationRank.Rank3)
                 {
-                    return SoftHeartedDevil;
+                    return ReputationLabel.SoftHeartedDevil;
                 }
                 else if (fameRank == ReputationRank.Rank4)
                 {
-                    return WildChild;
+                    return ReputationLabel.WildChild;
                 }
             }
 
-            return Neutral;
+            return ReputationLabel.Neutral;
         }
 
         private ReputationRank GetReputationRank(int value)
@@ -145,16 +124,6 @@ namespace Engine.Core.SPECIAL.ReputationNS
             }
 
             return ReputationRank.Rank4;
-        }
-
-        public override string ToString() => $"[{Translation.Name}:{Level}], {FameReputationRank}:{Fame}, {InfamyReputationRank}:{Infamy}\n  {Translation.Description}";
-
-        public enum ReputationRank
-        {
-            Rank1 = 1,
-            Rank2 = 2,
-            Rank3 = 3,
-            Rank4 = 4,
         }
     }
 }

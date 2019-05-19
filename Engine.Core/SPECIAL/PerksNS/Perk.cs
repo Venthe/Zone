@@ -239,16 +239,16 @@ namespace Engine.Core.SPECIAL.PerksNS
 
         private readonly IReadOnlyRepository<IBaseTranslation, string> translations = new PerkTranslationRepository();
 
-        public Perk(string id, Script requirements)
+        public Perk(string id, Script requirements, bool isVisible = true)
         {
             Id = id;
             Requirements = requirements;
+            IsVisible = isVisible;
         }
 
         public IBaseTranslation Translation => translations.GetById(Id);
         public Script Requirements { get; set; }
+        public bool IsVisible { get; }
         public int Rank { get; set; } = 0;
-
-        public override string ToString() => $"[{Id}:{Translation?.Name}]\n  {Translation?.Description}";
     }
 }

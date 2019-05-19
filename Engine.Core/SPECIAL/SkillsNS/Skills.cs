@@ -6,7 +6,7 @@ using Engine.Core.SPECIAL.AttributesNS.BaseNS;
 
 namespace Engine.Core.SPECIAL.SkillsNS
 {
-    public class Skills : IReadOnlyRepository<Skill, string>
+    internal class Skills : ISkills
     {
         private const int MaxTagSkills = 3;
 
@@ -53,7 +53,5 @@ namespace Engine.Core.SPECIAL.SkillsNS
         public Skill GetById(string id) => skills.GetById(id);
         public IEnumerable<Skill> List() => skills.List();
         public IEnumerable<Skill> List(System.Func<Skill, bool> predicate) => skills.List(predicate);
-
-        public override string ToString() => "Skills:\n\t"+string.Join("\n\t", (from skill in skills.List() select skill.ToString()).ToList());
     }
 }

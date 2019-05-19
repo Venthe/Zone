@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using Engine.Core.Sharedkernel.Repositories;
 
 namespace Engine.Core.SPECIAL.TraitsNS
 {
-    public class Traits : IRepository<Trait, string>
+    internal class Traits : ITraits
     {
         private readonly IRepository<Trait, string> traits;
         private readonly IReadOnlyRepository<Trait, string> traitRepository = new TraitRepository();
@@ -22,7 +21,5 @@ namespace Engine.Core.SPECIAL.TraitsNS
         public Trait GetById(string id) => traits.GetById(id);
         public IEnumerable<Trait> List() => traits.List();
         public IEnumerable<Trait> List(Func<Trait, bool> predicate) => traits.List(predicate);
-
-        public override string ToString() => "Traits:\n" + string.Join("\n  ", (from trait in traits.List() select trait.ToString()).ToList());
     }
 }

@@ -1,6 +1,8 @@
-﻿using Engine.Core.SPECIAL.AttributesNS.BaseNS;
+﻿using Engine.Core.Sharedkernel.Utilities;
+using Engine.Core.SPECIAL.AttributesNS.BaseNS;
 using Engine.Core.SPECIAL.AttributesNS.DerivedNS;
 using Engine.Core.SPECIAL.KarmaNS;
+using Engine.Core.SPECIAL.LevelNS;
 using Engine.Core.SPECIAL.PerksNS;
 using Engine.Core.SPECIAL.RadiationNS;
 using Engine.Core.SPECIAL.ReputationNS;
@@ -9,28 +11,26 @@ using Engine.Core.SPECIAL.TraitsNS;
 
 namespace Engine.Core.SPECIAL
 {
-    public class CharacterAggregate
+    internal class CharacterAggregate : ICharacter
     {
-        public const int MaxLevel = 30;
+        private static readonly ILoggerService Logger = new LoggerService(typeof(CharacterAggregate));
 
-        public int Level { get; } = 1;
         public string Name { get; set; }
-        public int Experience { get; } = 0;
-
-        public Radiation Radiation { get; }
-        public Attributes Attributes { get; }
-        public DerivedAttributes DerivedAttributes { get; }
-        public Karma Karma { get; }
-        public Traits Traits { get; }
+        public ICharacterProgress Level { get; }
+        public IRadiation Radiation { get; }
+        public IAttributes Attributes { get; }
+        public IDerivedAttributes DerivedAttributes { get; }
+        public IKarma Karma { get; }
+        public ITraits Traits { get; }
         // TODO: Add Equipment
         // TODO: Add Companion(s)
         // TDOD: Effects
         // Mutations?
-        public Reputation Reputation { get; }
-        public Skills Skills { get; }
-        public Perks Perks { get; }
+        public IReputation Reputation { get; }
+        public ISkills Skills { get; }
+        public IPerks Perks { get; }
 
-        public CharacterAggregate()
+        internal CharacterAggregate()
         {
             Attributes = new Attributes();
             DerivedAttributes = new DerivedAttributes();
@@ -40,8 +40,15 @@ namespace Engine.Core.SPECIAL
             Perks = new Perks();
             Radiation = new Radiation();
             Traits = new Traits();
-    }
+            Level = new CharacterProgress();
 
-        public override string ToString() => $"{Name}, level {Level}\n{Karma}\n{Reputation}\n{Attributes}\n{DerivedAttributes}\n{Skills}\n{Perks}\n{Traits}";
+            Level.LevelUpEvent += (int _) => LevelUp();
+            Level.ExperienceGainedEvent += (int _) => ExperienceGained();
+        }
+
+        public void GainExperience(int amount) => Level.AddExperience(amount);
+
+        private void LevelUp() => Logger.Log($"{Name} has gained a level. Current level: {Level.Level}");
+        private void ExperienceGained() => Logger.Log($"{Name} has gained experience. Current Experience: {Level.Experience}/{Level.ExperienceToNextLevel}");
     }
 }

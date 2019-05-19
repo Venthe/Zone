@@ -2,11 +2,11 @@
 
 namespace Engine.Core.Sharedkernel.Utilities
 {
-    internal class LoggerService : ILoggerService
+    public class LoggerService : ILoggerService
     {
         private readonly Type classType;
 
-        internal LoggerService(Type classType)
+        public LoggerService(Type classType)
         {
             this.classType = classType;
         }

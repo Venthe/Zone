@@ -3,7 +3,7 @@ using Engine.Core.Sharedkernel.Utilities;
 
 namespace Engine.Core.SPECIAL.KarmaNS
 {
-    public class Karma: ITranslation<string>
+    internal class Karma : IKarma
     {
         public const int MaxKarma = 1000;
         public const int MinKarma = -1000;
@@ -22,7 +22,7 @@ namespace Engine.Core.SPECIAL.KarmaNS
         public string Translation
         {
             get {
-                var translation = translationRepository.GetById(CharacterAggregate.Level);
+                var translation = translationRepository.GetById(CharacterAggregate.Level.Level);
 
                 if (Classification.Equals(KarmaClassification.Bad, StringComparison.InvariantCulture))
                 {
@@ -98,7 +98,5 @@ namespace Engine.Core.SPECIAL.KarmaNS
                 }
             }
         }
-
-        public override string ToString() => $"[{Value}, {Level} (Classified as {Classification})] {Translation}";
     }
 }

@@ -8,7 +8,7 @@ namespace Engine.Core.CLI
 {
     class Program
     {
-        private static IRepository<Script, string> scriptRepository;
+        private static IScriptRepository scriptRepository;
 
         static void Main()
         {
@@ -17,10 +17,7 @@ namespace Engine.Core.CLI
             StartTestConsole();
         }
 
-        private static void WireServices()
-        {
-            scriptRepository = new ScriptRepository();
-        }
+        private static void WireServices() => scriptRepository = new ScriptRepository();
 
         private static void InitializeGame()
         {

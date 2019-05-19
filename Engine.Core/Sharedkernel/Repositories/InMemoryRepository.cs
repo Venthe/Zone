@@ -17,15 +17,17 @@ namespace Engine.Core.Sharedkernel.Repositories
 
         public InMemoryRepository(IDictionary<TIdType, TEntityType> database)
         {
-            if (Database == null)
+            if (_database == null)
             {
-                Database = database;
+                _database = database;
             }
         }
 
-        protected IDictionary<TIdType, TEntityType> Database { get; }
+        private static IDictionary<TIdType, TEntityType> _database;
 
-        public void Add(TEntityType entity)
+        protected IDictionary<TIdType, TEntityType> Database => _database;
+
+        public virtual void Add(TEntityType entity)
         {
             if (entity == null)
             {
@@ -36,9 +38,9 @@ namespace Engine.Core.Sharedkernel.Repositories
             Database.Add(entity.Id, entity);
         }
 
-        public void Delete(TIdType id) => Database.Remove(id);
+        public virtual void Delete(TIdType id) => Database.Remove(id);
 
-        public void Edit(TEntityType entity)
+        public virtual void Edit(TEntityType entity)
         {
             if (entity == null)
             {
@@ -50,10 +52,10 @@ namespace Engine.Core.Sharedkernel.Repositories
             Add(entity);
         }
 
-        public TEntityType GetById(TIdType id) => (from entity in Database where entity.Value.Id.Equals(id) select entity.Value).FirstOrDefault();
+        public virtual TEntityType GetById(TIdType id) => (from entity in Database where entity.Value.Id.Equals(id) select entity.Value).FirstOrDefault();
 
-        public IEnumerable<TEntityType> List() => Database.Values.ToList();
+        public virtual IEnumerable<TEntityType> List() => Database.Values.ToList();
 
-        public IEnumerable<TEntityType> List(Func<TEntityType, bool> predicate) => Database.Values.Where(predicate);
+        public virtual IEnumerable<TEntityType> List(Func<TEntityType, bool> predicate) => Database.Values.Where(predicate);
     }
 }

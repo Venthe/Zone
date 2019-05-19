@@ -2,17 +2,17 @@
 
 namespace Engine.Core.SPECIAL.RadiationNS
 {
-    public class Radiation
+    internal class Radiation : IRadiation
     {
         private readonly ScriptRepository scriptRepository = new ScriptRepository();
-        private int value = 0;
+        private int _value = 0;
 
         public int Value
         {
-            get => value;
+            get => _value;
             set {
                 scriptRepository.GetById("handleRadiationLevel").Execute(value);
-                this.value = value;
+                _value = value;
             }
         }
     }

@@ -1,10 +1,9 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
 using Engine.Core.Sharedkernel.Repositories;
 
 namespace Engine.Core.SPECIAL.AttributesNS.BaseNS
 {
-    public class Attributes : IReadOnlyRepository<Attribute, string>
+    internal class Attributes : IAttributes
     {
         private readonly IReadOnlyRepository<Attribute, string> attributes;
         internal const int DefaultAttributePointsToBeDistributed = 5;
@@ -30,7 +29,5 @@ namespace Engine.Core.SPECIAL.AttributesNS.BaseNS
         public Attribute GetById(string id) => attributes.GetById(id);
         public IEnumerable<Attribute> List() => attributes.List();
         public IEnumerable<Attribute> List(System.Func<Attribute, bool> predicate) => attributes.List(predicate);
-
-        public override string ToString() => "Attributes:\n\t" + string.Join("\n\t", (from attribute in attributes.List() select attribute.ToString()).ToList());
     }
 }

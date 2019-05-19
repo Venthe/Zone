@@ -1,6 +1,6 @@
 ﻿namespace Engine.Core.Sharedkernel.Utilities
 {
-    internal interface ILoggerService
+    public interface ILoggerService
     {
         void Log(string message);
     }
