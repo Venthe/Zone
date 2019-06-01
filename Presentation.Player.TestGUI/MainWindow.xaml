@@ -1,0 +1,205 @@
+﻿<Window x:Class="Presentation.Player.TestGUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Presentation.Player.TestGUI"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TabControl HorizontalAlignment="Left" Height="399" Margin="10,10,0,0" VerticalAlignment="Top" Width="772" SelectionChanged="TabControl_SelectionChanged">
+            <TabItem Header="NormalScreen" Margin="-2,-2,-2,2">
+                <Grid Background="#FFE5E5E5">
+                    <!--Messages-->
+                    <StackPanel HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100">
+                        <Label Content="Message" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                        <TextBlock>Messages and tutorials appear here. Animated quest VB's also appear in this box (which may grow to fit).</TextBlock>
+                    </StackPanel>
+                    <!--Enemy info-->
+                    <StackPanel HorizontalAlignment="Center" Height="66" VerticalAlignment="Top" Width="100" Margin="333,0">
+                        <Label Content="Enemy Name"/>
+                        <ProgressBar Height="10"/>
+                    </StackPanel>
+                    <!--Hidden status-->
+                    <Label Content="Hidden status" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="307,71,307,0" Width="152"/>
+                    <StackPanel HorizontalAlignment="Right" Height="100" VerticalAlignment="Top" Width="100">
+                        <!--Negative status, health status-->
+                        <Image Height="100"/>
+                        <Label Content="Small notification - PA battery"/>
+                    </StackPanel>
+                    <!--Quest info, experience-->
+                    <StackPanel HorizontalAlignment="Left" Height="100" VerticalAlignment="Center" Width="100" Margin="0,105,0,0">
+                        <Label Content="Quest status"/>
+                        <Label Content="Quest stage info"/>
+                        <Label Content="+00 XP/ Level up"/>
+                        <ProgressBar Height="10"/>
+                    </StackPanel>
+                    <!--TODO: Add dialogue-->
+                    <!--Crosshair-->
+                    <Image Height="100" Width="100" RenderTransformOrigin="0.5,0.5" />
+                    <!--Additional Status image-->
+                    <Image Height="100" Width="100" Margin="333,240,333,31"/>
+                    <StackPanel HorizontalAlignment="Center" Height="100" VerticalAlignment="Center" Width="100" Margin="438,118,228,153">
+                        <Label Content="Container name"/>
+                        <ScrollViewer Height="100">
+                            <!--Container content-->
+                            <ListBox Height="100" Width="100"/>
+                        </ScrollViewer>
+
+                    </StackPanel>
+                    <!--Favourites panel-->
+                    <TabControl HorizontalAlignment="Center" Height="100" VerticalAlignment="Center" Width="100" Margin="543,171,123,100">
+                        <TabItem Header="Fav 1">
+                            <Grid Background="#FFE5E5E5">
+                                <ListBox HorizontalAlignment="Left" Height="72" VerticalAlignment="Top" Width="94"/>
+                            </Grid>
+                        </TabItem>
+                        <TabItem Header="Fav 2">
+                            <Grid Background="#FFE5E5E5">
+                                <ListBox HorizontalAlignment="Left" Height="72" VerticalAlignment="Top" Width="94"/>
+                            </Grid>
+                        </TabItem>
+                        <TabItem Header="Fav 3">
+                            <Grid Background="#FFE5E5E5">
+                                <ListBox HorizontalAlignment="Left" Height="72" VerticalAlignment="Top" Width="94"/>
+                            </Grid>
+                        </TabItem>
+                        <TabItem Header="Fav 4">
+                            <Grid Background="#FFE5E5E5">
+                                <ListBox HorizontalAlignment="Left" Height="72" VerticalAlignment="Top" Width="94"/>
+                            </Grid>
+                        </TabItem>
+                    </TabControl>
+
+                    <!--FLashlight status-->
+                    <Image HorizontalAlignment="Right" Height="100" VerticalAlignment="Center" Width="100"/>
+                    <!--Basic stats-->
+                    <StackPanel HorizontalAlignment="Left" Height="100" VerticalAlignment="Bottom" Width="100">
+                        <Label Content="Region name"/>
+                        <StackPanel Height="100" Orientation="Horizontal">
+                            <!--Health-->
+                            <ProgressBar Height="10"/>
+                            <!--Rads-->
+                            <ProgressBar Height="10"/>
+                        </StackPanel>
+                    </StackPanel>
+                    <!--Subtitles-->
+                    <StackPanel HorizontalAlignment="Center" Height="100" VerticalAlignment="Bottom" Width="100">
+                        <Label Content="NPC name speaking"/>
+                        <TextBlock TextWrapping="Wrap" Text="NPC Text"/>
+                    </StackPanel>
+                    <!--Compass-->
+                    <Canvas HorizontalAlignment="Center" Height="20" VerticalAlignment="Bottom" Width="200"/>
+                    <!--Weapons-->
+                    <StackPanel HorizontalAlignment="Right" Height="100" VerticalAlignment="Bottom" Width="100">
+                        <Label Content="Grenades"/>
+                        <Label Content="Ammo currently"/>
+                        <Label Content="Ammo total"/>
+                        <!--AP-->
+                        <ProgressBar Height="10"/>
+                    </StackPanel>
+
+
+                </Grid>
+            </TabItem>
+            <TabItem Header="PipBoy" Margin="-2,-2,-2,-2">
+                <TabControl HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <TabItem Header="Stat">
+                        <Grid Background="#FFE5E5E5">
+                            <TabControl>
+                                <TabItem Header="Status">
+                                    <Grid Background="#FFE5E5E5">
+                                        <!--Status effect indicator-->
+                                        <Image HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100"/>
+                                        <StackPanel HorizontalAlignment="Center" Height="100" VerticalAlignment="Top" Width="100">
+                                            <!--Head health-->
+                                            <ProgressBar Height="10"/>
+                                            <!--Left arm health-->
+                                            <ProgressBar Height="10"/>
+                                            <!--Right arm health-->
+                                            <ProgressBar Height="10"/>
+                                            <!--Torso health-->
+                                            <ProgressBar Height="10"/>
+                                            <!--Left leg health-->
+                                            <ProgressBar Height="10"/>
+                                            <!--RIght leg health-->
+                                            <ProgressBar Height="10"/>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Height="100" VerticalAlignment="Top" Width="100" Margin="327,105,327,0">
+                                            <!--Current weapon dmg/dmg type-->
+                                            <ListBox Width="100"/>
+                                            <!--Curremt armour dmg/dmg type-->
+                                            <ListBox Width="100"/>
+                                        </StackPanel>
+                                        <Label Content="Player name" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="327,210,352,0"/>
+
+                                    </Grid>
+                                </TabItem>
+                                <TabItem Header="Special">
+                                    <Grid Background="#FFE5E5E5"/>
+                                </TabItem>
+                                <TabItem Header="Perk">
+                                    <Grid Background="#FFE5E5E5"/>
+                                </TabItem>
+                            </TabControl>
+
+                            <StackPanel Orientation="Horizontal" Height="50" VerticalAlignment="Bottom">
+                                <TextBlock TextWrapping="Wrap" Text="HP 0/0"/>
+                                <TextBlock TextWrapping="Wrap" Text="Level 62"/>
+                                <!--Xp this level-->
+                                <ProgressBar Width="100"/>
+                                <TextBlock TextWrapping="Wrap" Text="AP 210/210"/>
+                                <TextBlock TextWrapping="Wrap" Text="Game Time 19:36"/>
+                            </StackPanel>
+                            <Label Content="E) Stimpak (357) R) Radaway (274) O) Show effects T) Perk chart" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
+                        </Grid>
+
+                    </TabItem>
+                    <TabItem Header="Inv">
+
+                        <TabControl HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                            <TabItem Header="Weapons">
+                                <Grid Background="#FFE5E5E5"/>
+                            </TabItem>
+                            <TabItem Header="Apparel">
+                                <Grid Background="#FFE5E5E5"/>
+                            </TabItem>
+                            <TabItem Header="Aid">
+                                <Grid Background="#FFE5E5E5"/>
+                            </TabItem>
+                            <TabItem Header="Misc">
+                                <Grid Background="#FFE5E5E5"/>
+                            </TabItem>
+                            <TabItem Header="Junk">
+                                <Grid Background="#FFE5E5E5"/>
+                            </TabItem>
+                            <TabItem Header="Mods">
+                                <Grid Background="#FFE5E5E5"/>
+                            </TabItem>
+                        </TabControl>
+                    </TabItem>
+                    <TabItem Header="Data">
+                        <Grid Background="#FFE5E5E5"/>
+                    </TabItem>
+                    <TabItem Header="Map">
+                        <StackPanel>
+                            <!--Map-->
+                            <ScrollViewer>
+                                <Canvas/>
+                            </ScrollViewer>
+                            <StackPanel Orientation="Horizontal" Height="50" VerticalAlignment="Bottom">
+                                <TextBlock TextWrapping="Wrap" Text="Current Date"/>
+                                <TextBlock TextWrapping="Wrap" Text="Current time"/>
+                                <TextBlock TextWrapping="Wrap" Text="Current area name"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </TabItem>
+                    <TabItem Header="Radio">
+                        <Grid Background="#FFE5E5E5"/>
+                    </TabItem>
+                </TabControl>
+
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
