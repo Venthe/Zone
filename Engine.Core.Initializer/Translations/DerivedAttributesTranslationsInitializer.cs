@@ -1,8 +1,8 @@
-﻿using Engine.Core.SPECIAL;
-using Engine.Core.SPECIAL.AttributesNS.DerivedNS;
-
-namespace Engine.Core.Initializer.Translations
+﻿namespace Engine.Core.Initializer.Translations
 {
+    using Engine.Core.SPECIAL;
+    using Engine.Core.SPECIAL.AttributesNS.DerivedNS;
+
     class DerivedAttributesTranslationsInitializer : IInitializer
     {
         public void Initialize(ref Game game)

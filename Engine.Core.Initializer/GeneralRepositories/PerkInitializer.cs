@@ -1,7 +1,7 @@
-﻿using Engine.Core.SPECIAL.PerksNS;
-
-namespace Engine.Core.Initializer.GeneralRepositories
+﻿namespace Engine.Core.Initializer.GeneralRepositories
 {
+    using Engine.Core.SPECIAL.PerksNS;
+
     class PerkInitializer : IInitializer
     {
         public void Initialize(ref Game game)

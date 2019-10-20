@@ -1,11 +1,11 @@
-﻿using System;
-using System.Linq;
-using Engine.Core.Initializer;
-using Engine.Core.Scripting;
-using Engine.Core.Sharedkernel.Repositories;
-
-namespace Engine.Core.CLI
+﻿namespace Engine.Core.CLI
 {
+    using System;
+    using System.Linq;
+    using Engine.Core.Initializer;
+    using Engine.Core.Scripting;
+    using Engine.Core.Sharedkernel.Repositories;
+
     class Program
     {
         private static IScriptRepository scriptRepository;

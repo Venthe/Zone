@@ -1,9 +1,9 @@
-﻿using System.Collections.Generic;
-using Engine.Core.Initializer.GeneralRepositories;
-using Engine.Core.Initializer.Translations;
-
-namespace Engine.Core.Initializer
+﻿namespace Engine.Core.Initializer
 {
+    using System.Collections.Generic;
+    using Engine.Core.Initializer.GeneralRepositories;
+    using Engine.Core.Initializer.Translations;
+
     public static class GameInitializer
     {
         private const string SamplePlayerName = "SamplePlayerName";

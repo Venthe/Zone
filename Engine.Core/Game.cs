@@ -1,9 +1,6 @@
-﻿using Engine.Core.SPECIAL;
+﻿namespace Engine.Core {
 
-namespace Engine.Core
-{
-    public class Game
-    {
-        public ICharacter Player { get; set; } = new CharacterAggregate();
+    public class Game {
+        public ICharacter Player { get; set; } = new Chracter();
     }
 }

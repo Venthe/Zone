@@ -1,9 +1,9 @@
-﻿using System.Collections.Generic;
-using Engine.Core.SPECIAL.AttributesNS.BaseNS;
-using Attribute = Engine.Core.SPECIAL.AttributesNS.BaseNS.Attribute;
-
-namespace Engine.Core.Initializer.Translations
+﻿namespace Engine.Core.Initializer.Translations
 {
+    using System.Collections.Generic;
+    using Engine.Core.SPECIAL.AttributesNS.BaseNS;
+    using Attribute = Engine.Core.SPECIAL.AttributesNS.BaseNS.Attribute;
+
     class AttributesTranslationsInitializer : IInitializer
     {
         public void Initialize(ref Game game)

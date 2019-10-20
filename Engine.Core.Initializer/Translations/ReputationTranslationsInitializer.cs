@@ -1,8 +1,8 @@
-﻿using Engine.Core.SPECIAL;
-using Engine.Core.SPECIAL.ReputationNS;
-
-namespace Engine.Core.Initializer.Translations
+﻿namespace Engine.Core.Initializer.Translations
 {
+    using Engine.Core.SPECIAL;
+    using Engine.Core.SPECIAL.ReputationNS;
+
     class ReputationTranslationsInitializer : IInitializer
     {
         public void Initialize(ref Game game)

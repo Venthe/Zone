@@ -1,7 +1,7 @@
-﻿using Engine.Core.SPECIAL.KarmaNS;
-
-namespace Engine.Core.Initializer.Translations
+﻿namespace Engine.Core.Initializer.Translations
 {
+    using Engine.Core.SPECIAL.KarmaNS;
+
     class KarmaTranslationsInitializer : IInitializer
     {
         public void Initialize(ref Game game)

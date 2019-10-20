@@ -1,15 +1,15 @@
-﻿using System;
-using System.Collections;
-using Engine.Core.Scripting;
-using Engine.Core.Sharedkernel.Utilities;
-using Engine.Core.SPECIAL;
-using Engine.Core.SPECIAL.AttributesNS.BaseNS;
-using Engine.Core.SPECIAL.AttributesNS.DerivedNS;
-using Engine.Core.SPECIAL.SkillsNS;
-using Attribute = Engine.Core.SPECIAL.AttributesNS.BaseNS.Attribute;
-
-namespace Engine.Core.Initializer.GeneralRepositories
+﻿namespace Engine.Core.Initializer.GeneralRepositories
 {
+    using System;
+    using System.Collections;
+    using Engine.Core.Scripting;
+    using Engine.Core.Sharedkernel.Utilities;
+    using Engine.Core.SPECIAL;
+    using Engine.Core.SPECIAL.AttributesNS.BaseNS;
+    using Engine.Core.SPECIAL.AttributesNS.DerivedNS;
+    using Engine.Core.SPECIAL.SkillsNS;
+    using Attribute = Engine.Core.SPECIAL.AttributesNS.BaseNS.Attribute;
+
     class ScriptInitializer : IInitializer
     {
         ILoggerService loggerService;
