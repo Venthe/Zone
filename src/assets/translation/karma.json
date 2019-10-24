@@ -1,0 +1,156 @@
+{
+  "Karma": {
+    "1": {
+      "goodKarma": "Samaritan",
+      "neutralKarma": "Drifter",
+      "badKarma": "Grifter"
+    },
+    "2": {
+      "goodKarma": "Martyr",
+      "neutralKarma": "Renegade",
+      "badKarma": "Outlaw"
+    },
+    "3": {
+      "goodKarma": "Sentinel",
+      "neutralKarma": "Seeker",
+      "badKarma": "Opportunist"
+    },
+    "4": {
+      "goodKarma": "Defender",
+      "neutralKarma": "Wanderer",
+      "badKarma": "Plunderer"
+    },
+    "5": {
+      "goodKarma": "Dignitary",
+      "neutralKarma": "Citizen",
+      "badKarma": "Fat Cat"
+    },
+    "6": {
+      "goodKarma": "Peacekeeper",
+      "neutralKarma": "Adventurer",
+      "badKarma": "Marauder"
+    },
+    "7": {
+      "goodKarma": "Ranger of the Wastes",
+      "neutralKarma": "Vagabond of the Wastes",
+      "badKarma": "Pirate of the Wastes"
+    },
+    "8": {
+      "goodKarma": "Protector",
+      "neutralKarma": "Mercenary",
+      "badKarma": "Grifter"
+    },
+    "9": {
+      "goodKarma": "Desert Avenger",
+      "neutralKarma": "Desert Scavenger",
+      "badKarma": "Desert Terror"
+    },
+    "10": {
+      "goodKarma": "Exemplar",
+      "neutralKarma": "Observer",
+      "badKarma": "Ne'er-do-well"
+    },
+    "11": {
+      "goodKarma": "Vegas Crusader",
+      "neutralKarma": "Vegas Councilor",
+      "badKarma": "Vegas Crime lord"
+    },
+    "12": {
+      "goodKarma": "Paladin",
+      "neutralKarma": "Keeper",
+      "badKarma": "Defiler"
+    },
+    "13": {
+      "goodKarma": "Mojave Legend",
+      "neutralKarma": "Mojave Myth",
+      "badKarma": "Mojave Boogeyman"
+    },
+    "14": {
+      "goodKarma": "Shield of Hope",
+      "neutralKarma": "Pinnacle of Survival",
+      "badKarma": "Sword of Despair"
+    },
+    "15": {
+      "goodKarma": "Vegas Legend",
+      "neutralKarma": "Vegas Myth",
+      "badKarma": "Vegas Boogeyman"
+    },
+    "16": {
+      "goodKarma": "Hero of the Wastes",
+      "neutralKarma": "Strider of the Wastes",
+      "badKarma": "Villain of the Wastes"
+    },
+    "17": {
+      "goodKarma": "Paragon",
+      "neutralKarma": "Beholder",
+      "badKarma": "Fiend"
+    },
+    "18": {
+      "goodKarma": "Wasteland Savior",
+      "neutralKarma": "Wasteland Watcher",
+      "badKarma": "Wasteland Destroyer"
+    },
+    "19": {
+      "goodKarma": "Saint",
+      "neutralKarma": "Super-Human",
+      "badKarma": "Desert Terror"
+    },
+    "20": {
+      "goodKarma": "Guardian of the Wastes",
+      "neutralKarma": "Renegade of the Wastes",
+      "badKarma": "Scourge of the Wastes"
+    },
+    "21": {
+      "goodKarma": "Restorer of Faith",
+      "neutralKarma": "Soldier of Fortune",
+      "badKarma": "Architect of Doom"
+    },
+    "22": {
+      "goodKarma": "Model of Selflessness",
+      "neutralKarma": "Profiteer",
+      "badKarma": "Bringer of Sorrow"
+    },
+    "23": {
+      "goodKarma": "Shepherd",
+      "neutralKarma": "Egocentric",
+      "badKarma": "Deceiver"
+    },
+    "24": {
+      "goodKarma": "Friend of the People",
+      "neutralKarma": "Loner",
+      "badKarma": "Consort of Discord"
+    },
+    "25": {
+      "goodKarma": "Champion of Justice",
+      "neutralKarma": "Hero for Hire",
+      "badKarma": "Stuff of Nightmares"
+    },
+    "26": {
+      "goodKarma": "Symbol of Order",
+      "neutralKarma": "Model of Apathy",
+      "badKarma": "Agent of Chaos"
+    },
+    "27": {
+      "goodKarma": "Herald of Tranquility",
+      "neutralKarma": "Person of Refinement",
+      "badKarma": "Instrument of Ruin"
+    },
+    "28": {
+      "goodKarma": "Last, Best Hope of Humanity",
+      "neutralKarma": "Moneygrubber",
+      "badKarma": "Soultaker"
+    },
+    "29": {
+      "goodKarma": "Savior of the Damned",
+      "neutralKarma": "Gray Stranger",
+      "badKarma": "Demon's Spawn"
+    },
+    "30": {
+      "goodKarma": "Messiah",
+      "neutralKarma": "True Mortal",
+      "badKarma": "Devil"
+    }
+  }
+} {
+
+}

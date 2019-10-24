@@ -1,0 +1,68 @@
+{
+  "reputation": {
+    "neutral": {
+      "name": "Neutral",
+      "description": "People don't know enough about you to form an opinion"
+    },
+    "accepted": {
+      "name": "Accepted",
+      "description": "Folks have come to accept you for your helpful nature"
+    },
+    "liked": {
+      "name": "Liked",
+      "description": "Enough news of your good works has been passed around that people like you"
+    },
+    "idolized": {
+      "name": "Idolized",
+      "description": "Renowned for your extensive support and goodwill, you are idolized by the community"
+    },
+    "shunned": {
+      "name": "Shunned",
+      "description": "You've left a poor impression on the community and may be shunned as a result"
+    },
+    "mixed": {
+      "name": "Mixed",
+      "description": "A little bit good mixed with a little bit bad, people haven't figured you out yet"
+    },
+    "smilingTroublemaker": {
+      "name": "Smiling Troublemaker",
+      "description": "People know you're good at heart even though you're occasionally a troublemaker"
+    },
+    "goodNaturedRascal": {
+      "name": "Good-Natured Rascal",
+      "description": "Your reputation as a good-natured friend of the community manages to outshine your dark side"
+    },
+    "hated": {
+      "name": "Hated",
+      "description": "Now that folks know you're bad, most people outright hate you"
+    },
+    "sneeringPunk": {
+      "name": "Sneering Punk",
+      "description": "Even though you've done some good for the community, people still think you're a punk"
+    },
+    "unpredictable": {
+      "name": "Unpredictable",
+      "description": "No one's sure what to make of your unpredictable nature, but you've left a strong impression"
+    },
+    "darkHero": {
+      "name": "Dark Hero",
+      "description": "Folks still think you're some kind of hero, but you sure can be nasty sometimes"
+    },
+    "vilified": {
+      "name": "Vilified",
+      "description": "For your overwhelmingly monstrous behavior, you have become vilified by the community"
+    },
+    "mercifulThug": {
+      "name": "Merciful Thug",
+      "description": "Despite your reputation as a thug, you are known to occasionally show a charitable side"
+    },
+    "softHeartedDevil": {
+      "name": "Soft-Hearted Devil",
+      "description": "Most people say you're the devil himself, but most admit you've also done a world of good"
+    },
+    "wildChild": {
+      "name": "Wild Child",
+      "description": "Your wild, seemingly capricious behavior leaves people scratching their heads in confusion and avoiding close contact"
+    }
+  }
+}

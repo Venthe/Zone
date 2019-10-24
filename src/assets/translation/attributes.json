@@ -1,0 +1,122 @@
+{
+  "attributes": {
+    "agility": {
+      "name": "Agility",
+      "description": "A measure of your quickness and dexterity",
+      "levels": {
+        "1": "Walking Disaster",
+        "2": "Accident Prone",
+        "3": "Oaf",
+        "4": "Butterfingers",
+        "5": "Under Control",
+        "6": "Catlike",
+        "7": "Knife Thrower",
+        "8": "Knife Catcher",
+        "9": "Acrobatic Marvel",
+        "10": "Walks on Water"
+      }
+    },
+
+    "charisma": {
+      "name": "Charisma",
+      "description": "Your overall attractiveness and likeability",
+      "levels": {
+        "1": "Misanthrope",
+        "2": "Old Hermit",
+        "3": "Creepy Undertaker",
+        "4": "Peevish Librarian",
+        "5": "Substitute Teacher",
+        "6": "Cheery Salesman",
+        "7": "Diplomat",
+        "8": "Movie Star",
+        "9": "Casanova",
+        "10": "Cult Leader"
+      }
+    },
+
+    "strength": {
+      "name": "Strength",
+      "description": "Your overall attractiveness and likeability",
+      "levels": {
+        "1": "Wet Noodle",
+        "2": "Beached Jellyfish",
+        "3": "Doughy Baby",
+        "4": "Lightweight",
+        "5": "Average Joe",
+        "6": "Barrel Chested",
+        "7": "Beach Bully",
+        "8": "Circus Strongman",
+        "9": "Doomsday Pecs",
+        "10": "Hercules' Bigger Cousin"
+      }
+    },
+
+    "perception": {
+      "name": "Perception",
+      "description": "How well you use your five senses, and also pertains to a \"sixth sense\"",
+      "levels": {
+        "1": "Deaf Bat",
+        "2": "Senile Mole",
+        "3": "Squinting Newt",
+        "4": "Unsuspecting Trout",
+        "5": "Wary Trout",
+        "6": "Alert Coyote",
+        "7": "Big-Eyed Tiger",
+        "8": "Monocled Falcon",
+        "9": "Sniper Hawk",
+        "10": "Eagle with Telescope"
+      }
+    },
+
+    "luck": {
+      "name": "Luck",
+      "description": "How often good things happen to you by chance",
+      "levels": {
+        "1": "13 Pitch-Black Cats",
+        "2": "Broken Gypsy Mirror",
+        "3": "Sickly Albatross",
+        "4": "Spilled Salt",
+        "5": "Coin Flip",
+        "6": "Stacked Deck",
+        "7": "Lucky 7",
+        "8": "Leprechaun's Foot",
+        "9": "21 Leaf Clover",
+        "10": "Two-Headed Coin Flip"
+      }
+    },
+
+    "intelligence": {
+      "name": "Intelligence",
+      "description": "Your basic intellect, curiosity in the world and adeptness at critical thinking",
+      "levels": {
+        "1": "Sub-Brick",
+        "2": "Vegetable",
+        "3": "Cretin",
+        "4": "Knuckle Head",
+        "5": "Knowledgeable",
+        "6": "Gifted",
+        "7": "Smartypants",
+        "8": "Know-It-All",
+        "9": "Genius",
+        "10": "Omniscient"
+      }
+    },
+
+    "endurance": {
+      "name": "Endurance",
+      "description": "Your health and overall physical fitness",
+      "levels": {
+        "1": "Basically Dead",
+        "2": "Crumbly",
+        "3": "Do Not Bend",
+        "4": "Handle With Care",
+        "5": "Stain-Resistant",
+        "6": "Hardy",
+        "7": "Tough-as-nails",
+        "8": "Flame Retardant",
+        "9": "Bullet Proof",
+        "10": "Unstoppable"
+      }
+    }
+  }
+}

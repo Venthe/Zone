@@ -1,0 +1,15 @@
+<div class="form-container">
+  <form [formGroup]="scriptForm" (ngSubmit)="executeScript()">
+    <mat-form-field>
+      <input matInput formControlName="key" placeholder="Script key">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput formControlName="props" placeholder="Props">
+    </mat-form-field>
+
+    <button mat-raised-button class="button" type="submit">Purchase</button>
+  </form>
+</div>
+
+<router-outlet></router-outlet>

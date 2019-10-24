@@ -1,0 +1,60 @@
+{
+  "skills": {
+    "barter": {
+      "name": "Barter",
+      "description": "Proficiency at trading and haggling. Also used to negotiate better quest rewards or occasionally as a bribe-like alternative to Speech"
+    },
+    "energyWeapons": {
+      "name": "Energy Weapons",
+      "description": "Proficiency at using energy-based weapons"
+    },
+    "explosives": {
+      "name": "Explosives",
+      "description": "Proficiency at using explosive weaponry, disarming mines, and crafting explosives"
+    },
+    "smallGuns": {
+      "name": "Small Guns",
+      "description": "Proficiency at using light weapons that fire standard ammunition"
+    },
+    "bigGuns": {
+      "name": "Big Guns",
+      "description": "Proficiency at using heavy weapons that fire standard ammunition"
+    },
+    "lockpick": {
+      "name": "Lockpick",
+      "description": "Proficiency at picking locks"
+    },
+    "medicine": {
+      "name": "Medicine",
+      "description": "Proficiency at using medical tools, drugs, and for crafting Doctor's Bags"
+    },
+    "meleeWeapons": {
+      "name": "Melee Weapons",
+      "description": "Proficiency at using melee weapons"
+    },
+    "repair": {
+      "name": "Repair",
+      "description": "Proficiency at repairing items and crafting items and ammunition"
+    },
+    "science": {
+      "name": "Science",
+      "description": "Proficiency at hacking terminals, recycling energy ammunition at workbenches, crafting chems, and many dialog checks"
+    },
+    "sneak": {
+      "name": "Sneak",
+      "description": "Proficiency at remaining undetected and stealing"
+    },
+    "speech": {
+      "name": "Speech",
+      "description": "Proficiency at persuading others. Also used to negotiate for better quest rewards and to talk your way out of combat, convincing people to give up vital information and succeeding in multiple speech checks"
+    },
+    "survival": {
+      "name": "Survival",
+      "description": "Proficiency at cooking, making poisons, and crafting \"natural\" equipment and consumables. Also yields increased benefits from food"
+    },
+    "unarmed": {
+      "name": "Unarmed",
+      "description": "Proficiency at unarmed fighting"
+    }
+  }
+}
