@@ -16,7 +16,6 @@
         "10": "Walks on Water"
       }
     },
-
     "charisma": {
       "name": "Charisma",
       "description": "Your overall attractiveness and likeability",
@@ -33,7 +32,6 @@
         "10": "Cult Leader"
       }
     },
-
     "strength": {
       "name": "Strength",
       "description": "Your overall attractiveness and likeability",
@@ -50,7 +48,6 @@
         "10": "Hercules' Bigger Cousin"
       }
     },
-
     "perception": {
       "name": "Perception",
       "description": "How well you use your five senses, and also pertains to a \"sixth sense\"",
@@ -67,7 +64,6 @@
         "10": "Eagle with Telescope"
       }
     },
-
     "luck": {
       "name": "Luck",
       "description": "How often good things happen to you by chance",
@@ -84,7 +80,6 @@
         "10": "Two-Headed Coin Flip"
       }
     },
-
     "intelligence": {
       "name": "Intelligence",
       "description": "Your basic intellect, curiosity in the world and adeptness at critical thinking",
@@ -101,7 +96,6 @@
         "10": "Omniscient"
       }
     },
-
     "endurance": {
       "name": "Endurance",
       "description": "Your health and overall physical fitness",

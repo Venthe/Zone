@@ -1,15 +1,51 @@
-<div class="form-container">
-  <form [formGroup]="scriptForm" (ngSubmit)="executeScript()">
-    <mat-form-field>
-      <input matInput formControlName="key" placeholder="Script key">
-    </mat-form-field>
+<mat-card>
+  <mat-card-title>Script</mat-card-title>
+  <div class="form-container">
+    <form [formGroup]="scriptForm" (ngSubmit)="executeScript()">
+      <mat-form-field>
+        <input matInput formControlName="key" placeholder="Script key">
+      </mat-form-field>
 
-    <mat-form-field>
-      <input matInput formControlName="props" placeholder="Props">
-    </mat-form-field>
+      <mat-form-field>
+        <input matInput formControlName="props" placeholder="Props">
+      </mat-form-field>
 
-    <button mat-raised-button class="button" type="submit">Purchase</button>
-  </form>
-</div>
+      <button mat-raised-button class="button" type="submit">Execute script</button>
+    </form>
+  </div>
+</mat-card>
+<mat-card>
+  <mat-card-title>Grant experience</mat-card-title>
+  <div class="form-container">
+    <form [formGroup]="experienceForm" (ngSubmit)="grantExperience()">
+      <mat-form-field>
+        <input matInput formControlName="amount" placeholder="Amount">
+      </mat-form-field>
+
+      <button mat-raised-button class="button" type="submit">Grant Experience</button>
+    </form>
+  </div>
+</mat-card>
+<mat-card>
+  <mat-card-title>Kill enemy</mat-card-title>
+  <div class="form-container">
+    <form [formGroup]="killEnemyForm" (ngSubmit)="killEnemy()">
+      <mat-form-field>
+        <input matInput formControlName="kill" placeholder="Kill entry">
+      </mat-form-field>
+
+      <button mat-raised-button class="button" type="submit">Kill enemy</button>
+    </form>
+  </div>
+</mat-card>
+<mat-card>
+  <mat-card-title>State</mat-card-title>
+  <pre>
+    {{game$|async|json}}
+  </pre>
+  <pre>
+    {{player$|async|json}}
+  </pre>
+</mat-card>
 
 <router-outlet></router-outlet>

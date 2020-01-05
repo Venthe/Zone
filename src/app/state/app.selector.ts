@@ -1,16 +1,14 @@
-import { AppState, GlobalState } from './app.reducer';
-import { createSelector } from '@ngrx/store';
-import { Player } from '../player/player.model';
-import { Game } from '../game/game.model';
+import {createSelector, MemoizedSelector} from "@ngrx/store";
+import {AppState, Game, GlobalState, Player} from "./app.reducer";
 
 export const selectAppFeature = (state: GlobalState): AppState => state.app;
- 
-export const selectPlayer = createSelector(
+
+export const selectPlayer: MemoizedSelector<GlobalState, Player> = createSelector(
   selectAppFeature,
   (state: AppState): Player => state.player
 );
- 
-export const selectGame = createSelector(
+
+export const selectGame: MemoizedSelector<GlobalState, Game> = createSelector(
   selectAppFeature,
   (state: AppState): Game => state.game
 );
