@@ -6,7 +6,7 @@ import {
   LevelUpEvent,
   NoopAction
 } from "./app.actions";
-import {Achievement, AttributeKey, EnemyType, GameDifficulty, Skills, Weapon} from "./model";
+import {Achievement, AttributeKey, EnemyType, GameDifficulty, Skill, SkillKey, Weapon} from "./model";
 
 export interface GlobalState {
   app: AppState;
@@ -27,7 +27,7 @@ export interface Player {
   level: number;
   experience: number;
   attributes: { [key in AttributeKey]: number };
-  skills: Skills;
+  skills: { [key in SkillKey]: Skill };
   kills: KillEntry[];
   challenges: { [key: string]: ChallengeEntry };
 }
@@ -44,7 +44,7 @@ export interface AppState {
 
 export const initialState: AppState = {
   game: {
-    difficulty: GameDifficulty.EASY,
+    difficulty: GameDifficulty.Easy,
     achievements: {}
   },
   player: {
@@ -61,7 +61,28 @@ export const initialState: AppState = {
       perception: 5,
       strength: 5,
     },
-    skills: {},
+    skills: {
+      barter: {isTagged: false, points: 0},
+      energyWeapons: {isTagged: false, points: 0},
+      explosives: {isTagged: false, points: 0},
+      bigGuns: {isTagged: false, points: 0},
+      smallGuns: {isTagged: false, points: 0},
+      lockpick: {isTagged: false, points: 0},
+      medicine: {isTagged: false, points: 0},
+      meleeWeapons: {isTagged: false, points: 0},
+      repair: {isTagged: false, points: 0},
+      science: {isTagged: false, points: 0},
+      sneak: {isTagged: false, points: 0},
+      speech: {isTagged: false, points: 0},
+      survival: {isTagged: false, points: 0},
+      unarmed: {isTagged: false, points: 0},
+      throwing: {isTagged: false, points: 0},
+      firstAid: {isTagged: false, points: 0},
+      doctor: {isTagged: false, points: 0},
+      steal: {isTagged: false, points: 0},
+      traps: {isTagged: false, points: 0},
+      gambling: {isTagged: false, points: 0},
+    },
     kills: []
   }
 };

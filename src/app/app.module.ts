@@ -16,6 +16,7 @@ import {AppEffects} from "./state/app.effects";
 import {ReactiveFormsModule} from "@angular/forms";
 import {MAT_SNACK_BAR_DEFAULT_OPTIONS, MatSnackBarModule} from "@angular/material/snack-bar";
 import {MatCardModule} from "@angular/material/card";
+import {MatDialogModule} from "@angular/material/dialog";
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import {MatCardModule} from "@angular/material/card";
     ReactiveFormsModule,
     MatButtonModule,
     MatCardModule,
+    MatDialogModule,
     MatSnackBarModule
   ],
   providers: [

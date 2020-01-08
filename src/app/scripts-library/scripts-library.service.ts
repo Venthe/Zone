@@ -15,13 +15,13 @@ export class ScriptsLibraryService {
     store.select(selectAppFeature).subscribe(state => this.globalVariables = state);
   }
 
-  execute(scriptName: string, props: object & { globalVariablesOverride?: object } = {}) {
+  execute(scriptName: string, props: object & { globalVariablesOverride?: object } | any = {}) {
     const {globalVariablesOverride, ...propsWithoutOverrides} = props;
 
     // const newScriptsLibrary = this.overrideGlobalVariables(globalVariablesOverride);
 
-    const script = this.scripts.execute(scriptName, {...this.globalVariables, ...globalVariablesOverride});
-    const result = script.script({scriptsLibrary: this, ...this.globalVariables, ...script.globalVariables});
+    const script = this.scripts.execute(scriptName, {...this.globalVariables, ...globalVariablesOverride, ...propsWithoutOverrides});
+    const result = script.script({scriptsLibrary: this, ...this.globalVariables, ...script.globalVariables, ...propsWithoutOverrides});
     console.debug("Executing script.", `scriptName:${scriptName}`, "props:", props, "globalVariables:", this.globalVariables, "result:", result);
     return result;
   }

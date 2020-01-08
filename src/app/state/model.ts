@@ -536,21 +536,41 @@ export const Achievements: { [key: string]: Achievement } = {
 };
 
 export interface Skill {
-  name: string;
+  isTagged: boolean;
+  points: number;
 }
 
-export interface Skills {
-  [key: string]: Skill;
+export enum SkillKey {
+  Barter = "barter",
+  EnergyWeapons = "energyWeapons",
+  Explosives = "explosives",
+  BigGuns = "bigGuns",
+  SmallGuns = "smallGuns",
+  Lockpick = "lockpick",
+  Medicine = "medicine",
+  MeleeWeapons = "meleeWeapons",
+  Repair = "repair",
+  Science = "science",
+  Sneak = "sneak",
+  Speech = "speech",
+  Survival = "survival",
+  Unarmed = "unarmed",
+  Throwing = "throwing",
+  FirstAid = "firstAid",
+  Doctor = "doctor",
+  Steal = "steal",
+  Traps = "traps",
+  Gambling = "gambling",
 }
 
 export const enum AttributeKey {
-  STRENGTH = "strength",
-  PERCEPTION = "perception",
-  ENDURANCE = "endurance",
-  CHARISMA = "charisma",
-  INTELLIGENCE = "intelligence",
-  AGILITY = "agility",
-  LUCK = "luck"
+  Strength = "strength",
+  Perception = "perception",
+  Endurance = "endurance",
+  Charisma = "charisma",
+  Intelligence = "intelligence",
+  Agility = "agility",
+  Luck = "luck"
 }
 
 export enum WeaponCarryType {
@@ -610,8 +630,8 @@ export interface DamageEntry {
 }
 
 export enum GameDifficulty {
-  EASY = "easy",
-  HARD = "hard"
+  Easy = "easy",
+  Hard = "hard"
 }
 
 export enum EnemyType {

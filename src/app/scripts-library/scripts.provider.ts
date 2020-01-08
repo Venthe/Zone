@@ -37,42 +37,50 @@ export class ScriptsProvider {
       return scriptsLibrary.execute("noLessThanZero", {value: skillValue < maxSkillPoints ? skillValue : maxSkillPoints});
     };
     this.scripts.maxSkillPoints = () => 300;
-    this.scripts.getAdjustedSkillValue = ({skill}) => skill.tag ? skill.value + 20 : skill.value;
+    // this.scripts.getAdjustedSkillValue = ({skill}) => skill.tag ? skill.value + 20 : skill.value;
+    this.scripts.getAdjustedSkillValue = ({skill}) => skill;
     this.scripts.canAddSkillPoint = ({skillValue, scriptsLibrary}) => skillValue < scriptsLibrary.execute("maxSkillPoints");
     this.scripts.gameDifficultySkillModifier = ({scriptsLibrary}) => {
       const difficulty = scriptsLibrary.execute("getDifficulty");
 
       switch (difficulty) {
-        case GameDifficulty.EASY:
+        case GameDifficulty.Easy:
           return 20;
-        case GameDifficulty.HARD:
+        case GameDifficulty.Hard:
           return -10;
         default:
           return 0;
       }
     };
-    this.scripts.adjustByDifficulty = ({argument, scriptsLibrary}) => argument + scriptsLibrary.execute("gameDifficultySkillModifier");
+    this.scripts.adjustByDifficulty = ({argument, scriptsLibrary, ...rest}) => argument + scriptsLibrary.execute("gameDifficultySkillModifier");
 
-    this.scripts.skillsBaseValueSmallGuns = ({player}) => 5 + 4 * player.attributes[AttributeKey.AGILITY];
-    this.scripts.skillsBaseValueBigGuns = ({player}) => 2 * player.attributes[AttributeKey.AGILITY];
-    this.scripts.skillsBaseValueEnergyWeapons = ({player}) => 2 * player.attributes[AttributeKey.AGILITY];
-    this.scripts.skillsBaseValueUnarmed = ({player}) => 30 + 2 * (player.attributes[AttributeKey.AGILITY] + player.attributes[AttributeKey.STRENGTH]);
-    this.scripts.skillsBaseValueMeleeWeapons = ({player}) => 20 + 2 * (player.attributes[AttributeKey.AGILITY] + player.attributes[AttributeKey.STRENGTH]);
-    this.scripts.skillsBaseValueThrowing = ({player}) => 4 * player.attributes[AttributeKey.AGILITY];
-    this.scripts.skillsBaseValueFirstAid = ({player, scriptsLibrary}) => scriptsLibrary.execute("adjustByDifficulty", {argument: (2 * (player.attributes[AttributeKey.PERCEPTION] + player.attributes[AttributeKey.INTELLIGENCE]))});
-    this.scripts.skillsBaseValueDoctor = ({player, scriptsLibrary}) => scriptsLibrary.execute("adjustByDifficulty", {argument: (5 + (player.attributes[AttributeKey.PERCEPTION] + player.attributes[AttributeKey.INTELLIGENCE]))});
-    this.scripts.skillsBaseValueSneak = ({player, scriptsLibrary}) => scriptsLibrary.execute("adjustByDifficulty", {argument: (5 + 3 * player.attributes[AttributeKey.AGILITY])});
-    this.scripts.skillsBaseValueLockpick = ({player, scriptsLibrary}) => scriptsLibrary.execute("adjustByDifficulty", {argument: (10 + (player.attributes[AttributeKey.PERCEPTION] + player.attributes[AttributeKey.AGILITY]))});
-    this.scripts.skillsBaseValueSteal = ({player, scriptsLibrary}) => scriptsLibrary.execute("adjustByDifficulty", {argument: (3 * player.attributes[AttributeKey.AGILITY])});
-    this.scripts.skillsBaseValueTraps = ({player, scriptsLibrary}) => scriptsLibrary.execute("adjustByDifficulty", {argument: (10 + (player.attributes[AttributeKey.PERCEPTION] + player.attributes[AttributeKey.AGILITY]))});
-    this.scripts.skillsBaseValueScience = ({player, scriptsLibrary}) => scriptsLibrary.execute("adjustByDifficulty", {argument: (4 * player.attributes[AttributeKey.INTELLIGENCE])});
-    this.scripts.skillsBaseValueRepair = ({player, scriptsLibrary}) => scriptsLibrary.execute("adjustByDifficulty", {argument: (3 * player.attributes[AttributeKey.INTELLIGENCE])});
-    this.scripts.skillsBaseValueSpeech = ({player, scriptsLibrary}) => scriptsLibrary.execute("adjustByDifficulty", {argument: (5 * player.attributes[AttributeKey.CHARISMA])});
-    this.scripts.skillsBaseValueBarter = ({player, scriptsLibrary}) => scriptsLibrary.execute("adjustByDifficulty", {argument: (4 * player.attributes[AttributeKey.CHARISMA])});
-    this.scripts.skillsBaseValueGambling = ({player, scriptsLibrary}) => scriptsLibrary.execute("adjustByDifficulty", {argument: (5 * player.attributes[AttributeKey.LUCK])});
-    this.scripts.skillsBaseValueOutdoorsman = ({player, scriptsLibrary}) => scriptsLibrary.execute("adjustByDifficulty", {argument: (2 * (player.attributes[AttributeKey.ENDURANCE] + player.attributes[AttributeKey.INTELLIGENCE]))});
+    this.scripts.skillsBaseValueSmallGuns = ({player}) => 5 + 4 * player.attributes[AttributeKey.Agility];
+    this.scripts.skillsBaseValueBigGuns = ({player}) => 2 * player.attributes[AttributeKey.Agility];
+    this.scripts.skillsBaseValueEnergyWeapons = ({player}) => 2 * player.attributes[AttributeKey.Agility];
+    this.scripts.skillsBaseValueUnarmed = ({player}) => 30 + 2 * (player.attributes[AttributeKey.Agility] + player.attributes[AttributeKey.Strength]);
+    this.scripts.skillsBaseValueMeleeWeapons = ({player}) => 20 + 2 * (player.attributes[AttributeKey.Agility] + player.attributes[AttributeKey.Strength]);
+    this.scripts.skillsBaseValueThrowing = ({player}) => 4 * player.attributes[AttributeKey.Agility];
+    this.scripts.skillsBaseValueFirstAid = ({player, scriptsLibrary}) => scriptsLibrary.execute("adjustByDifficulty", {argument: (2 * (player.attributes[AttributeKey.Perception] + player.attributes[AttributeKey.Intelligence]))});
+    this.scripts.skillsBaseValueDoctor = ({player, scriptsLibrary}) => scriptsLibrary.execute("adjustByDifficulty", {argument: (5 + (player.attributes[AttributeKey.Perception] + player.attributes[AttributeKey.Intelligence]))});
+    this.scripts.skillsBaseValueSneak = ({player, scriptsLibrary}) => scriptsLibrary.execute("adjustByDifficulty", {argument: (5 + 3 * player.attributes[AttributeKey.Agility])});
+    this.scripts.skillsBaseValueLockpick = ({player, scriptsLibrary}) => scriptsLibrary.execute("adjustByDifficulty", {argument: (10 + (player.attributes[AttributeKey.Perception] + player.attributes[AttributeKey.Agility]))});
+    this.scripts.skillsBaseValueSteal = ({player, scriptsLibrary}) => scriptsLibrary.execute("adjustByDifficulty", {argument: (3 * player.attributes[AttributeKey.Agility])});
+    this.scripts.skillsBaseValueTraps = ({player, scriptsLibrary}) => scriptsLibrary.execute("adjustByDifficulty", {argument: (10 + (player.attributes[AttributeKey.Perception] + player.attributes[AttributeKey.Agility]))});
+    this.scripts.skillsBaseValueScience = ({player, scriptsLibrary}) => scriptsLibrary.execute("adjustByDifficulty", {argument: (4 * player.attributes[AttributeKey.Intelligence])});
+    this.scripts.skillsBaseValueRepair = ({player, scriptsLibrary}) => scriptsLibrary.execute("adjustByDifficulty", {argument: (3 * player.attributes[AttributeKey.Intelligence])});
+    this.scripts.skillsBaseValueSpeech = ({player, scriptsLibrary}) => scriptsLibrary.execute("adjustByDifficulty", {argument: (5 * player.attributes[AttributeKey.Charisma])});
+    this.scripts.skillsBaseValueBarter = ({player, scriptsLibrary}) =>
+      scriptsLibrary.execute("adjustByDifficulty", {
+          argument: 4 * player.attributes[AttributeKey.Charisma]
+        }
+      );
+    this.scripts.skillsBaseValueGambling = ({player, scriptsLibrary}) => scriptsLibrary.execute("adjustByDifficulty", {argument: (5 * player.attributes[AttributeKey.Luck])});
+    this.scripts.skillsBaseValueSurvival = ({player, scriptsLibrary}) => scriptsLibrary.execute("adjustByDifficulty", {argument: (2 * (player.attributes[AttributeKey.Endurance] + player.attributes[AttributeKey.Intelligence]))});
 
-    this.scripts.skillPointsPerLevel = ({player}) => Math.floor(5 + 2 * player.attributes[AttributeKey.INTELLIGENCE]);
+    this.scripts.skillsBaseValueExplosives = ({player}) => 2 + (2 * player.attributes[AttributeKey.Perception]) + (player.attributes[AttributeKey.Perception] / 2);
+    this.scripts.skillsBaseValueMedicine = ({player}) => 2 + (2 * player.attributes[AttributeKey.Intelligence]) + (player.attributes[AttributeKey.Luck] / 2);
+
+    this.scripts.skillPointsPerLevel = ({player}) => Math.floor(5 + 2 * player.attributes[AttributeKey.Intelligence]);
     this.scripts.costOfSkillUpgrade = ({skillValue}) => {
       if (skillValue <= 100) {
         return 1;
@@ -97,22 +105,22 @@ export class ScriptsProvider {
     // end tag skills
 
     // misc
-    this.scripts.healthPointsBaseValue = ({player}) => 15 + (2 * player.attributes[AttributeKey.ENDURANCE]) + player.attributes[AttributeKey.STRENGTH];
-    this.scripts.healthPointsPerLevel = ({player}) => 2 + Math.floor(player.attributes[AttributeKey.ENDURANCE] / 2);
-    this.scripts.armorClass = ({player}) => player.attributes[AttributeKey.AGILITY];
-    this.scripts.actionPoints = ({player}) => 5 + Math.floor(player.attributes[AttributeKey.AGILITY] / 2);
-    this.scripts.carryWeight = ({player}) => 25. + 25 * player.attributes[AttributeKey.STRENGTH];
+    this.scripts.healthPointsBaseValue = ({player}) => 15 + (2 * player.attributes[AttributeKey.Endurance]) + player.attributes[AttributeKey.Strength];
+    this.scripts.healthPointsPerLevel = ({player}) => 2 + Math.floor(player.attributes[AttributeKey.Endurance] / 2);
+    this.scripts.armorClass = ({player}) => player.attributes[AttributeKey.Agility];
+    this.scripts.actionPoints = ({player}) => 5 + Math.floor(player.attributes[AttributeKey.Agility] / 2);
+    this.scripts.carryWeight = ({player}) => 25. + 25 * player.attributes[AttributeKey.Strength];
     // Example: If weapon has base damage of 3->5, we add result (e.g. 5) like so: 3->(5+5)
     this.scripts.maxMeleeDamageModifier = ({player, scriptsLibrary}) => {
-      const value = player.attributes[AttributeKey.STRENGTH] - 5;
+      const value = player.attributes[AttributeKey.Strength] - 5;
       return scriptsLibrary.execute("noLessThanOne", {value});
     };
     this.scripts.damageResistance = () => 0;
-    this.scripts.poisonResistance = ({player}) => 5 * player.attributes[AttributeKey.ENDURANCE];
-    this.scripts.radiationResistance = ({player}) => 2 * player.attributes[AttributeKey.ENDURANCE];
-    this.scripts.sequence = ({player}) => 2 * player.attributes[AttributeKey.PERCEPTION];
-    this.scripts.healingRate = ({player, scriptsLibrary}) => scriptsLibrary.execute("noLessThanOne", {value: Math.floor(player.attributes[AttributeKey.ENDURANCE] / 3)});
-    this.scripts.criticalChance = ({player}) => player.attributes[AttributeKey.LUCK];
+    this.scripts.poisonResistance = ({player}) => 5 * player.attributes[AttributeKey.Endurance];
+    this.scripts.radiationResistance = ({player}) => 2 * player.attributes[AttributeKey.Endurance];
+    this.scripts.sequence = ({player}) => 2 * player.attributes[AttributeKey.Perception];
+    this.scripts.healingRate = ({player, scriptsLibrary}) => scriptsLibrary.execute("noLessThanOne", {value: Math.floor(player.attributes[AttributeKey.Endurance] / 3)});
+    this.scripts.criticalChance = ({player}) => player.attributes[AttributeKey.Luck];
     // end misc
 
     // traits
@@ -127,10 +135,10 @@ export class ScriptsProvider {
       const attributes = player.attributes;
       const perks = player.perks;
 
-      const charisma = attributes[AttributeKey.CHARISMA];
-      const endurance = attributes[AttributeKey.ENDURANCE];
-      const agility = attributes[AttributeKey.AGILITY];
-      const strength = attributes[AttributeKey.STRENGTH];
+      const charisma = attributes[AttributeKey.Charisma];
+      const endurance = attributes[AttributeKey.Endurance];
+      const agility = attributes[AttributeKey.Agility];
+      const strength = attributes[AttributeKey.Strength];
       const kamaSutraMaster = perks.kamaSutraMaster.rank > 0;
       const sexAppeal = perks.sexAppeal.rank > 0;
       const sexGod = scriptsLibrary.execute("sexGod");
