@@ -629,11 +629,6 @@ export interface DamageEntry {
   extremity: Extremity;
 }
 
-export enum GameDifficulty {
-  Easy = "easy",
-  Hard = "hard"
-}
-
 export enum EnemyType {
   Abomination = "Abomination",
   MutatedAnimal = "MutatedAnimal",

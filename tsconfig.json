@@ -15,8 +15,6 @@
       "node_modules/@types"
     ],
     "lib": [
-      "esnext",
-      "es2017",
       "es2019",
       "dom"
     ]

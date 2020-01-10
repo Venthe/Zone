@@ -1,13 +1,9 @@
 /* tslint:disable:max-line-length */
-import {Injectable} from "@angular/core";
-import {Script, Scripts} from "./scripts.model";
-import {AttributeKey, GameDifficulty} from "../state/model";
+import {GameDifficulty} from "../model/game";
+import {AttributeKey} from "../model/model";
 
-@Injectable({
-  providedIn: "root",
-})
-export class ScriptsProvider {
-  private scripts: Scripts = {};
+class Scripts {
+  private scripts: { [key: string]: (any) => any } = {};
 
   constructor() {
 
@@ -37,8 +33,7 @@ export class ScriptsProvider {
       return scriptsLibrary.execute("noLessThanZero", {value: skillValue < maxSkillPoints ? skillValue : maxSkillPoints});
     };
     this.scripts.maxSkillPoints = () => 300;
-    // this.scripts.getAdjustedSkillValue = ({skill}) => skill.tag ? skill.value + 20 : skill.value;
-    this.scripts.getAdjustedSkillValue = ({skill}) => skill;
+    this.scripts.getAdjustedSkillValue = ({skill}) => skill.tag ? skill.value + 20 : skill.value;
     this.scripts.canAddSkillPoint = ({skillValue, scriptsLibrary}) => skillValue < scriptsLibrary.execute("maxSkillPoints");
     this.scripts.gameDifficultySkillModifier = ({scriptsLibrary}) => {
       const difficulty = scriptsLibrary.execute("getDifficulty");
@@ -303,7 +298,7 @@ export class ScriptsProvider {
     //             }));
   }
 
-  execute(key: string, globalVariables: object): { script: Script, globalVariables: object } {
+  execute(key: string, globalVariables: object): { script: any, globalVariables: object } {
     const newLocal = this.scripts[key];
     if (!newLocal) {
       console.error(`Script not found. ${key}`);
@@ -312,3 +307,5 @@ export class ScriptsProvider {
     return {script: newLocal, globalVariables};
   }
 }
+
+export const scriptsLibrary = new Scripts();
