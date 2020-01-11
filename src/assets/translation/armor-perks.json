@@ -1,0 +1,22 @@
+{
+  "combatArmor": {
+    "name": "Combat Armor",
+    "description": ""
+  },
+  "poweredArmor": {
+    "name": "Powered Armor",
+    "description": ""
+  },
+  "armorAdvancedI": {
+    "name": "Armor Advanced I",
+    "description": ""
+  },
+  "armorAdvancedIi": {
+    "name": "Armor Advanced II",
+    "description": ""
+  },
+  "armorCharisma": {
+    "name": "Armor Charisma",
+    "description": ""
+  }
+}

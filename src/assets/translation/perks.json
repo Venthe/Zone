@@ -1,434 +1,310 @@
 {
-  "regularPerks": {
-    "actionBoy": {
-      "name": "Action Boy",
-      "description": "Each level of Action Boy/Girl gives you an additional AP to spend every combat turn. You can use these generic APs on any task."
-    },
-    "adrenalineRush": {
-      "name": "Adrenaline Rush",
-      "description": "With this Perk, you gain +1 to your Strength when you drop below 1/2 of your max hit points."
-    },
-    "awareness": {
-      "name": "Awareness",
-      "description": "With Awareness, you are given detailed information about any critter you examine. You see their exact hit points and information about any weapon they are equipped with."
-    },
-    "betterCriticals": {
-      "name": "Better Criticals",
-      "description": "The critical hits you cause in combat are more devastating. You gain a 20% bonus on the critical hit table, almost ensuring that more damage will be done. This does not affect the chance to cause a critical hit."
-    },
-    "bonusHtHAttacks": {
-      "name": "Bonus HtH Attacks",
-      "description": "You have learned the secret arts of the East, or you just punch faster. In any case, your hand-to-hand attacks cost 1 AP less to perform."
-    },
-    "bonusHtHDamage": {
-      "name": "Bonus HtH Damage",
-      "description": "Experience in unarmed combat has given you the edge when it comes to damage. You cause +2 points of damage with hand-to-hand and melee attacks for each level of this Perk."
-    },
-    "bonusMove": {
-      "name": "Bonus Move",
-      "description": "For each level of Bonus Move, you get 2 free APs each turn that can only be used for movement. In other words, you can move 2 free hexes each turn for each level of this Perk."
-    },
-    "bonusRangedDamage": {
-      "name": "Bonus Ranged Damage",
-      "description": "Your training in firearms and other ranged weapons has made you more deadly in ranged combat. For each level of this Perk, you do +2 points of damage with ranged weapons."
-    },
-    "bonusRateOfFire": {
-      "name": "Bonus Rate of Fire",
-      "description": "This perk allows you to pull the trigger a little faster and still remain as accurate as before. Each ranged weapon attack costs 1 AP less to perform."
-    },
-    "cautiousNature": {
-      "name": "Cautious Nature",
-      "description": "You are more alert outdoors and enemies are less likely to sneak up on you. With this Perk you get a +3 to your perception in random encounters when determining placement."
-    },
-    "comprehension": {
-      "name": "Comprehension",
-      "description": "You pay much closer attention to the smaller details when reading. You gain 50% more skill points when reading books."
-    },
-    "cultOfPersonality": {
-      "name": "Cult of Personality",
-      "description": "Your reputation is always positive to people. Without this Perk, a large negative reputation would have a bad effect on good natured people. Works with a good rep and bad people, too."
-    },
-    "demolitionExpert": {
-      "name": "Demolition Expert",
-      "description": "You are an expert when it comes to the fine art of handling explosives. They always go off when they're supposed to, as well as causing extra damage."
-    },
-    "dodger": {
-      "name": "Dodger",
-      "description": "You are less likely to be hit in combat if you have this Perk. You gain a +5 to your Armor Class, in addition to the AC bonus from any armor worn."
-    },
-    "earlierSequence": {
-      "name": "Earlier Sequence",
-      "description": "You are more likely to move before your opponents in combat, since your Sequence is +2 for each level of this Perk."
-    },
-    "educated": {
-      "name": "Educated",
-      "description": "Each level of Educated will add +2 skill points when you gain a new experience level. This Perk works best when purchased early in your adventure."
-    },
-    "empathy": {
-      "name": "Empathy",
-      "description": "You have studied other human beings, giving you the inside knowledge of their emotional reaction to you. You will see the reaction level of the person you are talking to, when involved in an in-depth conversation."
-    },
-    "explorer": {
-      "name": "Explorer",
-      "description": "The mark of the Explorer is to search out new and interesting locations. With this Perk, you have a greater chance of finding special places and people."
-    },
-    "fasterHealing": {
-      "name": "Faster Healing",
-      "description": "With each level of this Perk, you will get a +1 bonus to your Healing Rate. Thus you heal faster."
-    },
-    "fortuneFinder": {
-      "name": "Fortune Finder",
-      "description": "You have the talent of finding money. You will find additional money in random encounters in the desert."
-    },
-    "gainStrength": {
-      "name": "Gain Strength",
-      "description": "With this Perk you gain +1 to your Strength."
-    },
-    "gaiPerception": {
-      "name": "Gain Perception",
-      "description": "With this Perk you gain +1 to your Perception."
-    },
-    "gainEndurance": {
-      "name": "Gain Endurance",
-      "description": "With this Perk you gain +1 to your Endurance."
-    },
-    "gainCharisma": {
-      "name": "Gain Charisma",
-      "description": "With this Perk you gain +1 to your Charisma."
-    },
-    "gainIntelligence": {
-      "name": "Gain Intelligence",
-      "description": "With this Perk you gain +1 to your Intelligence."
-    },
-    "gainAgility": {
-      "name": "Gain Agility",
-      "description": "With this Perk you gain +1 to your Agility."
-    },
-    "gainLuck": {
-      "name": "Gain Luck",
-      "description": "With this Perk you gain +1 to your Luck."
-    },
-    "gambler": {
-      "name": "Gambler",
-      "description": "You can roll with the best of them. You gain +20% to your gambling skill."
-    },
-    "ghost": {
-      "name": "Ghost",
-      "description": "When the sun goes down, or you are in a poorly lit area, you move like a Ghost with this Perk. Your Sneak skill is enhanced +20% during darkness conditions."
-    },
-    "harmless": {
-      "name": "Harmless",
-      "description": "Your innocent demeanor makes stealing from people a little easier. You gain 20% to your Steal skill."
-    },
-    "healer": {
-      "name": "Healer",
-      "description": "The healing of bodies comes easier to you with this Perk. Each level will add 2-5 more hit points healed when using the First Aid or Doctor skills."
-    },
-    "heaveHo": {
-      "name": "Heave Ho!",
-      "description": "Each level of the Heave Ho! Perk will give your thrown weapons an additional +2 Strength for purposes of determining range only."
-    },
-    "hereAndNow": {
-      "name": "Here and Now",
-      "description": "With this Perk you immediately gain one experience level."
-    },
-    "htHEvade": {
-      "name": "HtH Evade",
-      "description": "If both item slots are empty, each unused action point gives you a +2 instead of +1 towards your Armor Class at the end of your turn, plus 1/12 of your unarmed skill."
-    },
-    "kamaSutraMaster": {
-      "name": "Kama Sutra Master",
-      "description": "When it comes to pleasing sexually, you wrote the book."
-    },
-    "karmaBeacon": {
-      "name": "Karma Beacon",
-      "description": "Your Karma shines twice as bright. Whether good or bad, your Karma is doubled for any kind of reaction or modifiers."
-    },
-    "lifegiver": {
-      "name": "Lifegiver",
-      "description": "With each level of this Perk, you gain an additional 4 Hit Points every time you advance a level. This is in addition to the Hit Points you already gain per level based off of your Endurance."
-    },
-    "lightStep": {
-      "name": "Light Step",
-      "description": "You are agile, lucky, and always careful. This perk halves your chances of setting off a trap."
-    },
-    "livingAnatomy": {
-      "name": "Living Anatomy",
-      "description": "You have a better understanding of living creatures and their strengths and weaknesses. You get a one-time bonus of +10% to Doctor, and you do +5 damage per attack to living creatures."
-    },
-    "magneticPersonality": {
-      "name": "Magnetic Personality",
-      "description": "You get 1 extra slot in your companion limit, but don't forget that more than 5 is always a crowd."
-    },
-    "masterThief": {
-      "name": "Master Thief",
-      "description": "You gain +15 to stealing and lockpicking. Steal from the rich, and give to you."
-    },
-    "masterTrader": {
-      "name": "Master Trader",
-      "description": "You have mastered one aspect of bartering - the ability to buy goods far cheaper than a normal person. With this Perk, you get a 25% discount when purchasing items from a store or another trader. "
-    },
-    "medic": {
-      "name": "Medic",
-      "description": "The Medic Perk will give you a one-time bonus of +20% to the First Aid and Doctor skills. Healing skills are a good thing."
-    },
-    "moreCriticals": {
-      "name": "More Criticals",
-      "description": "You are more likely to cause Critical Hits in combat if you have this Perk. Each level of More Criticals will get you a +5% chance to cause a critical hit. This is a good thing."
-    },
-    "mrFixit": {
-      "name": "Mr. Fixit",
-      "description": "This perk will give you a one-time bonus of +10% to the Repair and Science skills."
-    },
-    "mutate": {
-      "name": "Mutate!",
-      "description": "The radiation of the wasteland has changed you! One of your traits has mutated into something else..."
-    },
-    "mysteriousStranger": {
-      "name": "Mysterious Stranger",
-      "description": "With this Perk, you have gained the attention of a Mysterious Stranger, who will appear to help you from time to time. If your ally is lost in combat, do not expect him or her to be replaced."
-    },
-    "negotiator": {
-      "name": "Negotiator",
-      "description": "You are a very skilled negotiator. Not only can you barter with the best of them, but you can talk your way into or out of almost anything. "
-    },
-    "nightVision": {
-      "name": "Night Vision",
-      "description": "With the Night Vision Perk, you can see in the dark better. Each level of this Perk will reduce the overall darkness level by 20%."
-    },
-    "packRat": {
-      "name": "Pack Rat",
-      "description": "You are efficient at arranging your inventory in general. This makes it much easier to carry that little extra you've always needed. This is useful for characters with low Strength, i.e. sharpshooters and mediators. "
-    },
-    "pathfinder": {
-      "name": "Pathfinder",
-      "description": "The Pathfinder is better able to find the shortest route. With this Perk, your travel time on the world map is reduced by 25% for each level."
-    },
-    "pickpocket": {
-      "name": "Pickpocket",
-      "description": "You are much more adept at stealing than the normal crook. You can Steal with the best of them, because with this perk, you ignore size and facing modifiers, when stealing from a person. "
-    },
-    "presence": {
-      "name": "Presence",
-      "description": "You command attention by just walking into a room. The initial reaction of another person is improved by 10% for each level of this Perk."
-    },
-    "pyromaniac": {
-      "name": "Pyromaniac",
-      "description": "This Perk will make your character do horrible things with fire — to other people. +5 points of damage with fire-based weapons."
-    },
-    "quickPockets": {
-      "name": "Quick Pockets",
-      "description": "You have learned to better store your equipment on your person. With each level of this Perk, the AP cost to access Inventory in combat is reduced by one."
-    },
-    "quickRecovery": {
-      "name": "Quick Recovery",
-      "description": "You are quick at recovering from being knocked down."
-    },
-    "radResistance": {
-      "name": "Rad Resistance",
-      "description": "You are better able to avoid radiation, and the bad effects radiation causes. Each level of this Perk will improve your Radiation Resistance by 10%."
-    },
-    "ranger": {
-      "name": "Ranger",
-      "description": "You are better able to avoid unwanted attention while traveling through the wasteland. Your chance of a hostile random encounter is lowered by each level of this Perk."
-    },
-    "salesman": {
-      "name": "Salesman",
-      "description": "You are an adept salesperson. With this Perk you gain +20% towards your Barter skill."
-    },
-    "scout": {
-      "name": "Scout",
-      "description": "You have improved your ability to see distant locations, increasing the size of explorations on the World Map by one square in each direction."
-    },
-    "scrounger": {
-      "name": "Scrounger",
-      "description": "You can find more ammunition than the normal post-apocalyptic survivor. This perk will double the amount of ammunition found in random encounters. "
-    },
-    "sharpshooter": {
-      "name": "Sharpshooter",
-      "description": "The talent of hitting things at longer distances. You get a +2 bonus, for each level of this Perk, to Perception for the purposes of determining range modifiers. It's easier than ever to kill at long range!"
-    },
-    "silentDeath": {
-      "name": "Silent Death",
-      "description": "While Sneaking, hitting an enemy in the back will cause double damage using a HtH attack. This perk will not double the damage caused by a Critical Hit and Critical Hits do at least two times normal damage. "
-    },
-    "silentRunning": {
-      "name": "Silent Running",
-      "description": "With this Perk, you now have the ability to move quickly and still remain quiet. You can Sneak, and run at the same time. Without this Perk, you would automatically stop Sneaking if you ran."
-    },
-    "slayer": {
-      "name": "Slayer",
-      "description": "The Slayer walks the earth! With a successful Luck roll, all of your hits in hand-to-hand combat are upgraded to critical hits - causing destruction and mayhem."
-    },
-    "smoothTalker": {
-      "name": "Smooth Talker",
-      "description": "A Smooth Talker has learned to increase their options in dialogue, without understanding what they are talking about. Each level of this Perk will increase your Intelligence by one, for purposes of dialogue only."
-    },
-    "snakeater": {
-      "name": "Snakeater",
-      "description": "Yum! Tastes like chicken. You have gained an immunity to poison, resulting in a +25% to your Poison Resistance."
-    },
-    "sniper": {
-      "name": "Sniper",
-      "description": "You have mastered the firearm as a source of pain. With this perk, any successful hit in combat with a ranged weapon will be upgraded to a critical hit if you also make a Luck roll."
-    },
-    "speaker": {
-      "name": "Speaker",
-      "description": ""
-    },
-    "stonewall": {
-      "name": "Stonewall",
-      "description": "You are much less likely to be knocked down in combat. "
-    },
-    "strongBack": {
-      "name": "Strong Back",
-      "description": "AKA Mule. You can carry an additional 50 lbs. of equipment for each level of this Perk."
-    },
-    "survivalist": {
-      "name": "Survivalist",
-      "description": "You are a master of the outdoors. This Perk confers the ability to survive in hostile environments. You get a +20% bonus to Outdoorsman for survival purposes, for each level of this Perk."
-    },
-    "swiftLearner": {
-      "name": "Swift Learner",
-      "description": "You are indeed a Swift Learner with this Perk, as each level gives you an additional +5% bonus whenever you earn experience points. This is best taken early."
-    },
-    "tag": {
-      "name": "Tag!",
-      "description": "Your skills have improved to the point where you can pick an additional Tag skill, increasing that skill by +20% immediately and 2% per skill point spent."
-    },
-    "thief": {
-      "name": "Thief",
-      "description": "The blood of a thief runs through your veins. With the Thief perk, you get a one-time bonus of +10% (+10 skill points in unpatched Fallout 2) to your Sneak, Lockpick, Steal, and Traps skills. A well rounded thief is a living thief. "
-    },
-    "toughness": {
-      "name": "Toughness",
-      "description": "When you are tough, you take less damage. Each level of this Perk will add +10% to your general damage resistance."
-    },
-    "weaponHandling": {
-      "name": "Weapon Handling",
-      "description": ""
-    }
+  "actionBoy": {
+    "name": "Action Boy",
+    "description": "Each level of Action Boy/Girl gives you an additional AP to spend every combat turn. You can use these generic APs on any task."
   },
-  "specialPerks": {
-    "alcoholLoweredHitPoints": {
-      "name": "Alcohol Lowered Hit Points",
-      "description": "Your hit points have been lowered slightly by repeated drunkeness."
-    },
-    "alcoholLoweredHitPointsIi": {
-      "name": "Alcohol Lowered Hit Points II",
-      "description": "Your hit points have been lowered slightly by repeated drunkeness."
-    },
-    "alcoholRaisedHitPoints": {
-      "name": "Alcohol Raised Hit Points",
-      "description": "Your hit points have been enhanced a little by repeated drunkeness."
-    },
-    "alcoholRaisedHitPointsIi": {
-      "name": "Alcohol Raised Hit Points II",
-      "description": "Your hit points have been enhanced a little by repeated drunkeness."
-    },
-    "autodocRaisedHitPoints": {
-      "name": "Autodoc Raised Hit Points",
-      "description": ""
-    },
-    "autodocRaisedHitPointsIi": {
-      "name": "Autodoc Raised Hit Points II",
-      "description": ""
-    },
-    "autodocLoweredHitPoints": {
-      "name": "Autodoc Lowered Hit Points",
-      "description": ""
-    },
-    "autodocLoweredHitPointsIi": {
-      "name": "Autodoc Lowered Hit Points II",
-      "description": ""
-    },
-    "dermalImpactArmor": {
-      "name": "Dermal Impact Armor",
-      "description": "You have inherent protection against physical attacks. This implant consists of combat armor plates grafted to the patient's skeleton, improving the resistance to physical trauma and concussive damage. "
-    },
-    "dermalImpactAssaultEnhancement": {
-      "name": "Dermal Impact Assault Enhancement",
-      "description": "You have extra inherent protection against physical attacks. This improvement of the Dermal Impact Armor implant consists of extra assault-issue impact plates crammed under the skin that double the strength of the original grafts and the resistance to physical trauma and concussive damage. However, all of these metal plates under the skin deform the natural shape of the skeleton and the body, the angular form reduces charisma of the recipient. The recipients are also advised to try to stay out of the sun until most of the scabs slough off. "
-    },
-    "expertExcrementExpeditor": {
-      "name": "Expert Excrement Expeditor",
-      "description": "You can sling Bull with the best of them."
-    },
-    "geckoSkinning": {
-      "name": "Gecko Skinning",
-      "description": "You have the knowledge of how to skin geckos properly to get their hides."
-    },
-    "phoenixArmorImplants": {
-      "name": "Phoenix Armor Implants",
-      "description": "You have inherent protection against energy attacks. This implant consists of combat armor thermal-dissipative membranes grafted under the patient's skin, improving the resistance to heat and energy based damage. This operation should create only a minimal scarring to the recipient. Burning and itching sensation also disappears after a few weeks of operation once the recipient's body is getting used to the thermal-dissipative fibers. Results in no real impact on the recipient's charisma. "
-    },
-    "phoenixAssaultEnhancement": {
-      "name": "Phoenix Assault Enhancement",
-      "description": "You have inherent protection against energy attacks."
-    },
-    "vaultCityTraining": {
-      "name": "Vault City Training",
-      "description": "You have received the Vault City medical training."
-    },
-    "vaultCityInoculations": {
-      "name": "Vault City Inoculations",
-      "description": "You have gained +10% resistance to both poison and radiation."
-    }
+  "adrenalineRush": {
+    "name": "Adrenaline Rush",
+    "description": "With this Perk, you gain +1 to your Strength when you drop below 1/2 of your max hit points."
   },
-  "weaponPerks": {
-    "weaponAccurate": {
-      "name": "Weapon Accurate",
-      "description": ""
-    },
-    "weaponKnockback": {
-      "name": "Weapon Knockback",
-      "description": ""
-    },
-    "weaponLongRange": {
-      "name": "Weapon Long Range",
-      "description": ""
-    },
-    "weaponPenetrate": {
-      "name": "Weapon Penetrate",
-      "description": ""
-    },
-    "weaponFastReload": {
-      "name": "Weapon Fast Reload",
-      "description": ""
-    },
-    "weaponFlameboy": {
-      "name": "Weapon Flameboy",
-      "description": ""
-    },
-    "weaponNightSight": {
-      "name": "Weapon Night Sight",
-      "description": ""
-    },
-    "weaponScopeRange": {
-      "name": "Weapon Scope Range",
-      "description": ""
-    }
+  "awareness": {
+    "name": "Awareness",
+    "description": "With Awareness, you are given detailed information about any critter you examine. You see their exact hit points and information about any weapon they are equipped with."
   },
-  "armorPerks": {
-    "combatArmor": {
-      "name": "Combat Armor",
-      "description": ""
-    },
-    "poweredArmor": {
-      "name": "Powered Armor",
-      "description": ""
-    },
-    "armorAdvancedI": {
-      "name": "Armor Advanced I",
-      "description": ""
-    },
-    "armorAdvancedIi": {
-      "name": "Armor Advanced II",
-      "description": ""
-    },
-    "armorCharisma": {
-      "name": "Armor Charisma",
-      "description": ""
-    }
+  "betterCriticals": {
+    "name": "Better Criticals",
+    "description": "The critical hits you cause in combat are more devastating. You gain a 20% bonus on the critical hit table, almost ensuring that more damage will be done. This does not affect the chance to cause a critical hit."
+  },
+  "bonusHtHAttacks": {
+    "name": "Bonus HtH Attacks",
+    "description": "You have learned the secret arts of the East, or you just punch faster. In any case, your hand-to-hand attacks cost 1 AP less to perform."
+  },
+  "bonusHtHDamage": {
+    "name": "Bonus HtH Damage",
+    "description": "Experience in unarmed combat has given you the edge when it comes to damage. You cause +2 points of damage with hand-to-hand and melee attacks for each level of this Perk."
+  },
+  "bonusMove": {
+    "name": "Bonus Move",
+    "description": "For each level of Bonus Move, you get 2 free APs each turn that can only be used for movement. In other words, you can move 2 free hexes each turn for each level of this Perk."
+  },
+  "bonusRangedDamage": {
+    "name": "Bonus Ranged Damage",
+    "description": "Your training in firearms and other ranged weapons has made you more deadly in ranged combat. For each level of this Perk, you do +2 points of damage with ranged weapons."
+  },
+  "bonusRateOfFire": {
+    "name": "Bonus Rate of Fire",
+    "description": "This perk allows you to pull the trigger a little faster and still remain as accurate as before. Each ranged weapon attack costs 1 AP less to perform."
+  },
+  "cautiousNature": {
+    "name": "Cautious Nature",
+    "description": "You are more alert outdoors and enemies are less likely to sneak up on you. With this Perk you get a +3 to your perception in random encounters when determining placement."
+  },
+  "comprehension": {
+    "name": "Comprehension",
+    "description": "You pay much closer attention to the smaller details when reading. You gain 50% more skill points when reading books."
+  },
+  "cultOfPersonality": {
+    "name": "Cult of Personality",
+    "description": "Your reputation is always positive to people. Without this Perk, a large negative reputation would have a bad effect on good natured people. Works with a good rep and bad people, too."
+  },
+  "demolitionExpert": {
+    "name": "Demolition Expert",
+    "description": "You are an expert when it comes to the fine art of handling explosives. They always go off when they're supposed to, as well as causing extra damage."
+  },
+  "dodger": {
+    "name": "Dodger",
+    "description": "You are less likely to be hit in combat if you have this Perk. You gain a +5 to your Armor Class, in addition to the AC bonus from any armor worn."
+  },
+  "earlierSequence": {
+    "name": "Earlier Sequence",
+    "description": "You are more likely to move before your opponents in combat, since your Sequence is +2 for each level of this Perk."
+  },
+  "educated": {
+    "name": "Educated",
+    "description": "Each level of Educated will add +2 skill points when you gain a new experience level. This Perk works best when purchased early in your adventure."
+  },
+  "empathy": {
+    "name": "Empathy",
+    "description": "You have studied other human beings, giving you the inside knowledge of their emotional reaction to you. You will see the reaction level of the person you are talking to, when involved in an in-depth conversation."
+  },
+  "explorer": {
+    "name": "Explorer",
+    "description": "The mark of the Explorer is to search out new and interesting locations. With this Perk, you have a greater chance of finding special places and people."
+  },
+  "fasterHealing": {
+    "name": "Faster Healing",
+    "description": "With each level of this Perk, you will get a +1 bonus to your Healing Rate. Thus you heal faster."
+  },
+  "fortuneFinder": {
+    "name": "Fortune Finder",
+    "description": "You have the talent of finding money. You will find additional money in random encounters in the desert."
+  },
+  "gainStrength": {
+    "name": "Gain Strength",
+    "description": "With this Perk you gain +1 to your Strength."
+  },
+  "gaiPerception": {
+    "name": "Gain Perception",
+    "description": "With this Perk you gain +1 to your Perception."
+  },
+  "gainEndurance": {
+    "name": "Gain Endurance",
+    "description": "With this Perk you gain +1 to your Endurance."
+  },
+  "gainCharisma": {
+    "name": "Gain Charisma",
+    "description": "With this Perk you gain +1 to your Charisma."
+  },
+  "gainIntelligence": {
+    "name": "Gain Intelligence",
+    "description": "With this Perk you gain +1 to your Intelligence."
+  },
+  "gainAgility": {
+    "name": "Gain Agility",
+    "description": "With this Perk you gain +1 to your Agility."
+  },
+  "gainLuck": {
+    "name": "Gain Luck",
+    "description": "With this Perk you gain +1 to your Luck."
+  },
+  "gambler": {
+    "name": "Gambler",
+    "description": "You can roll with the best of them. You gain +20% to your gambling skill."
+  },
+  "ghost": {
+    "name": "Ghost",
+    "description": "When the sun goes down, or you are in a poorly lit area, you move like a Ghost with this Perk. Your Sneak skill is enhanced +20% during darkness conditions."
+  },
+  "harmless": {
+    "name": "Harmless",
+    "description": "Your innocent demeanor makes stealing from people a little easier. You gain 20% to your Steal skill."
+  },
+  "healer": {
+    "name": "Healer",
+    "description": "The healing of bodies comes easier to you with this Perk. Each level will add 2-5 more hit points healed when using the First Aid or Doctor skills."
+  },
+  "heaveHo": {
+    "name": "Heave Ho!",
+    "description": "Each level of the Heave Ho! Perk will give your thrown weapons an additional +2 Strength for purposes of determining range only."
+  },
+  "hereAndNow": {
+    "name": "Here and Now",
+    "description": "With this Perk you immediately gain one experience level."
+  },
+  "htHEvade": {
+    "name": "HtH Evade",
+    "description": "If both item slots are empty, each unused action point gives you a +2 instead of +1 towards your Armor Class at the end of your turn, plus 1/12 of your unarmed skill."
+  },
+  "kamaSutraMaster": {
+    "name": "Kama Sutra Master",
+    "description": "When it comes to pleasing sexually, you wrote the book."
+  },
+  "karmaBeacon": {
+    "name": "Karma Beacon",
+    "description": "Your Karma shines twice as bright. Whether good or bad, your Karma is doubled for any kind of reaction or modifiers."
+  },
+  "lifegiver": {
+    "name": "Lifegiver",
+    "description": "With each level of this Perk, you gain an additional 4 Hit Points every time you advance a level. This is in addition to the Hit Points you already gain per level based off of your Endurance."
+  },
+  "lightStep": {
+    "name": "Light Step",
+    "description": "You are agile, lucky, and always careful. This perk halves your chances of setting off a trap."
+  },
+  "livingAnatomy": {
+    "name": "Living Anatomy",
+    "description": "You have a better understanding of living creatures and their strengths and weaknesses. You get a one-time bonus of +10% to Doctor, and you do +5 damage per attack to living creatures."
+  },
+  "magneticPersonality": {
+    "name": "Magnetic Personality",
+    "description": "You get 1 extra slot in your companion limit, but don't forget that more than 5 is always a crowd."
+  },
+  "masterThief": {
+    "name": "Master Thief",
+    "description": "You gain +15 to stealing and lockpicking. Steal from the rich, and give to you."
+  },
+  "masterTrader": {
+    "name": "Master Trader",
+    "description": "You have mastered one aspect of bartering - the ability to buy goods far cheaper than a normal person. With this Perk, you get a 25% discount when purchasing items from a store or another trader. "
+  },
+  "medic": {
+    "name": "Medic",
+    "description": "The Medic Perk will give you a one-time bonus of +20% to the First Aid and Doctor skills. Healing skills are a good thing."
+  },
+  "moreCriticals": {
+    "name": "More Criticals",
+    "description": "You are more likely to cause Critical Hits in combat if you have this Perk. Each level of More Criticals will get you a +5% chance to cause a critical hit. This is a good thing."
+  },
+  "mrFixit": {
+    "name": "Mr. Fixit",
+    "description": "This perk will give you a one-time bonus of +10% to the Repair and Science skills."
+  },
+  "mutate": {
+    "name": "Mutate!",
+    "description": "The radiation of the wasteland has changed you! One of your traits has mutated into something else..."
+  },
+  "mysteriousStranger": {
+    "name": "Mysterious Stranger",
+    "description": "With this Perk, you have gained the attention of a Mysterious Stranger, who will appear to help you from time to time. If your ally is lost in combat, do not expect him or her to be replaced."
+  },
+  "negotiator": {
+    "name": "Negotiator",
+    "description": "You are a very skilled negotiator. Not only can you barter with the best of them, but you can talk your way into or out of almost anything. "
+  },
+  "nightVision": {
+    "name": "Night Vision",
+    "description": "With the Night Vision Perk, you can see in the dark better. Each level of this Perk will reduce the overall darkness level by 20%."
+  },
+  "packRat": {
+    "name": "Pack Rat",
+    "description": "You are efficient at arranging your inventory in general. This makes it much easier to carry that little extra you've always needed. This is useful for characters with low Strength, i.e. sharpshooters and mediators. "
+  },
+  "pathfinder": {
+    "name": "Pathfinder",
+    "description": "The Pathfinder is better able to find the shortest route. With this Perk, your travel time on the world map is reduced by 25% for each level."
+  },
+  "pickpocket": {
+    "name": "Pickpocket",
+    "description": "You are much more adept at stealing than the normal crook. You can Steal with the best of them, because with this perk, you ignore size and facing modifiers, when stealing from a person. "
+  },
+  "presence": {
+    "name": "Presence",
+    "description": "You command attention by just walking into a room. The initial reaction of another person is improved by 10% for each level of this Perk."
+  },
+  "pyromaniac": {
+    "name": "Pyromaniac",
+    "description": "This Perk will make your character do horrible things with fire — to other people. +5 points of damage with fire-based weapons."
+  },
+  "quickPockets": {
+    "name": "Quick Pockets",
+    "description": "You have learned to better store your equipment on your person. With each level of this Perk, the AP cost to access Inventory in combat is reduced by one."
+  },
+  "quickRecovery": {
+    "name": "Quick Recovery",
+    "description": "You are quick at recovering from being knocked down."
+  },
+  "radResistance": {
+    "name": "Rad Resistance",
+    "description": "You are better able to avoid radiation, and the bad effects radiation causes. Each level of this Perk will improve your Radiation Resistance by 10%."
+  },
+  "ranger": {
+    "name": "Ranger",
+    "description": "You are better able to avoid unwanted attention while traveling through the wasteland. Your chance of a hostile random encounter is lowered by each level of this Perk."
+  },
+  "salesman": {
+    "name": "Salesman",
+    "description": "You are an adept salesperson. With this Perk you gain +20% towards your Barter skill."
+  },
+  "scout": {
+    "name": "Scout",
+    "description": "You have improved your ability to see distant locations, increasing the size of explorations on the World Map by one square in each direction."
+  },
+  "scrounger": {
+    "name": "Scrounger",
+    "description": "You can find more ammunition than the normal post-apocalyptic survivor. This perk will double the amount of ammunition found in random encounters. "
+  },
+  "sharpshooter": {
+    "name": "Sharpshooter",
+    "description": "The talent of hitting things at longer distances. You get a +2 bonus, for each level of this Perk, to Perception for the purposes of determining range modifiers. It's easier than ever to kill at long range!"
+  },
+  "silentDeath": {
+    "name": "Silent Death",
+    "description": "While Sneaking, hitting an enemy in the back will cause double damage using a HtH attack. This perk will not double the damage caused by a Critical Hit and Critical Hits do at least two times normal damage. "
+  },
+  "silentRunning": {
+    "name": "Silent Running",
+    "description": "With this Perk, you now have the ability to move quickly and still remain quiet. You can Sneak, and run at the same time. Without this Perk, you would automatically stop Sneaking if you ran."
+  },
+  "slayer": {
+    "name": "Slayer",
+    "description": "The Slayer walks the earth! With a successful Luck roll, all of your hits in hand-to-hand combat are upgraded to critical hits - causing destruction and mayhem."
+  },
+  "smoothTalker": {
+    "name": "Smooth Talker",
+    "description": "A Smooth Talker has learned to increase their options in dialogue, without understanding what they are talking about. Each level of this Perk will increase your Intelligence by one, for purposes of dialogue only."
+  },
+  "snakeater": {
+    "name": "Snakeater",
+    "description": "Yum! Tastes like chicken. You have gained an immunity to poison, resulting in a +25% to your Poison Resistance."
+  },
+  "sniper": {
+    "name": "Sniper",
+    "description": "You have mastered the firearm as a source of pain. With this perk, any successful hit in combat with a ranged weapon will be upgraded to a critical hit if you also make a Luck roll."
+  },
+  "speaker": {
+    "name": "Speaker",
+    "description": ""
+  },
+  "stonewall": {
+    "name": "Stonewall",
+    "description": "You are much less likely to be knocked down in combat. "
+  },
+  "strongBack": {
+    "name": "Strong Back",
+    "description": "AKA Mule. You can carry an additional 50 lbs. of equipment for each level of this Perk."
+  },
+  "survivalist": {
+    "name": "Survivalist",
+    "description": "You are a master of the outdoors. This Perk confers the ability to survive in hostile environments. You get a +20% bonus to Outdoorsman for survival purposes, for each level of this Perk."
+  },
+  "swiftLearner": {
+    "name": "Swift Learner",
+    "description": "You are indeed a Swift Learner with this Perk, as each level gives you an additional +5% bonus whenever you earn experience points. This is best taken early."
+  },
+  "tag": {
+    "name": "Tag!",
+    "description": "Your skills have improved to the point where you can pick an additional Tag skill, increasing that skill by +20% immediately and 2% per skill point spent."
+  },
+  "thief": {
+    "name": "Thief",
+    "description": "The blood of a thief runs through your veins. With the Thief perk, you get a one-time bonus of +10% (+10 skill points in unpatched Fallout 2) to your Sneak, Lockpick, Steal, and Traps skills. A well rounded thief is a living thief. "
+  },
+  "toughness": {
+    "name": "Toughness",
+    "description": "When you are tough, you take less damage. Each level of this Perk will add +10% to your general damage resistance."
+  },
+  "weaponHandling": {
+    "name": "Weapon Handling",
+    "description": ""
   }
 }

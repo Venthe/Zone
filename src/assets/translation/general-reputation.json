@@ -1,0 +1,17 @@
+{
+  "negative": {
+    "-1": "Betrayer",
+    "-2": "Sword of Despair",
+    "-3": "Scourge of the Wastes",
+    "-4": "Demon spawn"
+  },
+  "neutral": {
+    "0": "Neutral"
+  },
+  "positive": {
+    "1": "Defender",
+    "2": "Shield of Hope",
+    "3": "Guardian of the Wastes",
+    "4": "Savior of the Damned"
+  }
+}

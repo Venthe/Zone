@@ -1,20 +1,25 @@
 import {GameDifficulty} from "../game";
 import {Fallout2Attributes} from "./attributes";
 import {Fallout2DerivedAttributes} from "./derived-attributes";
-import {Fallout2Karma} from "./karma";
+import {Fallout2Experience} from "./experience";
 import {Fallout2Perks} from "./perks/perks";
+import {Fallout2Reputation} from "./reputation";
 import {Fallout2Skills} from "./skills";
 import {Fallout2Traits} from "./traits";
+
+export enum Gender {
+  Male,
+  Female
+}
 
 class Fallout2CharacterEntity {
   constructor(private readonly gameDifficulty: GameDifficulty) {
   }
 
-  level = 1;
   name = "";
 
-  experience = 0;
-  karma = new Fallout2Karma();
+  experience = new Fallout2Experience();
+  karma = new Fallout2Reputation();
 
   attributes = new Fallout2Attributes();
   skills = new Fallout2Skills(this.gameDifficulty, this.attributes);

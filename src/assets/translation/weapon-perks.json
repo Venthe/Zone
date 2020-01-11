@@ -1,0 +1,34 @@
+{
+  "weaponAccurate": {
+    "name": "Weapon Accurate",
+    "description": ""
+  },
+  "weaponKnockback": {
+    "name": "Weapon Knockback",
+    "description": ""
+  },
+  "weaponLongRange": {
+    "name": "Weapon Long Range",
+    "description": ""
+  },
+  "weaponPenetrate": {
+    "name": "Weapon Penetrate",
+    "description": ""
+  },
+  "weaponFastReload": {
+    "name": "Weapon Fast Reload",
+    "description": ""
+  },
+  "weaponFlameboy": {
+    "name": "Weapon Flameboy",
+    "description": ""
+  },
+  "weaponNightSight": {
+    "name": "Weapon Night Sight",
+    "description": ""
+  },
+  "weaponScopeRange": {
+    "name": "Weapon Scope Range",
+    "description": ""
+  }
+}

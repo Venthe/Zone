@@ -1,0 +1,15 @@
+{
+  "negative": {
+    "-1": "Antipathy",
+    "-2": "Hated",
+    "-3": "Vilified"
+  },
+  "neutral": {
+    "0": "Neutral"
+  },
+  "positive": {
+    "1": "Accepted",
+    "2": "Liked",
+    "3": "Idolized"
+  }
+}

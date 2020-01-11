@@ -1,11 +1,11 @@
 import {Attributes} from "../attributes";
-import {Fallout2Karma} from "../karma";
+import {Fallout2Reputation} from "../reputation";
 import {Fallout2Skills} from "../skills";
 import {Effect} from "../utility/effects";
 
 export interface Fallout2RegularPerk {
   ranks: number;
-  requirements: (parameters: { level: number, attributes: Attributes, skills: Fallout2Skills, karma: Fallout2Karma }) => boolean;
+  requirements: (parameters: { level: number, attributes: Attributes, skills: Fallout2Skills, karma: Fallout2Reputation }) => boolean;
   effects: Effect[]
 }
 
@@ -196,7 +196,7 @@ export class Fallout2Perks {
   };
   harmless: Fallout2RegularPerk = {
     ranks: 1,
-    requirements: ({level, skills, karma}) => level >= 6 && skills.steal.getSkill() >= 50 && karma.value >= 50,
+    requirements: ({level, skills, karma}) => level >= 6 && skills.steal.getSkill() >= 50 && karma.generalReputation >= 50,
     // TODO: +20% steal
     effects: []
   };

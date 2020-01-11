@@ -1,0 +1,66 @@
+{
+  "alcoholLoweredHitPoints": {
+    "name": "Alcohol Lowered Hit Points",
+    "description": "Your hit points have been lowered slightly by repeated drunkeness."
+  },
+  "alcoholLoweredHitPointsIi": {
+    "name": "Alcohol Lowered Hit Points II",
+    "description": "Your hit points have been lowered slightly by repeated drunkeness."
+  },
+  "alcoholRaisedHitPoints": {
+    "name": "Alcohol Raised Hit Points",
+    "description": "Your hit points have been enhanced a little by repeated drunkeness."
+  },
+  "alcoholRaisedHitPointsIi": {
+    "name": "Alcohol Raised Hit Points II",
+    "description": "Your hit points have been enhanced a little by repeated drunkeness."
+  },
+  "autodocRaisedHitPoints": {
+    "name": "Autodoc Raised Hit Points",
+    "description": ""
+  },
+  "autodocRaisedHitPointsIi": {
+    "name": "Autodoc Raised Hit Points II",
+    "description": ""
+  },
+  "autodocLoweredHitPoints": {
+    "name": "Autodoc Lowered Hit Points",
+    "description": ""
+  },
+  "autodocLoweredHitPointsIi": {
+    "name": "Autodoc Lowered Hit Points II",
+    "description": ""
+  },
+  "dermalImpactArmor": {
+    "name": "Dermal Impact Armor",
+    "description": "You have inherent protection against physical attacks. This implant consists of combat armor plates grafted to the patient's skeleton, improving the resistance to physical trauma and concussive damage. "
+  },
+  "dermalImpactAssaultEnhancement": {
+    "name": "Dermal Impact Assault Enhancement",
+    "description": "You have extra inherent protection against physical attacks. This improvement of the Dermal Impact Armor implant consists of extra assault-issue impact plates crammed under the skin that double the strength of the original grafts and the resistance to physical trauma and concussive damage. However, all of these metal plates under the skin deform the natural shape of the skeleton and the body, the angular form reduces charisma of the recipient. The recipients are also advised to try to stay out of the sun until most of the scabs slough off. "
+  },
+  "expertExcrementExpeditor": {
+    "name": "Expert Excrement Expeditor",
+    "description": "You can sling Bull with the best of them."
+  },
+  "geckoSkinning": {
+    "name": "Gecko Skinning",
+    "description": "You have the knowledge of how to skin geckos properly to get their hides."
+  },
+  "phoenixArmorImplants": {
+    "name": "Phoenix Armor Implants",
+    "description": "You have inherent protection against energy attacks. This implant consists of combat armor thermal-dissipative membranes grafted under the patient's skin, improving the resistance to heat and energy based damage. This operation should create only a minimal scarring to the recipient. Burning and itching sensation also disappears after a few weeks of operation once the recipient's body is getting used to the thermal-dissipative fibers. Results in no real impact on the recipient's charisma. "
+  },
+  "phoenixAssaultEnhancement": {
+    "name": "Phoenix Assault Enhancement",
+    "description": "You have inherent protection against energy attacks."
+  },
+  "vaultCityTraining": {
+    "name": "Vault City Training",
+    "description": "You have received the Vault City medical training."
+  },
+  "vaultCityInoculations": {
+    "name": "Vault City Inoculations",
+    "description": "You have gained +10% resistance to both poison and radiation."
+  }
+}

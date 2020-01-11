@@ -1,5 +1,3 @@
-import {Attributes} from "../attributes";
-import {Fallout2Skills} from "../skills";
 import {Effect} from "../utility/effects";
 
 export interface Fallout2SpecialPerk {
@@ -61,7 +59,8 @@ export class Fallout2SpecialPerks {
   // TODO: Replaces dermal Impact Armor
   // TODO: Requires dermal Impact Armor
   dermalImpactAssaultEnhancement: Fallout2SpecialPerk = {
-    // TODO: +10% damage resistance against normal and explosion damage; -1 CH
+    // TODO: +10% damage resistance against normal and explosion damage;
+    //  -1 CH
     effects: []
   };
   expertExcrementExpeditor: Fallout2SpecialPerk = {
@@ -85,7 +84,8 @@ export class Fallout2SpecialPerks {
     effects: []
   };
   vaultCityTraining: Fallout2SpecialPerk = {
-    // TODO: +5% First Aid, +5% Doctor
+    // TODO: +5% First Aid
+    //  +5% Doctor
     effects: []
   };
   vaultCityInoculations: Fallout2SpecialPerk = {
