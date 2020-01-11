@@ -1,4 +1,8 @@
-export const AttributeModifier = (attribute, value) => ({
+export interface Effect {
+  type: string;
+}
+
+export const AttributeModifier = (attribute, value): Effect & any => ({
   type: "attributeModifier",
   payload: {
     attribute,
@@ -6,7 +10,7 @@ export const AttributeModifier = (attribute, value) => ({
   }
 });
 
-export const SkillModifier = (skill, value) => ({
+export const SkillModifier = (skill, value): Effect & any => ({
   type: "attributeModifier",
   payload: {
     skill,
@@ -14,7 +18,7 @@ export const SkillModifier = (skill, value) => ({
   }
 });
 
-export const DerivativeAttributeModifier = (derivedAttributeName, value) => ({
+export const DerivativeAttributeModifier = (derivedAttributeName, value): Effect & any => ({
   type: "attributeModifier",
   payload: {
     derivedAttributeName,
@@ -22,6 +26,6 @@ export const DerivativeAttributeModifier = (derivedAttributeName, value) => ({
   }
 });
 
-export const MoreViolentDeathAnimations = () => ({
+export const MoreViolentDeathAnimations = (): Effect & any => ({
   type: "moreViolentDeathAnimations"
 });

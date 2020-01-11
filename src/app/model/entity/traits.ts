@@ -1,15 +1,21 @@
 import {
   AttributeModifier,
   DerivativeAttributeModifier,
+  Effect,
   MoreViolentDeathAnimations,
   SkillModifier
 } from "./utility/effects";
+
+export interface Fallout2Trait {
+  name: string,
+  effect: Effect[]
+}
 
 export class Fallout2Traits {
   // TODO: With perk Mutate! player can change one trait more
   readonly traitsToDistribute = 2;
 
-  private readonly traits = [
+  private readonly traits: Fallout2Trait[] = [
     // TODO: Changes the ending
     {name: "bloodyMess", effect: [MoreViolentDeathAnimations()]},
     {name: "bruiser", effect: [AttributeModifier("strength", 2), DerivativeAttributeModifier("actionPoint", -2)]},

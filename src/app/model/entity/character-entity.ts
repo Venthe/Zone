@@ -1,17 +1,10 @@
 import {GameDifficulty} from "../game";
 import {Fallout2Attributes} from "./attributes";
 import {Fallout2DerivedAttributes} from "./derived-attributes";
+import {Fallout2Karma} from "./karma";
+import {Fallout2Perks} from "./perks/perks";
 import {Fallout2Skills} from "./skills";
 import {Fallout2Traits} from "./traits";
-
-class Experience {
-  amount = 0;
-}
-
-class Fallout2Perks {
-  /** How many levels must pass before your character gains another perk. */
-  perkRate = 3;
-}
 
 class Fallout2CharacterEntity {
   constructor(private readonly gameDifficulty: GameDifficulty) {
@@ -20,7 +13,8 @@ class Fallout2CharacterEntity {
   level = 1;
   name = "";
 
-  experience = new Experience();
+  experience = 0;
+  karma = new Fallout2Karma();
 
   attributes = new Fallout2Attributes();
   skills = new Fallout2Skills(this.gameDifficulty, this.attributes);
