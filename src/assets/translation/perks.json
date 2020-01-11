@@ -1,0 +1,215 @@
+{
+  "actionBoy": {
+    "name": "Action Boy"
+  },
+  "adrenalineRush": {
+    "name": "Adrenaline Rush"
+  },
+  "awareness": {
+    "name": "Awareness"
+  },
+  "betterCriticals": {
+    "name": "Better Criticals"
+  },
+  "bonusHtHAttacks": {
+    "name": "Bonus HtH Attacks"
+  },
+  "bonusHtHDamage": {
+    "name": "Bonus HtH Damage"
+  },
+  "bonusMove": {
+    "name": "Bonus Move"
+  },
+  "bonusRangedDamage": {
+    "name": "Bonus Ranged Damage"
+  },
+  "bonusRateOfFire": {
+    "name": "Bonus Rate of Fire"
+  },
+  "cautiousNature": {
+    "name": "Cautious Nature"
+  },
+  "comprehension": {
+    "name": "Comprehension"
+  },
+  "cultOfPersonality": {
+    "name": "Cult of Personality"
+  },
+  "demolitionExpert": {
+    "name": "Demolition Expert"
+  },
+  "dodger": {
+    "name": "Dodger"
+  },
+  "earlierSequence": {
+    "name": "Earlier Sequence"
+  },
+  "educated": {
+    "name": "Educated"
+  },
+  "empathy": {
+    "name": "Empathy"
+  },
+  "explorer": {
+    "name": "Explorer"
+  },
+  "fasterHealing": {
+    "name": "Faster Healing"
+  },
+  "fortuneFinder": {
+    "name": "Fortune Finder"
+  },
+  "gain": {
+    "name": "Gain"
+  },
+  "gambler": {
+    "name": "Gambler"
+  },
+  "ghost": {
+    "name": "Ghost"
+  },
+  "harmless": {
+    "name": "Harmless"
+  },
+  "healer": {
+    "name": "Healer"
+  },
+  "heaveHo": {
+    "name": "Heave Ho!"
+  },
+  "hereAndNow": {
+    "name": "Here and Now"
+  },
+  "htHEvade": {
+    "name": "HtH Evade"
+  },
+  "kamaSutraMaster": {
+    "name": "Kama Sutra Master"
+  },
+  "karmaBeacon": {
+    "name": "Karma Beacon"
+  },
+  "lifegiver": {
+    "name": "Lifegiver"
+  },
+  "lightStep": {
+    "name": "Light Step"
+  },
+  "livingAnatomy": {
+    "name": "Living Anatomy"
+  },
+  "magneticPersonality": {
+    "name": "Magnetic Personality"
+  },
+  "masterThief": {
+    "name": "Master Thief"
+  },
+  "masterTrader": {
+    "name": "Master Trader"
+  },
+  "medic": {
+    "name": "Medic"
+  },
+  "moreCriticals": {
+    "name": "More Criticals"
+  },
+  "mrFixit": {
+    "name": "Mr. Fixit"
+  },
+  "mutate": {
+    "name": "Mutate!"
+  },
+  "mysteriousStranger": {
+    "name": "Mysterious Stranger"
+  },
+  "negotiator": {
+    "name": "Negotiator"
+  },
+  "nightVision": {
+    "name": "Night Vision"
+  },
+  "packRat": {
+    "name": "Pack Rat"
+  },
+  "pathfinder": {
+    "name": "Pathfinder"
+  },
+  "pickpocket": {
+    "name": "Pickpocket"
+  },
+  "presence": {
+    "name": "Presence"
+  },
+  "pyromaniac": {
+    "name": "Pyromaniac"
+  },
+  "quickPockets": {
+    "name": "Quick Pockets"
+  },
+  "quickRecovery": {
+    "name": "Quick Recovery"
+  },
+  "radResistance": {
+    "name": "Rad Resistance"
+  },
+  "ranger": {
+    "name": "Ranger"
+  },
+  "salesman": {
+    "name": "Salesman"
+  },
+  "scout": {
+    "name": "Scout"
+  },
+  "scrounger": {
+    "name": "Scrounger"
+  },
+  "sharpshooter": {
+    "name": "Sharpshooter"
+  },
+  "silentDeath": {
+    "name": "Silent Death"
+  },
+  "silentRunning": {
+    "name": "Silent Running"
+  },
+  "slayer": {
+    "name": "Slayer"
+  },
+  "smoothTalker": {
+    "name": "Smooth Talker"
+  },
+  "snakeater": {
+    "name": "Snakeater"
+  },
+  "sniper": {
+    "name": "Sniper"
+  },
+  "speaker": {
+    "name": "Speaker"
+  },
+  "stonewall": {
+    "name": "Stonewall"
+  },
+  "strongBack": {
+    "name": "Strong Back"
+  },
+  "survivalist": {
+    "name": "Survivalist"
+  },
+  "swiftLearner": {
+    "name": "Swift Learner"
+  },
+  "tag": {
+    "name": "Tag!"
+  },
+  "thief": {
+    "name": "Thief"
+  },
+  "toughness": {
+    "name": "Toughness"
+  },
+  "weaponHandling": {
+    "name": "Weapon Handling"
+  }
+}

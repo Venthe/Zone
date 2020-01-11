@@ -3,7 +3,7 @@ export enum GameDifficulty {
   Hard = "hard"
 }
 
-class Game {
+export class Game {
   difficulty: GameDifficulty.Easy;
   achievements: {};
   challenges: {};

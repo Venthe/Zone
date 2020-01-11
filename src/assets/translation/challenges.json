@@ -1,0 +1,527 @@
+{
+  "aFistfulOfHollars": {
+    "name": "A Fistful of Hollars"
+  },
+  "abominable": {
+    "name": "Abominable"
+  },
+  "animalControl": {
+    "name": "Animal Control"
+  },
+  "bugStomper": {
+    "name": "Bug Stomper"
+  },
+  "demiseOfTheMachines": {
+    "name": "Demise of the Machines"
+  },
+  "energetic": {
+    "name": "Energetic"
+  },
+  "forAFewHollarsMore": {
+    "name": "For a Few Hollars More"
+  },
+  "iCanKillYouWithOneHand": {
+    "name": "I Can Kill You With One Hand"
+  },
+  "justPointAndClick": {
+    "name": "Just Point and Click"
+  },
+  "kaboom": {
+    "name": "Kaboom"
+  },
+  "kaboomBoomPow": {
+    "name": "Kaboom-boom-pow"
+  },
+  "moreEnergetic": {
+    "name": "More Energetic"
+  },
+  "notSoUpClose": {
+    "name": "Not So Up Close"
+  },
+  "nukeItFromOrbit": {
+    "name": "Nuke it From Orbit"
+  },
+  "shootEmUp": {
+    "name": "Shoot Em Up"
+  },
+  "shootEmUpAgain": {
+    "name": "Shoot Em Up Again"
+  },
+  "superMutantMassacre": {
+    "name": "Super Mutant Massacre"
+  },
+  "theRifleman": {
+    "name": "The Rifleman"
+  },
+  "thisIsHacking": {
+    "name": "This is Hacking"
+  },
+  "upClose": {
+    "name": "Up Close"
+  },
+  "upCloser": {
+    "name": "Up Closer"
+  },
+  "andBoyAreMyArmsTired": {
+    "name": "...And Boy are My Arms Tired"
+  },
+  "aLittleCritical": {
+    "name": "A Little Critical"
+  },
+  "aMatterOfHeart": {
+    "name": "A Matter of Heart"
+  },
+  "aMatterOfPerception": {
+    "name": "A Matter of Perception"
+  },
+  "aimingIsOptional": {
+    "name": "Aiming is Optional"
+  },
+  "beamWeaponMeUp": {
+    "name": "Beam (Weapon) Me Up"
+  },
+  "blasterMaster": {
+    "name": "Blaster Master"
+  },
+  "click": {
+    "name": "Click"
+  },
+  "conditionCritical": {
+    "name": "Condition Critical"
+  },
+  "criticalReaction": {
+    "name": "Critical Reaction"
+  },
+  "destroySomethingNotSoBeautiful": {
+    "name": "Destroy Something Not So Beautiful"
+  },
+  "fullOfStars": {
+    "name": "Full of Stars"
+  },
+  "goForTheEyes": {
+    "name": "Go For the Eyes"
+  },
+  "gottaHandGrenadeItToYou": {
+    "name": "Gotta Hand Grenade It to You"
+  },
+  "gutChecker": {
+    "name": "Gut Checker"
+  },
+  "iAmNotLeftHanded": {
+    "name": "I Am Not Left Handed"
+  },
+  "iCanDoItOneHanded": {
+    "name": "I Can Do It One Handed"
+  },
+  "iVeGotShotgun": {
+    "name": "I've Got Shotgun"
+  },
+  "knockedUp": {
+    "name": "Knocked Up"
+  },
+  "leadDealer": {
+    "name": "Lead Dealer"
+  },
+  "letSGetCritical": {
+    "name": "Let's Get Critical"
+  },
+  "lethalWeapons": {
+    "name": "Lethal Weapons"
+  },
+  "limberJack": {
+    "name": "Limber Jack"
+  },
+  "loveTheBomb": {
+    "name": "Love the Bomb"
+  },
+  "newVegasSamurai": {
+    "name": "New Vegas Samurai"
+  },
+  "oldTymeBrawler": {
+    "name": "Old-Tyme Brawler"
+  },
+  "setLasersForFun": {
+    "name": "Set Lasers for Fun"
+  },
+  "theBigSqueezy": {
+    "name": "The Big Squeezy"
+  },
+  "twoHandsAreBetterThanOne": {
+    "name": "Two Hands are Better than One"
+  },
+  "wereYouUsingThat": {
+    "name": "Were You Using That?"
+  },
+  "youLlBlindSomebody": {
+    "name": "You'll Blind Somebody"
+  },
+  "andKnowDisintegrations": {
+    "name": "...And Know Disintegrations"
+  },
+  "andNotADropToDrink": {
+    "name": "...And Not a drop to Drink"
+  },
+  "orAreYouJustHappyToSeeMe": {
+    "name": "...Or Are You Just Happy to See Me?"
+  },
+  "allThingsInModderNation": {
+    "name": "All Things in Modder Nation"
+  },
+  "apocalypseAinTGotNothinOnMe": {
+    "name": "Apocalypse Ain't Got Nothin' On Me"
+  },
+  "artfulPocketer": {
+    "name": "Artful Pocketer"
+  },
+  "atALossForWords": {
+    "name": "At a Loss for Words"
+  },
+  "knowWhenToHoldEm": {
+    "name": "Know When to Hold 'Em"
+  },
+  "crafty": {
+    "name": "Crafty"
+  },
+  "craftyVeteran": {
+    "name": "Crafty Veteran"
+  },
+  "dayTripper": {
+    "name": "Day Tripper"
+  },
+  "desertSurvivalist": {
+    "name": "Desert Survivalist"
+  },
+  "devourerOfNations": {
+    "name": "Devourer of Nations"
+  },
+  "dineAndDash": {
+    "name": "Dine and Dash"
+  },
+  "disarmingPersonality": {
+    "name": "Disarming Personality"
+  },
+  "doubleDown": {
+    "name": "Double Down"
+  },
+  "drWastelandMD": {
+    "name": "Dr. Wasteland, M.D."
+  },
+  "fastTimes": {
+    "name": "Fast Times"
+  },
+  "findVault3": {
+    "name": "Find Vault 3"
+  },
+  "findVault11": {
+    "name": "Find Vault 11"
+  },
+  "findVault19": {
+    "name": "Find Vault 19"
+  },
+  "findVault22": {
+    "name": "Find Vault 22"
+  },
+  "findVault34": {
+    "name": "Find Vault 34"
+  },
+  "fixinThings": {
+    "name": "Fixin' Things"
+  },
+  "freeRadical": {
+    "name": "Free Radical"
+  },
+  "h4XSupr3M3": {
+    "name": "H4x Supr3m3"
+  },
+  "heMovesInMysteriousWays": {
+    "name": "He Moves in Mysterious Ways"
+  },
+  "healthyGlow": {
+    "name": "Healthy Glow"
+  },
+  "iCanStopAnyTimeIWant": {
+    "name": "I Can Stop Any Time I Want"
+  },
+  "iDismemberYou": {
+    "name": "I Dismember You"
+  },
+  "littleWheel": {
+    "name": "Little Wheel"
+  },
+  "lordDeath": {
+    "name": "Lord Death"
+  },
+  "lordDeathOfMurderMountain": {
+    "name": "Lord Death of Murder Mountain"
+  },
+  "lowTechHacking": {
+    "name": "Low Tech Hacking"
+  },
+  "masterOfTheMojave": {
+    "name": "Master of the Mojave"
+  },
+  "maybeThatSALie": {
+    "name": "Maybe That's a Lie"
+  },
+  "missFortunateSonOrDaughter": {
+    "name": "Miss Fortunate Son (or Daughter)"
+  },
+  "oneArmedBandit": {
+    "name": "One Armed Bandit"
+  },
+  "questinMark": {
+    "name": "Questin' Mark"
+  },
+  "radical": {
+    "name": "Radical"
+  },
+  "sirTalksALot": {
+    "name": "Sir Talks-a-lot"
+  },
+  "stimPlyAmazing": {
+    "name": "Stim-ply Amazing"
+  },
+  "stimpaddict": {
+    "name": "Stimpaddict"
+  },
+  "toughGuy": {
+    "name": "Tough Guy"
+  },
+  "upToTheChallenge": {
+    "name": "Up to the Challenge"
+  },
+  "walkerOfTheMojave": {
+    "name": "Walker of the Mojave"
+  },
+  "youRunBarterTown": {
+    "name": "You Run Barter Town"
+  },
+  "allForOne": {
+    "name": "All For One"
+  },
+  "assembleYourCrew": {
+    "name": "Assemble Your Crew"
+  },
+  "authorityIssues": {
+    "name": "Authority Issues"
+  },
+  "bigWinner": {
+    "name": "Big Winner"
+  },
+  "cashOut": {
+    "name": "Cash Out"
+  },
+  "deanSSecretStash": {
+    "name": "Dean's Secret Stash"
+  },
+  "deadManSHand": {
+    "name": "Dead Man's Hand"
+  },
+  "ghostEaterHarvesters": {
+    "name": "Ghost Eater - Harvesters"
+  },
+  "ghostEaterSeekers": {
+    "name": "Ghost Eater - Seekers"
+  },
+  "ghostEaterTrappers": {
+    "name": "Ghost Eater - Trappers"
+  },
+  "havingABall": {
+    "name": "Having a Ball"
+  },
+  "historySSake": {
+    "name": "History's Sake"
+  },
+  "kissOfDeath": {
+    "name": "Kiss of Death"
+  },
+  "looseEnds": {
+    "name": "Loose Ends"
+  },
+  "safetyDepositBox": {
+    "name": "Safety Deposit Box"
+  },
+  "sierraMadreSouvenirAficionado": {
+    "name": "Sierra Madre Souvenir Aficionado"
+  },
+  "theWholeSadStory": {
+    "name": "The Whole Sad Story"
+  },
+  "thingsToCome": {
+    "name": "Things to Come!"
+  },
+  "inAForeignLand": {
+    "name": "In a Foreign Land"
+  },
+  "mayMyHandForgetItsSkill": {
+    "name": "May my Hand Forget its Skill"
+  },
+  "oDaughterOfBabylon": {
+    "name": "O Daughter of Babylon"
+  },
+  "restoreOurFortunes": {
+    "name": "Restore Our Fortunes"
+  },
+  "survivalistSBounty": {
+    "name": "Survivalist's Bounty"
+  },
+  "whenWeRememberedZion": {
+    "name": "When We Remembered Zion"
+  },
+  "yaoGuaiHunter": {
+    "name": "Yao Guai Hunter"
+  },
+  "automaton": {
+    "name": "Automaton"
+  },
+  "madScientist": {
+    "name": "Mad Scientist"
+  },
+  "evilGenius": {
+    "name": "Evil Genius"
+  },
+  "makeUpYourMind": {
+    "name": "Make up Your Mind"
+  },
+  "makingFriends": {
+    "name": "Making Friends"
+  },
+  "cardiacArrest": {
+    "name": "Cardiac Arrest!"
+  },
+  "cazaDeathDealer": {
+    "name": "Caza-Death Dealer"
+  },
+  "dogRunI": {
+    "name": "Dog Run I"
+  },
+  "dogRunII": {
+    "name": "Dog Run II"
+  },
+  "dogRunIII": {
+    "name": "Dog Run III"
+  },
+  "mtSpace": {
+    "name": "MT Space"
+  },
+  "kleinDestine": {
+    "name": "Klein Destine"
+  },
+  "mobiusStrip": {
+    "name": "Mobius Strip"
+  },
+  "outerSpace": {
+    "name": "Outer Space"
+  },
+  "outsmarted": {
+    "name": "Outsmarted"
+  },
+  "spinalTapped": {
+    "name": "Spinal-Tapped"
+  },
+  "VrTheChampionsI": {
+    "name": "VR the Champions I"
+  },
+  "VrTheChampionsII": {
+    "name": "VR the Champions II"
+  },
+  "VrTheChampionsIII": {
+    "name": "VR the Champions III"
+  },
+  "condemnedToRepeatIt": {
+    "name": "Condemned to Repeat It"
+  },
+  "edEcated": {
+    "name": "ED-Ecated"
+  },
+  "hometownHero": {
+    "name": "Hometown Hero"
+  },
+  "rocketSRedGlare": {
+    "name": "Rocket's Red Glare"
+  },
+  "warheadHunter": {
+    "name": "Warhead Hunter"
+  },
+  "endsOfTheEarth": {
+    "name": "Ends of the Earth"
+  },
+  "mostLikelyTo": {
+    "name": "Most Likely To..."
+  },
+  "nostalgia": {
+    "name": "Nostalgia"
+  },
+  "feelLikeAKidAgain": {
+    "name": "Feel Like a Kid Again"
+  },
+  "theCourierSMile": {
+    "name": "The Courier's Mile"
+  },
+  "ulyssesOdyssey": {
+    "name": "Ulysses' Odyssey"
+  },
+  "againstAllTyrants": {
+    "name": "Against All Tyrants"
+  },
+  "armedForBear": {
+    "name": "Armed For Bear"
+  },
+  "aSlaveObeys": {
+    "name": "A Slave Obeys"
+  },
+  "benefitOrAHazard": {
+    "name": "Benefit Or a Hazard"
+  },
+  "crackerjackTiming": {
+    "name": "Crackerjack Timing"
+  },
+  "curiosAndRelics": {
+    "name": "Curios and Relics"
+  },
+  "deathclawProHunter": {
+    "name": "Deathclaw Pro Hunter"
+  },
+  "dyinAinTMuchOfALiving": {
+    "name": "Dyin' Ain't Much of a Living"
+  },
+  "evenAGodKingCanBleed": {
+    "name": "Even a God-King Can Bleed"
+  },
+  "historicalPropriety": {
+    "name": "Historical Propriety"
+  },
+  "manMachineInterface": {
+    "name": "Man-Machine Interface"
+  },
+  "masterOfTheArsenal": {
+    "name": "Master of the Arsenal"
+  },
+  "neNeNeNe": {
+    "name": "Ne Ne Ne Ne..."
+  },
+  "nyahSee": {
+    "name": "Nyah! See?"
+  },
+  "overkill": {
+    "name": "Overkill"
+  },
+  "sicSemperTyrannis": {
+    "name": "Sic Semper Tyrannis"
+  },
+  "talkAboutOwned": {
+    "name": "Talk About Owned"
+  },
+  "theSameCouldBeSaidOfAllReligiousWeapons": {
+    "name": "The Same Could Be Said of All Religious Weapons"
+  },
+  "vault13SRevenge": {
+    "name": "Vault 13's Revenge"
+  },
+  "whiteLineNightmare": {
+    "name": "White Line Nightmare"
+  },
+  "youDonTBelongInThisWorld": {
+    "name": "You Don't Belong In This World!"
+  }
+}

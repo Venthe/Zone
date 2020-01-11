@@ -1,0 +1,66 @@
+{
+  "bloodyMess": {
+    "name": "Bloody Mess",
+    "description": "By some strange twist of fate, people around you die violently. You always see the worst way a person can die."
+  },
+  "bruiser": {
+    "name": "Bruiser",
+    "description": "A little slower, but a little bigger. You may not hit as often, but they will feel it when you do! Your total action points are lowered, but your Strength is increased."
+  },
+  "chemReliant": {
+    "name": "Chem Reliant",
+    "description": "You are more easily addicted to chems. Your chance to be addicted by chem use is twice normal, but you recover faster from their ill effects."
+  },
+  "chemResistant": {
+    "name": "Chem Resistant",
+    "description": "Chems only affect you half as long as normal, but your chance to be addicted is also only 50% of normal."
+  },
+  "fastMetabolism": {
+    "name": "Fast Metabolism",
+    "description": "Your metabolic rate is twice normal. This means that you are much less resistant to radiation and poison, but your body heals faster."
+  },
+  "fastShot": {
+    "name": "Fast Shot",
+    "description": "You don't have time to aim for a targeted attack, because you attack faster than normal people. It costs you one less action point for guns and thrown weapons."
+  },
+  "finesse": {
+    "name": "Finesse",
+    "description": "Your attacks show a lot of finesse. You don't do as much damage, but you cause more critical hits."
+  },
+  "gifted": {
+    "name": "Gifted",
+    "description": "You have more innate abilities than most, so you have not spent as much time honing your skills."
+  },
+  "goodNatured": {
+    "name": "Good Natured",
+    "description": "You studied less-combative skills as you were growing up. Your combat skills start at a lower level, but other skills are substantially improved."
+  },
+  "heavyHanded": {
+    "name": "Heavy Handed",
+    "description": "You swing harder, not better. Your attacks are very brutal, but lack finesse. You rarely cause a good critical hit, but you always do more melee damage."
+  },
+  "jinxed": {
+    "name": "Jinxed",
+    "description": "The good thing is that everyone around you has more critical failures in combat, the bad thing is - so do you!"
+  },
+  "kamikaze": {
+    "name": "Kamikaze",
+    "description": "By not paying attention to any threats, you can act a lot faster in a turn. This lowers your Armor Class to just what you are wearing, but you sequence much faster in a combat turn."
+  },
+  "oneHander": {
+    "name": "One Hander",
+    "description": "One of your hands is very dominant. You excel with single-handed weapons, but two-handed weapons cause a problem."
+  },
+  "sexAppeal": {
+    "name": "Sex Appeal",
+    "description": "You've got the \"right\" stuff. Members of the opposite sex are attracted to you, but those of the same sex tend to become quite jealous."
+  },
+  "skilled": {
+    "name": "Skilled",
+    "description": "Since you spend more time improving your skills than a normal person, you start with better skills levels. The tradeoff is that you do not gain as many extra abilities. You will gain a perk every four levels."
+  },
+  "smallFrame": {
+    "name": "Small Frame",
+    "description": "You are not quite as big as other people, but that never slowed you down. You can't carry as much, but you are more agile."
+  }
+}

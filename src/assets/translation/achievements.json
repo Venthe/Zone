@@ -1,0 +1,302 @@
+{
+  "newKid": {
+    "name": "New Kid",
+    "description": "Reach level 10"
+  },
+  "upAndComer": {
+    "name": "Up and Comer",
+    "description": "Reach level 20"
+  },
+  "theBoss": {
+    "name": "The Boss",
+    "description": "Reach level 30"
+  },
+  "olBuddyOlPal": {
+    "name": "Ol' Buddy Ol' Pal",
+    "description": "Recruit any companion"
+  },
+  "theWholeGangSHere": {
+    "name": "The Whole Gang's Here",
+    "description": "Recruit all of the companions"
+  },
+  "crafty": {
+    "name": "Crafty",
+    "description": "Craft 20 items"
+  },
+  "modMachine": {
+    "name": "Mod Machine",
+    "description": "Install 20 weapon mods"
+  },
+  "walkerOfTheMojave": {
+    "name": "Walker of the Mojave",
+    "description": "Discover 50 locations"
+  },
+  "masterOfTheMojave": {
+    "name": "Master of the Mojave",
+    "description": "Discover 125 locations"
+  },
+  "globeTrotter": {
+    "name": "Globe Trotter",
+    "description": "Find all the snow globes"
+  },
+  "youRunBarterTown": {
+    "name": "You Run Barter Town",
+    "description": "Sell 10,000 caps worth of goods"
+  },
+  "blastMastery": {
+    "name": "Blast Mastery",
+    "description": "Deal 10,000 damage with energy weapons"
+  },
+  "loveTheBomb": {
+    "name": "Love the Bomb",
+    "description": "Deal 10,000 damage with explosives"
+  },
+  "leadDealer": {
+    "name": "Lead Dealer",
+    "description": "Deal 10,000 damage with guns"
+  },
+  "noTumblerFumbler": {
+    "name": "No Tumbler Fumbler",
+    "description": "Pick 25 locks"
+  },
+  "stimPlyAmazing": {
+    "name": "Stim-ply Amazing",
+    "description": "Heal 10,000 damage with stimpaks"
+  },
+  "newVegasSamurai": {
+    "name": "New Vegas Samurai",
+    "description": "Deal 10,000 damage with melee weapons"
+  },
+  "juryRigger": {
+    "name": "Jury Rigger",
+    "description": "Repair 30 items"
+  },
+  "hackTheMojave": {
+    "name": "Hack the Mojave",
+    "description": "Hack 25 terminals"
+  },
+  "artfulPocketer": {
+    "name": "Artful Pocketer",
+    "description": "Pick 50 pockets"
+  },
+  "outstandingOrator": {
+    "name": "Outstanding Orator",
+    "description": "Pass 50 Speech checks"
+  },
+  "desertSurvivalist": {
+    "name": "Desert Survivalist",
+    "description": "Heal 10,000 damage with Food"
+  },
+  "oldTymeBrawler": {
+    "name": "Old-Tyme Brawler",
+    "description": "Deal 10,000 damage with unarmed weapons"
+  },
+  "knowWhenToFoldThem": {
+    "name": "Know When to Fold Them",
+    "description": "Win 3 games of Caravan"
+  },
+  "oneArmedBandit": {
+    "name": "One Armed Bandit",
+    "description": "Play 10 spins of slots"
+  },
+  "littleWheel": {
+    "name": "Little Wheel",
+    "description": "Play 10 spins of Roulette"
+  },
+  "doubleDown": {
+    "name": "Double Down",
+    "description": "Play 10 hands of Blackjack"
+  },
+  "caravanMaster": {
+    "name": "Caravan Master",
+    "description": "Win 30 games of Caravan"
+  },
+  "theCourierWhoBrokeTheBank": {
+    "name": "The Courier Who Broke the Bank",
+    "description": "Get banned from all the casinos on the strip"
+  },
+  "hardcore": {
+    "name": "Hardcore",
+    "description": "Beat the game from start to finish with Hardcore mode enabled"
+  },
+  "ainTThatAKickInTheHead": {
+    "name": "Ain't That a Kick in the Head",
+    "description": "Complete 'Ain't That a Kick in the Head'"
+  },
+  "theyWentThatAWay": {
+    "name": "They Went That-a-Way",
+    "description": "Complete 'They Went That-a-Way'"
+  },
+  "ringADingDing": {
+    "name": "Ring-a-Ding-Ding!",
+    "description": "Complete 'Ring-a-Ding-Ding!'"
+  },
+  "theHouseAlwaysWins": {
+    "name": "The House Always Wins",
+    "description": "Complete 'The House Always Wins'"
+  },
+  "forTheRepublicPart2": {
+    "name": "For the Republic, Part 2",
+    "description": "Complete 'For the Republic, Part 2'"
+  },
+  "renderUntoCaesar": {
+    "name": "Render Unto Caesar",
+    "description": "Complete 'Render Unto Caesar'"
+  },
+  "wildCard": {
+    "name": "Wild Card",
+    "description": "Complete 'Wild Card'"
+  },
+  "allOrNothing": {
+    "name": "All or Nothing",
+    "description": "Complete 'All or Nothing'"
+  },
+  "veniVidiVici": {
+    "name": "Veni, Vidi, Vici",
+    "description": "Complete 'Veni, Vidi, Vici'"
+  },
+  "eureka": {
+    "name": "Eureka!",
+    "description": "Complete 'Eureka!'"
+  },
+  "noGodsNoMasters": {
+    "name": "No Gods, No Masters",
+    "description": "Complete 'No Gods, No Masters'"
+  },
+  "comeFlyWithMe": {
+    "name": "Come Fly With Me",
+    "description": "Complete 'Come Fly With Me'"
+  },
+  "talentPool": {
+    "name": "Talent Pool",
+    "description": "Complete 'Talent Pool'"
+  },
+  "returnToSender": {
+    "name": "Return to Sender",
+    "description": "Complete 'Return to Sender'"
+  },
+  "arizonaKiller": {
+    "name": "Arizona Killer",
+    "description": "Complete 'Arizona Killer'"
+  },
+  "youLlKnowItWhenItHappens": {
+    "name": "You'll Know It When It Happens",
+    "description": "Complete 'You'll Know It When It Happens'"
+  },
+  "gIBlues": {
+    "name": "G.I. Blues",
+    "description": "Complete 'G.I. Blues'"
+  },
+  "thatLuckyOldSun": {
+    "name": "That Lucky Old Sun",
+    "description": "Complete 'That Lucky Old Sun'"
+  },
+  "volare": {
+    "name": "Volare!",
+    "description": "Complete 'Volare!'"
+  },
+  "theLegendOfTheStar": {
+    "name": "The Legend of the Star",
+    "description": "Complete 'A Valuable Lesson'"
+  },
+  "assembleYourCrew": {
+    "name": "Assemble Your Crew",
+    "description": "Recruit Dean Domino, Christine and Dog"
+  },
+  "cashOut": {
+    "name": "Cash Out",
+    "description": "Confront Father Elijah in the Sierra Madre vault"
+  },
+  "havingABall": {
+    "name": "Having a Ball",
+    "description": "Complete the Sierra Madre Gala Event"
+  },
+  "safetyDepositBox": {
+    "name": "Safety Deposit Box",
+    "description": "Trap Father Elijah in the Sierra Madre's vault"
+  },
+  "sierraMadreSouvenirAficionado": {
+    "name": "Sierra Madre Souvenir Aficionado",
+    "description": "Collect 500 Sierra Madre chips"
+  },
+  "inAForeignLand": {
+    "name": "In a Foreign Land",
+    "description": "Scouted the Zion Valley for signs of the White Legs"
+  },
+  "mayMyHandForgetItsSkill": {
+    "name": "May my Hand Forget its Skill",
+    "description": "Evacuated Zion"
+  },
+  "oDaughterOfBabylon": {
+    "name": "O Daughter of Babylon",
+    "description": "Crushed the White Legs"
+  },
+  "restoreOurFortunes": {
+    "name": "Restore Our Fortunes",
+    "description": "Resupplied Daniel and the Sorrows"
+  },
+  "whenWeRememberedZion": {
+    "name": "When We Remembered Zion",
+    "description": "Arrived at Zion"
+  },
+  "cardiacArrest": {
+    "name": "Cardiac Arrest!",
+    "description": "Recovered X-13 cardiac regulator sneaky suit"
+  },
+  "makeUpYourMind": {
+    "name": "Make up Your Mind",
+    "description": "Made up your Mind... about your brain"
+  },
+  "makingFriends": {
+    "name": "Making Friends",
+    "description": "Reactivated all of the Sink's robotic assistants"
+  },
+  "outsmarted": {
+    "name": "Outsmarted",
+    "description": "Completed Old World Blues."
+  },
+  "spinalTapped": {
+    "name": "Spinal-Tapped",
+    "description": "Recovered X-8 vertebrae-pulse-de-sensitizer frequency"
+  },
+  "edEcated": {
+    "name": "ED-Ecated",
+    "description": "Found all of ED-E's upgrades in the Divide"
+  },
+  "condemnedToRepeatIt": {
+    "name": "Condemned to Repeat It",
+    "description": "Decided the fate of all the Divide Dwellers"
+  },
+  "hometownHero": {
+    "name": "Hometown Hero",
+    "description": "Completed Lonesome Road"
+  },
+  "rocketSRedGlare": {
+    "name": "Rocket's Red Glare",
+    "description": "Acquired all upgrades for the Divide's signature weapon"
+  },
+  "warheadHunter": {
+    "name": "Warhead Hunter",
+    "description": "Detonated all the warheads in the Divide"
+  },
+  "curiosAndRelics": {
+    "name": "Curios and Relics",
+    "description": "Caused 10,000 damage with unique Mojave Wasteland weapons"
+  },
+  "masterOfTheArsenal": {
+    "name": "Master of the Arsenal",
+    "description": "Caused 10,000 damage with Gun Runners' Arsenal Weapons"
+  },
+  "upToTheChallenge": {
+    "name": "Up to the Challenge",
+    "description": "Completed any three Gun Runners' Arsenal one star (★) Challenges"
+  },
+  "combatVeteran": {
+    "name": "Combat Veteran",
+    "description": "Completed any three Gun Runners' Arsenal two star (★★) Challenges"
+  },
+  "prosOnly": {
+    "name": "Pros Only",
+    "description": "Completed any three Gun Runners' Arsenal three star (★★★) Challenges"
+  }
+}
