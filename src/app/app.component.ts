@@ -1,6 +1,7 @@
 import {Component, OnInit} from "@angular/core";
-import {from, Observable, ReplaySubject, Subject} from "rxjs";
-import {filter, mergeMap, scan} from "rxjs/operators";
+import {Actions} from "@ngrx/effects";
+import {Store} from "@ngrx/store";
+import {tap} from "rxjs/operators";
 import {events} from "./events";
 
 @Component({
@@ -9,27 +10,15 @@ import {events} from "./events";
 })
 export class AppComponent implements OnInit {
   title = "zone-prototype";
-  private actionHistory$: Observable<any>;
-  private store$: Subject<any>;
 
-  private characters$: Observable<any>;
+  actions = [];
 
-  ngOnInit(): void {
-    this.actionHistory$ = this.createStore();
-    events.forEach(action => this.store$.next(action));
-    this.characters$ = this.actionHistory$.pipe(
-      mergeMap(arr => from(arr)),
-      filter(action => action !== undefined && action !== null),
-      filter((action: any) => action.type.startsWith("[Entity]")),
-      // groupBy(action => action.id.type), //action => action.id.uuid,
-      // concatMap(group => group.pipe(toArray())) //group => zip(of(group.key),
-    );
+  constructor(private readonly store$: Store<any>,
+              private readonly actions$: Actions) {
+    actions$.pipe(tap(action => this.actions.push(action))).subscribe();
   }
 
-  private createStore() {
-    this.store$ = new ReplaySubject<any>();
-    return this.store$.pipe(
-      scan((accumulator: any[], value: any) => [...accumulator, value], [])
-    );
+  ngOnInit(): void {
+    events.forEach(action => this.store$.dispatch(action));
   }
 }

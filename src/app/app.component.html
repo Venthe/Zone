@@ -1,5 +1,4 @@
-<pre>{{characters$|async|json}}</pre>
-<mat-card *ngFor="let action of (this.actionHistory$|async)">
+<mat-card *ngFor="let action of (this.actions)">
   <mat-card-title>{{action.type}}</mat-card-title>
   <pre>{{action|json}}</pre>
 </mat-card>
