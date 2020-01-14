@@ -1,6 +1,6 @@
 export const events = [
   {
-    type: "Game started",
+    type: "[Game] Game started",
     startDate: "Wed, 08 Jan 2020 20:17:35 GMT",
     gameDate: "Wed, 03 May 2130 11:00:00 GMT",
     difficultyLevel: "medium"
@@ -55,7 +55,7 @@ export const events = [
     }
   },
   {
-    type: "Name set",
+    type: "[Entity] Name set",
     id: {uuid: "35f44025-5c6e-4470-ab47-3e7c756a7767", type: "character"},
     name: "Jack"
   },
@@ -129,7 +129,7 @@ export const events = [
     skill: "unarmed"
   },
   {
-    type: "Difficulty set",
+    type: "[Game] Difficulty set",
     difficultyLevel: "easy"
   },
   {

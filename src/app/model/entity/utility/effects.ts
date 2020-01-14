@@ -11,7 +11,7 @@ export const AttributeModifier = (attribute, value): Effect & any => ({
 });
 
 export const SkillModifier = (skill, value): Effect & any => ({
-  type: "attributeModifier",
+  type: "skillModifier",
   payload: {
     skill,
     value
@@ -19,7 +19,7 @@ export const SkillModifier = (skill, value): Effect & any => ({
 });
 
 export const DerivativeAttributeModifier = (derivedAttributeName, value): Effect & any => ({
-  type: "attributeModifier",
+  type: "derivativeAttributeModifier",
   payload: {
     derivedAttributeName,
     value

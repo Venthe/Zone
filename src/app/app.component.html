@@ -1,3 +1,4 @@
+<h1>{{timeLoop$ | async}}</h1>
 <mat-card *ngFor="let action of (this.actions)">
   <mat-card-title>{{action.type}}</mat-card-title>
   <pre>{{action|json}}</pre>
