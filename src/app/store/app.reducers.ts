@@ -6,7 +6,6 @@ export interface State {
 }
 
 export const reducers: ActionReducerMap<State | any> = {
-  game: createReducer({}, on({type: "[Game] Difficulty set"}, state=>({...state, d})))
 };
 
 

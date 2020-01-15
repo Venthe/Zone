@@ -8,7 +8,12 @@ import {Game} from "./model/game";
 
 @Component({
   selector: "app-root",
-  templateUrl: "./app.component.html"
+  templateUrl: "./app.component.html",
+  styles: [
+    `.app-root {
+      padding: 0.5rem;
+    }`
+  ]
 })
 export class AppComponent implements OnInit {
   title = "zone-prototype";
@@ -16,6 +21,96 @@ export class AppComponent implements OnInit {
   actions = [];
   timeLoop$: Observable<Date>;
   game;
+
+  get sexes() {
+    return [
+      {label: "Male", value: "m"},
+      {label: "Female", value: "f"}
+    ];
+  }
+
+  get skills() {
+    return [
+      "smallGuns",
+      "bigGuns",
+      "energyWeapons",
+      "unarmed",
+      "meleeWeapons",
+      "throwing",
+      "firstAid",
+      "doctor",
+      "sneak",
+      "lockpick",
+      "steal",
+      "traps",
+      "science",
+      "repair",
+      "speech",
+      "barter",
+      "gambling",
+      "outdoorsman"
+    ];
+  }
+
+  get attributes() {
+    return [
+      "strength",
+      "perception",
+      "endurance",
+      "charisma",
+      "intelligence",
+      "agility",
+      "luck"
+    ];
+  }
+
+  get derivedAttributes() {
+    return ["actionPoints",
+      "armorClass",
+      "carryWeight",
+      "criticalChance",
+      "damageResistance",
+      "healingRate",
+      "hitPoints",
+      "bonusToMaxMeleeDamage",
+      "partyLimit",
+      "poisonResistance",
+      "radiationResistance",
+      "sequence"];
+  }
+
+  get statuses() {
+    return [
+      "poisoned",
+      "radiated",
+      "eyeDamage",
+      "crippledRightArm",
+      "crippledLeftArm",
+      "crippledRightLeg",
+      "crippledLeftLeg"
+    ];
+  }
+
+  get traits() {
+    return [
+      "bloodyMess",
+      "bruiser",
+      "chemReliant",
+      "chemResistant",
+      "fastMetabolism",
+      "fastShot",
+      "finesse",
+      "gifted",
+      "goodNatured",
+      "heavyHanded",
+      "jinxed",
+      "kamikaze",
+      "oneHander",
+      "sexAppeal",
+      "skilled",
+      "smallFrame"
+    ];
+  }
 
   constructor(private readonly store$: Store<any>,
               private readonly actions$: Actions) {

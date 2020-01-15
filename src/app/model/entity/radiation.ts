@@ -17,38 +17,37 @@ export class Fallout2Radiation {
         effect: []
       };
     } else if (this.currentValue < 300) {
-      // TODO: -1 STR
       return {
         level: 2,
+        // TODO: -1 STR
         effect: []
       };
     } else if (this.currentValue < 450) {
-      // TODO: -1 STR
-      // TODO: -1 AGI
       return {
         level: 3,
+        // TODO: -1 STR
+        // TODO: -1 AGI
         effect: []
       };
     } else if (this.currentValue < 600) {
-      // TODO: -2 STR
-      // TODO: -1 END
-      // TODO: -2 AGI
-      // TODO: -5% HP
-
       return {
         level: 4,
+        // TODO: -2 STR
+        // TODO: -1 END
+        // TODO: -2 AGI
+        // TODO: -5% HP
         effect: []
       };
     } else if (this.currentValue < 1000) {
-      // TODO: -4 STR
-      // TODO: -3 PER
-      // TODO: -3 END
-      // TODO: -3 CHA
-      // TODO: -1 INT
-      // TODO: -5 AGI
-      // TODO: -15% HP
       return {
         level: 5,
+        // TODO: -4 STR
+        // TODO: -3 PER
+        // TODO: -3 END
+        // TODO: -3 CHA
+        // TODO: -1 INT
+        // TODO: -5 AGI
+        // TODO: -15% HP
         effect: []
       };
     } else if (this.currentValue >= 1000) {
