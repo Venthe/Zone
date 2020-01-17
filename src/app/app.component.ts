@@ -1,33 +1,42 @@
 import {Component, OnInit} from "@angular/core";
 import {Actions} from "@ngrx/effects";
-import {Store} from "@ngrx/store";
+import {select, Store} from "@ngrx/store";
 import {interval, Observable} from "rxjs";
-import {map, tap} from "rxjs/operators";
-import {events} from "./events";
+import {map, tap, withLatestFrom} from "rxjs/operators";
+import {Fallout2CharacterEntity, Sex} from "./model/entity/character-entity";
 import {Game} from "./model/game";
+import {
+  cancelCharacterCreation,
+  finishCharacter,
+  lowerAttribute,
+  raiseAttribute,
+  setAge,
+  setName,
+  setSex,
+  setTrait,
+  tagSkill
+} from "./store/app.actions";
+import {selectGame, selectPlayer} from "./store/app.reducers";
 
 @Component({
   selector: "app-root",
   templateUrl: "./app.component.html",
   styles: [
-    `.app-root {
+      `.app-root {
       padding: 0.5rem;
     }`
   ]
 })
 export class AppComponent implements OnInit {
-  title = "zone-prototype";
-
   actions = [];
   timeLoop$: Observable<Date>;
-  game;
+  game$: Observable<Game>;
+  player$: Observable<Fallout2CharacterEntity>;
 
-  get sexes() {
-    return [
-      {label: "Male", value: "m"},
-      {label: "Female", value: "f"}
-    ];
-  }
+  sexes = [
+    {label: "Male", value: Sex.Male},
+    {label: "Female", value: Sex.Female}
+  ];
 
   get skills() {
     return [
@@ -54,13 +63,13 @@ export class AppComponent implements OnInit {
 
   get attributes() {
     return [
-      "strength",
-      "perception",
-      "endurance",
-      "charisma",
-      "intelligence",
-      "agility",
-      "luck"
+      "st",
+      "pe",
+      "en",
+      "ch",
+      "in",
+      "ag",
+      "lk"
     ];
   }
 
@@ -118,8 +127,23 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.game = new Game();
-    events.forEach(action => this.store$.dispatch(action));
-    this.timeLoop$ = interval(10).pipe(map(time => new Date(this.game.gameStartingDate.getTime() + time * 100)));
+    this.game$ = this.store$.pipe(select(selectGame));
+    this.player$ = this.store$.pipe(select(selectPlayer));
+    this.timeLoop$ = interval(10).pipe(
+      withLatestFrom(this.game$),
+      map(([time, game]) => new Date(game.gameStartingDate.getTime() + time * 100))
+    );
+
+    // events.forEach(action => this.store$.dispatch(action));
   }
+
+  setName = name => this.store$.dispatch(setName({name}));
+  setAge = age => this.store$.dispatch(setAge({age}));
+  setSex = sex => this.store$.dispatch(setSex({sex}));
+  raiseAttribute = () => this.store$.dispatch(raiseAttribute());
+  lowerAttribute = () => this.store$.dispatch(lowerAttribute());
+  tagSkill = () => this.store$.dispatch(tagSkill());
+  setTrait = () => this.store$.dispatch(setTrait());
+  finishCharacter = () => this.store$.dispatch(finishCharacter());
+  cancelCharacterCreation = () => this.store$.dispatch(cancelCharacterCreation());
 }

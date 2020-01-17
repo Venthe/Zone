@@ -1,5 +1,5 @@
 import {noLessThan, noMoreThan} from "../../utils/utils";
-import {Gender} from "./character-entity";
+import {Sex} from "./character-entity";
 
 export enum GeneralReputationLevels {
   NEGATIVE,
@@ -214,7 +214,7 @@ export class Fallout2CharacterReaction {
                                     traits: { has(name: string) },
                                     titles: { count(name: string), has(name: string) },
                                     townReputation: number,
-                                    gender: { player: Gender, npc: Gender }) => {
+                                    gender: { player: Sex, npc: Sex }) => {
     // TODO: Evaluate unused: Direct karma, Cult of Personality perk, Karma Beacon perk
     const townReputationModifier = Math.floor(townReputation / 2);
     // TODO: Slaver: -50, -25, 0 or +25 (mostly 0)

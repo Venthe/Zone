@@ -90,7 +90,7 @@ export class Fallout2Perks {
   };
   demolitionExpert: Fallout2RegularPerk = {
     ranks: 1,
-    requirements: ({level, attributes, skills}) => level >= 9 && attributes.agility >= 4 && skills.traps.getSkill() >= 75,
+    requirements: ({level, attributes, skills}) => level >= 9 && attributes.agility >= 4 && skills.traps({} as any).getSkill() >= 75,
     // TODO: Explosives do more damage and always detonate on time. 10 points of damage
     effects: []
   };
@@ -184,25 +184,25 @@ export class Fallout2Perks {
   };
   gambler: Fallout2RegularPerk = {
     ranks: 1,
-    requirements: ({level, skills}) => level >= 6 && skills.gambling.getSkill() >= 50,
+    requirements: ({level, skills}) => level >= 6 && skills.gambling({} as any).getSkill() >= 50,
     // TODO: +20% to Gambling
     effects: []
   };
   ghost: Fallout2RegularPerk = {
     ranks: 1,
-    requirements: ({level, skills}) => level >= 6 && skills.sneak.getSkill() >= 60,
+    requirements: ({level, skills}) => level >= 6 && skills.sneak({} as any).getSkill() >= 60,
     // TODO: +20% Sneak during darkness conditions
     effects: []
   };
   harmless: Fallout2RegularPerk = {
     ranks: 1,
-    requirements: ({level, skills, karma}) => level >= 6 && skills.steal.getSkill() >= 50 && karma.generalReputation >= 50,
+    requirements: ({level, skills, karma}) => level >= 6 && skills.steal({} as any).getSkill() >= 50 && karma.generalReputation >= 50,
     // TODO: +20% steal
     effects: []
   };
   healer: Fallout2RegularPerk = {
     ranks: 2,
-    requirements: ({level, attributes, skills}) => level >= 3 && attributes.perception >= 7 && attributes.agility >= 6 && skills.firstAid.getSkill() >= 40,
+    requirements: ({level, attributes, skills}) => level >= 3 && attributes.perception >= 7 && attributes.agility >= 6 && skills.firstAid({} as any).getSkill() >= 40,
     // TODO: Each level will add 4-10 more hit points healed when using the First Aid or Doctor skills.
     effects: []
   };
@@ -221,7 +221,7 @@ export class Fallout2Perks {
   };
   htHEvade: Fallout2RegularPerk = {
     ranks: 1,
-    requirements: ({level, skills}) => level >= 12 && skills.unarmed.getSkill() >= 75,
+    requirements: ({level, skills}) => level >= 12 && skills.unarmed({} as any).getSkill() >= 75,
     // TODO: AC increased by 2 for each unused AP, plus unarmed skill /12
     //  While it states that both item slots must be empty, that is not entirely accurate. It really requires not holding a gun or melee weapon (anything that is visible in the character's hands). This perk will work if wielding unarmed weapons (such as brass knuckles, boxing gloves, power fist), throwables (grenades, rocks), or any non-weapon item.
     effects: []
@@ -253,7 +253,7 @@ export class Fallout2Perks {
   };
   livingAnatomy: Fallout2RegularPerk = {
     ranks: 1,
-    requirements: ({level, skills}) => level >= 12 && skills.doctor.getSkill() >= 60,
+    requirements: ({level, skills}) => level >= 12 && skills.doctor({} as any).getSkill() >= 60,
     // TODO: +10% Doctor
     //  +5 damage per attack against organics
     effects: []
@@ -266,13 +266,13 @@ export class Fallout2Perks {
   };
   masterThief: Fallout2RegularPerk = {
     ranks: 1,
-    requirements: ({level, skills}) => level >= 12 && skills.steal.getSkill() >= 50 && skills.lockpick.getSkill() >= 50,
+    requirements: ({level, skills}) => level >= 12 && skills.steal({} as any).getSkill() >= 50 && skills.lockpick({} as any).getSkill() >= 50,
     // TODO: +15% to Steal and Lockpick
     effects: []
   };
   masterTrader: Fallout2RegularPerk = {
     ranks: 1,
-    requirements: ({level, attributes, skills}) => level >= 9 && attributes.charisma >= 6 && skills.barter.getSkill() >= 60,
+    requirements: ({level, attributes, skills}) => level >= 9 && attributes.charisma >= 6 && skills.barter({} as any).getSkill() >= 60,
     // TODO: In Fallout 2, due to a change in the Barter formula, this perk subtracts 25 points from a barter modifier, which is then multiplied by the original price and the Barter skill modifier.
     //  25% discount when purchasing items from a store or trader
     //  By default, the modifier starts at 100%, but Reaction modifiers can add 25 points, 0 points, or subtract 15 points at the same time, making the discount appear to vary from 20% (when there is a +25 point "negative reaction" modifier), to 25% (with "neutral reaction" modifier (0 points), up to 40% (with a -15 point "positive reaction" modifier).[
@@ -280,7 +280,7 @@ export class Fallout2Perks {
   };
   medic: Fallout2RegularPerk = {
     ranks: 1,
-    requirements: ({level, skills}) => level >= 12 && (skills.firstAid.getSkill() >= 40 || skills.doctor.getSkill() >= 40),
+    requirements: ({level, skills}) => level >= 12 && (skills.firstAid({} as any).getSkill() >= 40 || skills.doctor({} as any).getSkill() >= 40),
     // TODO: +10% First Aid and Doctor
     effects: []
   };
@@ -292,7 +292,7 @@ export class Fallout2Perks {
   };
   mrFixit: Fallout2RegularPerk = {
     ranks: 1,
-    requirements: ({level, skills}) => level >= 12 && (skills.repair.getSkill() >= 40 || skills.science.getSkill() >= 40),
+    requirements: ({level, skills}) => level >= 12 && (skills.repair({} as any).getSkill() >= 40 || skills.science({} as any).getSkill() >= 40),
     // TODO: +10% to Science and Repair
     effects: []
   };
@@ -311,7 +311,7 @@ export class Fallout2Perks {
   };
   negotiator: Fallout2RegularPerk = {
     ranks: 1,
-    requirements: ({level, skills}) => level >= 6 && skills.barter.getSkill() >= 50 && skills.speech.getSkill() >= 50,
+    requirements: ({level, skills}) => level >= 6 && skills.barter({} as any).getSkill() >= 50 && skills.speech({} as any).getSkill() >= 50,
     // TODO: +10% to Speech and Barter
     effects: []
   };
@@ -329,14 +329,14 @@ export class Fallout2Perks {
   };
   pathfinder: Fallout2RegularPerk = {
     ranks: 2,
-    requirements: ({level, attributes, skills}) => level >= 6 && attributes.endurance >= 6 && skills.outdoorsman.getSkill() >= 40,
+    requirements: ({level, attributes, skills}) => level >= 6 && attributes.endurance >= 6 && skills.outdoorsman({} as any).getSkill() >= 40,
     // TODO: World map travel time reduced by 25% per rank
     //  drain on the Highwayman's battery is reduced by 25%
     effects: []
   };
   pickpocket: Fallout2RegularPerk = {
     ranks: 1,
-    requirements: ({level, attributes, skills}) => level >= 15 && attributes.agility >= 8 && skills.steal.getSkill() >= 80,
+    requirements: ({level, attributes, skills}) => level >= 15 && attributes.agility >= 8 && skills.steal({} as any).getSkill() >= 80,
     // TODO: Ignore size and facing modifiers when stealing.
     effects: []
   };
@@ -349,7 +349,7 @@ export class Fallout2Perks {
   };
   pyromaniac: Fallout2RegularPerk = {
     ranks: 1,
-    requirements: ({level, skills}) => level >= 9 && skills.bigGuns.getSkill() >= 75,
+    requirements: ({level, skills}) => level >= 9 && skills.bigGuns({} as any).getSkill() >= 75,
     // TODO: the most violent fire-based death animation will always be used
     //  +5 damage with fire-based weapons
     effects: []
@@ -381,7 +381,7 @@ export class Fallout2Perks {
   };
   salesman: Fallout2RegularPerk = {
     ranks: 1,
-    requirements: ({level, skills}) => level >= 6 && skills.barter.getSkill() >= 50,
+    requirements: ({level, skills}) => level >= 6 && skills.barter({} as any).getSkill() >= 50,
     // TODO: +20% Barter
     effects: []
   };
@@ -405,19 +405,19 @@ export class Fallout2Perks {
   };
   silentDeath: Fallout2RegularPerk = {
     ranks: 1,
-    requirements: ({level, attributes, skills}) => level >= 18 && attributes.agility >= 10 && skills.sneak.getSkill() >= 80 && skills.unarmed.getSkill() >= 80,
+    requirements: ({level, attributes, skills}) => level >= 18 && attributes.agility >= 10 && skills.sneak({} as any).getSkill() >= 80 && skills.unarmed({} as any).getSkill() >= 80,
     // TODO: While Sneaking, if you hit a critter in the back, you will cause double damage using a HtH attack.
     effects: []
   };
   silentRunning: Fallout2RegularPerk = {
     ranks: 1,
-    requirements: ({level, attributes, skills}) => level >= 6 && attributes.agility >= 6 && skills.sneak.getSkill() >= 50,
+    requirements: ({level, attributes, skills}) => level >= 6 && attributes.agility >= 6 && skills.sneak({} as any).getSkill() >= 50,
     // TODO: Sneak and run at the same time
     effects: []
   };
   slayer: Fallout2RegularPerk = {
     ranks: 1,
-    requirements: ({level, attributes, skills}) => level >= 24 && attributes.agility >= 8 && attributes.strength >= 8 && skills.unarmed.getSkill() >= 80,
+    requirements: ({level, attributes, skills}) => level >= 24 && attributes.agility >= 8 && attributes.strength >= 8 && skills.unarmed({} as any).getSkill() >= 80,
     // TODO: All hand-to-hand attacks cause critical hits.
     effects: []
   };
@@ -435,14 +435,14 @@ export class Fallout2Perks {
   };
   sniper: Fallout2RegularPerk = {
     ranks: 1,
-    requirements: ({level, attributes, skills}) => level >= 24 && attributes.perception >= 8 && attributes.agility >= 8 && skills.smallGuns.getSkill() >= 80,
+    requirements: ({level, attributes, skills}) => level >= 24 && attributes.perception >= 8 && attributes.agility >= 8 && skills.smallGuns({} as any).getSkill() >= 80,
     // TODO: Increase chance to score a critical hit
     //  It adds another Luck roll of (10*Luck), hence having 10 LK converts every hit to critical and indirectly causes target's armor DR to be ignored regardless of player weapon. The perk synergises extremely well with weapons capable of burst fire, as every shot in one burst is upgraded. Taken in combination with Better Criticals' 20% chance for insta-kill, it makes burst mode extremely deadly.
     effects: []
   };
   speaker: Fallout2RegularPerk = {
     ranks: 1,
-    requirements: ({level, skills}) => level >= 9 && skills.speech.getSkill() >= 50,
+    requirements: ({level, skills}) => level >= 9 && skills.speech({} as any).getSkill() >= 50,
     // TODO: +20% to Speech (patched)
     effects: []
   };
@@ -460,7 +460,7 @@ export class Fallout2Perks {
   };
   survivalist: Fallout2RegularPerk = {
     ranks: 1,
-    requirements: ({level, attributes, skills}) => level >= 3 && attributes.endurance >= 6 && attributes.intelligence >= 6 && skills.outdoorsman.getSkill() >= 40,
+    requirements: ({level, attributes, skills}) => level >= 3 && attributes.endurance >= 6 && attributes.intelligence >= 6 && skills.outdoorsman({} as any).getSkill() >= 40,
     // TODO: +25% bonus to Outdoorsman.
     effects: []
   };

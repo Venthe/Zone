@@ -54,8 +54,7 @@ class Fallout2Skill {
 
 // TODO: Add math.floor to every single one
 export class Fallout2Skills {
-  constructor(private readonly gameDifficulty: GameDifficulty,
-              private readonly attributes: Attributes) {
+  constructor(private readonly attributes: Attributes) {
 
   }
 
@@ -63,12 +62,12 @@ export class Fallout2Skills {
   static readonly maxTagSkills = 3;
   readonly skillPointsPerLevel = 5 + 2 * this.attributes.intelligence;
 
-  readonly adjustByDifficulty = (value: number, isTagged: boolean) => {
+  readonly adjustByDifficulty = (difficulty, value: number, isTagged: boolean) => {
     if (isTagged) {
       return value;
     }
 
-    switch (this.gameDifficulty) {
+    switch (difficulty) {
       case GameDifficulty.Easy:
         return value + 20;
       case GameDifficulty.Hard:
@@ -79,26 +78,26 @@ export class Fallout2Skills {
   };
 
   // combat
-  readonly smallGuns = new Fallout2Skill(() => 5 + (4 * this.attributes.agility));
-  readonly bigGuns = new Fallout2Skill(() => 2 * this.attributes.agility);
-  readonly energyWeapons = new Fallout2Skill(() => 2 * this.attributes.agility);
-  readonly unarmed = new Fallout2Skill(() => 30 + 2 * (this.attributes.strength + this.attributes.agility));
-  readonly meleeWeapons = new Fallout2Skill(() => 30 + 2 * (this.attributes.strength + this.attributes.agility));
-  readonly throwing = new Fallout2Skill(() => 4 * this.attributes.agility);
+  readonly smallGuns = (difficulty) => new Fallout2Skill(() => 5 + (4 * this.attributes.agility));
+  readonly bigGuns = (difficulty) => new Fallout2Skill(() => 2 * this.attributes.agility);
+  readonly energyWeapons = (difficulty) => new Fallout2Skill(() => 2 * this.attributes.agility);
+  readonly unarmed = (difficulty) => new Fallout2Skill(() => 30 + 2 * (this.attributes.strength + this.attributes.agility));
+  readonly meleeWeapons = (difficulty) => new Fallout2Skill(() => 30 + 2 * (this.attributes.strength + this.attributes.agility));
+  readonly throwing = (difficulty) => new Fallout2Skill(() => 4 * this.attributes.agility);
 
   // active
-  readonly firstAid = new Fallout2Skill((isTagged: boolean) => this.adjustByDifficulty(2 * (this.attributes.perception + this.attributes.intelligence), isTagged));
-  readonly doctor = new Fallout2Skill((isTagged: boolean) => this.adjustByDifficulty(5 + (this.attributes.perception + this.attributes.intelligence), isTagged));
-  readonly sneak = new Fallout2Skill((isTagged: boolean) => this.adjustByDifficulty(5 + 3 * this.attributes.agility, isTagged));
-  readonly lockpick = new Fallout2Skill((isTagged: boolean) => this.adjustByDifficulty(10 + (this.attributes.perception + this.attributes.agility), isTagged));
-  readonly steal = new Fallout2Skill((isTagged: boolean) => this.adjustByDifficulty(3 * this.attributes.agility, isTagged));
-  readonly traps = new Fallout2Skill((isTagged: boolean) => this.adjustByDifficulty(10 + (this.attributes.perception + this.attributes.agility), isTagged));
-  readonly science = new Fallout2Skill((isTagged: boolean) => this.adjustByDifficulty(4 * this.attributes.intelligence, isTagged));
-  readonly repair = new Fallout2Skill((isTagged: boolean) => this.adjustByDifficulty(3 * this.attributes.intelligence, isTagged));
+  readonly firstAid = (difficulty) => new Fallout2Skill((isTagged: boolean) => this.adjustByDifficulty(difficulty, 2 * (this.attributes.perception + this.attributes.intelligence), isTagged));
+  readonly doctor = (difficulty) => new Fallout2Skill((isTagged: boolean) => this.adjustByDifficulty(difficulty, 5 + (this.attributes.perception + this.attributes.intelligence), isTagged));
+  readonly sneak = (difficulty) => new Fallout2Skill((isTagged: boolean) => this.adjustByDifficulty(difficulty, 5 + 3 * this.attributes.agility, isTagged));
+  readonly lockpick = (difficulty) => new Fallout2Skill((isTagged: boolean) => this.adjustByDifficulty(difficulty, 10 + (this.attributes.perception + this.attributes.agility), isTagged));
+  readonly steal = (difficulty) => new Fallout2Skill((isTagged: boolean) => this.adjustByDifficulty(difficulty, 3 * this.attributes.agility, isTagged));
+  readonly traps = (difficulty) => new Fallout2Skill((isTagged: boolean) => this.adjustByDifficulty(difficulty, 10 + (this.attributes.perception + this.attributes.agility), isTagged));
+  readonly science = (difficulty) => new Fallout2Skill((isTagged: boolean) => this.adjustByDifficulty(difficulty, 4 * this.attributes.intelligence, isTagged));
+  readonly repair = (difficulty) => new Fallout2Skill((isTagged: boolean) => this.adjustByDifficulty(difficulty, 3 * this.attributes.intelligence, isTagged));
 
   // passive
-  readonly speech = new Fallout2Skill((isTagged: boolean) => this.adjustByDifficulty(5 * this.attributes.charisma, isTagged));
-  readonly barter = new Fallout2Skill((isTagged: boolean) => this.adjustByDifficulty(4 * this.attributes.charisma, isTagged));
-  readonly gambling = new Fallout2Skill((isTagged: boolean) => this.adjustByDifficulty(5 * this.attributes.luck, isTagged));
-  readonly outdoorsman = new Fallout2Skill((isTagged: boolean) => this.adjustByDifficulty(2 * (this.attributes.endurance + this.attributes.intelligence), isTagged));
+  readonly speech = (difficulty) => new Fallout2Skill((isTagged: boolean) => this.adjustByDifficulty(difficulty, 5 * this.attributes.charisma, isTagged));
+  readonly barter = (difficulty) => new Fallout2Skill((isTagged: boolean) => this.adjustByDifficulty(difficulty, 4 * this.attributes.charisma, isTagged));
+  readonly gambling = (difficulty) => new Fallout2Skill((isTagged: boolean) => this.adjustByDifficulty(difficulty, 5 * this.attributes.luck, isTagged));
+  readonly outdoorsman = (difficulty) => new Fallout2Skill((isTagged: boolean) => this.adjustByDifficulty(difficulty, 2 * (this.attributes.endurance + this.attributes.intelligence), isTagged));
 }

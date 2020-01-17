@@ -6,20 +6,34 @@
       </p-panel>
     </div>
     <div class="p-col-12">
-      <p-panel [toggleable]="true" [collapsed]="false" toggler="header" header="Character sheet">
+      <p-panel *ngIf="player$ | async as player"
+               [toggleable]="true"
+               [collapsed]="false"
+               toggler="header"
+               header="Character sheet">
         <div class="p-grid ui-fluid">
           <div class="p-col-12 p-md-6 p-lg-7">
             <div class="p-grid ui-fluid">
               <div class="p-col-12">
                 <div class="p-grid ui-fluid">
                   <div class="p-col-12 p-md-4">
-                    <input type="text" placeholder="Name" pInputText>
+                    <input id="character-name"
+                           type="text"
+                           placeholder="Name"
+                           [ngModel]="player.name"
+                           (keyup)="setName($event.target.value)"
+                           pInputText>
                   </div>
                   <div class="p-col-12 p-md-4">
-                    <p-spinner placeholder="Age" ngModel="25"></p-spinner>
+                    <p-spinner #sp
+                               placeholder="Age"
+                               [ngModel]="player.age"
+                               (onChange)="setAge(sp.value)"></p-spinner>
                   </div>
                   <div class="p-col-12 p-md-4">
-                    <p-dropdown [options]="sexes"></p-dropdown>
+                    <p-dropdown [options]="sexes"
+                                [ngModel]="player.sex"
+                                (onChange)="setSex($event.value)"></p-dropdown>
                   </div>
                 </div>
               </div>
